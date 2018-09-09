@@ -56,7 +56,7 @@ $(window).on( "load", function(){ //make sure everything is loaded
   $(element).css('height', htext*set_height*1 + 'px');
 });
 $("#content0").css('height', fpa*set_height*1 + 'px');
-$("#content6").css('height', (fpa/2)*set_height*1 + 'px');
+$("#content6").css('height', (fpa)*set_height*1 + 'px');
 //
 //alert(set_height + ', ' + pages.length);
 
@@ -461,9 +461,9 @@ function r(min, max) {
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
         (element_top_position + 50 <= window_bottom_position)) {
-      $element.addClass('in-view-img');
+      $element.addClass('in-view-fullimg');
     } else {
-      $element.removeClass('in-view-img');
+      $element.removeClass('in-view-fullimg');
     }
   });
 }
@@ -498,7 +498,7 @@ $(window).resize(_.debounce(function(){
      $(element).css('height', hpage*set_height*1 + 'px');
    });
    $("#content0").css('height', fpa*set_height*1 + 'px');
-   $("#content6").css('height', (fpa/2)*set_height*1 + 'px');
+   $("#content6").css('height', (fpa)*set_height*1 + 'px');
    $( '.text' ).each(function( index, element ){
     $(element).css('height', htext*set_height*1 + 'px');
   });
