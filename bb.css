@@ -1,0 +1,21 @@
+#content4, #content5{
+  display: none;
+}
+#landimg {
+  transition: all 0.06s;
+  height: 125%;
+  min-height: 125%;
+  width: auto;
+  max-width: 290%;
+  min-width: 140%;
+  top: -25%;
+  position: absolute;
+  left: -55%;
+  z-index: 0;
+}
+.fullimg{
+  height: 100%;
+}
+.right_side{
+  display: none;
+}
