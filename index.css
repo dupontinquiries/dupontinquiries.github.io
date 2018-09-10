@@ -244,7 +244,7 @@
   z-index: 4;
 }
 .text::-webkit-scrollbar{
-  background: white;
+  background: rgba(233, 239, 244, 1);
   width: 10px;
   position: absolute;
   top: 0px;
