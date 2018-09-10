@@ -17,8 +17,8 @@ var init_height = $(window).height();
 var last_height = init_height;
 var current_height = init_height;
 var set_height = init_height;
-var htext = .6; //.325
-var hpage = .6; //1.8
+var htext = .7; //.325
+var hpage = .7; //1.8
 var fpa = 1.8;
 (function($) {
 	'use strict';
