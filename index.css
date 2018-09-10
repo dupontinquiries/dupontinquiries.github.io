@@ -328,7 +328,7 @@ ul {
   z-index: 2;
   font-style: italic;
   text-align: left;
-  font-size: calc(1vw + 12px);
+  font-size: calc(.85vw + 12px);
   font-weight: 600;
   line-height: 240%;
   padding-right: 10px;
