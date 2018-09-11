@@ -15,6 +15,7 @@
 }
 .fullimg{
   height: 100%;
+  min-height: 45%;
 }
 .right_side{
   display: none;
