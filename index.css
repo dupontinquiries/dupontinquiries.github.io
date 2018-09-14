@@ -105,7 +105,7 @@
   padding-top: 40px;
   background-color: rgba(233, 239, 244, 1); /**39, 65, 89**/
   z-index: 2;
-  margin-bottom: calc(10vh + 260px);
+  margin-bottom: calc(10vh + 130px);
 }
 .landing_button{
   transition: all .4s;
@@ -182,6 +182,25 @@
   z-index: 2;
   opacity: 0;
 }
+.fullimgh {
+  position: absolute;
+  transition: all 1s;
+  top: 15%;
+  height: 85%;
+  max-height: 85%;
+  right: 0;
+  width: 50.75%;
+  max-width: 50.75%;
+  min-width: 50.75%;
+  margin-left: 35%;
+  z-index: 2;
+  opacity: 0;
+}
+.ytv{
+  margin-top: 0%;
+  height: 100%;
+  width: 100%;
+}
 .in-view-fullimg{
   opacity: 1;
 }
@@ -233,7 +252,7 @@
   position: absolute;
   top: calc(-5vh - 1px);
   padding-bottom: 50px;
-  width: 44.2%;
+  width: 49.2%;
   text-align: left;
   font-size: 155%;
   overflow-y: scroll;
@@ -283,7 +302,8 @@
   box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.5);
 }
 .text:hover {
-  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, .4);
+  /** box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, .4); **/
+  background: rgba(217, 231, 236, 1);
 }
 .text li {
   padding-left: 30px;
@@ -837,7 +857,7 @@ a{
 #content5{
 
 }
-#content6{
+.contentLast{
   width: 110%;
   background: white;
   background: linear-gradient(0deg, rgba(100,70,107,1) 0%, rgba(233, 239, 244, 1) 100%);
@@ -867,15 +887,15 @@ a{
       top: -10px;
     }
     .text{
-      height: 32.5%;
-      max-height: 45%;
+      height: 35%;
+      max-height: 30%;
       top: calc(-5vh + 15%);
       width: 90.5%;
       margin: 0;
       left: 0;
       margin-right: 2px;
       max-width: 90.5%;
-      font-size: 135%;
+      font-size: 128%;
     }
     .text::-webkit-scrollbar{
     }
@@ -883,16 +903,30 @@ a{
       background-color: rgba(190, 77, 77, 1);
     }
     .fullimg{
-      height: 45%;
-      max-height: 50%;
+      height: 55%;
       bottom: 0;
       width: 100%;
       margin: 0;
       max-width: 100%;
-      top: 60%;
+      top: 65%;
       left: 0;
       margin: 0;
       right: 1%;
+    }
+    .ytv{
+      margin-top: -35%;
+    }
+    .fullimgh{
+      height: 55%;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      top: 65%;
+      left: 0;
+      margin: 0;
+      right: 1%;
+      overflow: hidden;
     }
     .ital{
       top: 0%;

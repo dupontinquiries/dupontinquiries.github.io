@@ -1,10 +1,6 @@
-#content4, #content5{
-  display: none;
-}
 #landimg {
   transition: all 0.06s;
   height: 125%;
-  min-height: 125%;
   width: auto;
   max-width: 290%;
   min-width: 140%;
@@ -19,4 +15,44 @@
 }
 .right_side{
   display: none;
+}
+.dm_v2 a{
+  transition: all .4s;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .5);
+}
+.dm_v2 a:hover{
+  text-decoration: none;
+  color: rgba(220, 220, 220, 1);
+}
+.dm_v2{
+  transition: all .6s;
+  position: fixed;
+  transition: all 1s;
+  top: 10px;
+  left: 0;
+  width: 93%;
+  z-index: 14;
+  background: none;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, .3);
+  border-radius: 5%;
+}
+.dm_v2:hover{
+  background: rgba(0, 0, 0, .7);
+  border-radius: 2%;
+}
+.dm_v2 ul{
+  list-style: none;
+}
+.dm_v2 ul li{
+  display: inline;
+  color: rgba(255, 255, 255 .7);
+  font-size: 15px;
+  text-align: center;
+  padding: 2px;
+}
+.dm_v2 .material-icons{
+  color: rgba(255, 255, 255 .7);
+  font-size: 34px;
 }

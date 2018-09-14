@@ -51,12 +51,14 @@ $(window).on( "load", function(){ //make sure everything is loaded
   $( '.fullpage' ).each(function( index, element ){
    pages.push($( '.fullpage' )[index].id);
    $(element).css('height', hpage*set_height*1 + 'px');
+   pglast++;
  });
+ pglast--;
  $( '.text' ).each(function( index, element ){
   $(element).css('height', htext*set_height*1 + 'px');
 });
 $("#content0").css('height', fpa*set_height*1 + 'px');
-$("#content6").css('height', (fpa)*set_height*1 + 'px');
+$("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
 //
 //alert(set_height + ', ' + pages.length);
 
