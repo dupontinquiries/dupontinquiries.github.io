@@ -5,6 +5,7 @@
     width: calc(.2vw + 6px);
     background: rgba(233, 219, 224, 1);
     height: 100vh;
+    display: block;
   }
   body::-webkit-scrollbar-thumb{
     transition: all .5s;
@@ -24,6 +25,13 @@
     margin: none;
     width: 100%;
     height: 100%;
+  }
+  body, html{
+    border: none;
+    padding: none;
+    margin: none;
+    overflow: visible;
+    overflow-y: scroll;
   }
   @font-face {
     font-family: 'Material Icons';
@@ -858,11 +866,11 @@ a{
 
 }
 .contentLast{
-  width: 110%;
+  width: 130%;
   background: white;
   background: linear-gradient(0deg, rgba(100,70,107,1) 0%, rgba(233, 239, 244, 1) 100%);
   margin-left: 0;
-  left: -10%;
+  left: 0%;
 }
 .big{
   display: block;
@@ -877,9 +885,10 @@ a{
 }
 @media only screen and (max-width: 780px) {
     .fullpage{
-      width: 96%;
+      width: 100%;
       background-color: rgba(233, 239, 244, 1);
       margin-bottom: 70%;
+      margin-left: 0;
     }
     #content0{
       width: 106%;
@@ -995,5 +1004,13 @@ a{
       width: 120%;
       top: -10%;
       left: -30%;
+    }
+    html, body {
+      overflow: hidden;
+      overflow-y: scroll;
+      width: 99.5vw;
+    }
+    body::-webkit-scrollbar, html::-webkit-scrollbar{
+      display: none;
     }
 }

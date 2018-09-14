@@ -16,6 +16,10 @@
 .right_side{
   display: none;
 }
+.dm_v2{
+  padding: 0;
+  display: none;
+}
 .dm_v2 a{
   transition: all .4s;
   text-decoration: none;
@@ -34,9 +38,10 @@
   width: auto;
   z-index: 14;
   background: none;
-  padding: 5px 10px;
+  padding: 2px 4px;
   background: rgba(0, 0, 0, .3);
   border-radius: 5%;
+  padding-right: 0px;
 }
 .dm_v2:hover{
   background: rgba(0, 0, 0, .7);
@@ -48,11 +53,23 @@
 .dm_v2 ul li{
   display: inline;
   color: rgba(255, 255, 255 .7);
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
   padding: 2px;
 }
 .dm_v2 .material-icons{
   color: rgba(255, 255, 255 .7);
   font-size: 34px;
+}
+@media only screen and (max-width: 780px) {
+  #landimg {
+    height: 125%;
+    width: auto;
+    max-width: 590%;
+    min-width: 540%;
+    top: -25%;
+    position: absolute;
+    left: -195%;
+    z-index: 0;
+  }
 }
