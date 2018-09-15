@@ -826,7 +826,15 @@ a{
   font-weight: 545;
   left: 10vw;
   top: 35vh;
-
+}
+.smallstart{
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1), 3px 3px 1px rgba(0, 0, 0, .5), 5px 5px 1px rgba(0, 0, 0, .2);
+  font-size: calc(1.2vw + 7px);
+  font-style: italic;
+  font-weight: 445;
+  margin-left: 36px;
+  top: 35vh;
 }
 .vw4{
   font-size: 4vw;
@@ -971,7 +979,7 @@ a{
     .slider_container{
       width: 100%;
       right: 0%;
-      top: 50%;
+      top: 55%;
       height: 50%;
       position: absolute;
     }
@@ -980,7 +988,7 @@ a{
         overflow: hidden;
         width: 100%;
         right: 0%;
-        top: 50%;
+        top: 55%;
         height: auto;
         position: absolute;
     }
