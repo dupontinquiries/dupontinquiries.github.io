@@ -1,4 +1,4 @@
-#landimg {
+/**#landimg {
   transition: all 0.06s;
   height: 125%;
   width: auto;
@@ -8,7 +8,7 @@
   position: absolute;
   left: -55%;
   z-index: 0;
-}
+  } **/
 .fullimg{
   height: 100%;
   min-height: 45%;
@@ -62,7 +62,7 @@
   font-size: 34px;
 }
 @media only screen and (max-width: 780px) {
-  #landimg {
+  /**#landimg {
     height: 125%;
     width: auto;
     max-width: 590%;
@@ -71,5 +71,5 @@
     position: absolute;
     left: -195%;
     z-index: 0;
-  }
+  }**/
 }
