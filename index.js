@@ -59,6 +59,9 @@ $(window).on( "load", function(){ //make sure everything is loaded
 });
 $("#content0").css('height', fpa*set_height*1 + 'px');
 $("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
+	if(isMobile){
+		$('#landimg').css('filter', 'brightness(1)');
+	}
 //
 //alert(set_height + ', ' + pages.length);
 
