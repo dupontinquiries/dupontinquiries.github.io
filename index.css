@@ -988,8 +988,7 @@ a{
       min-height: 200px;
     }
   .fullvidh{
-      height: 0;
-      maring-bottom: calc(20px + 65%);
+      height: calc(20px + 65%);
       bottom: 0;
       width: 100%;
       margin: 0;
