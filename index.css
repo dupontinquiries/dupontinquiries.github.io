@@ -191,7 +191,7 @@
   z-index: 2;
   opacity: 0;
 }
-.fullimgh {
+.fullimgh, .fullvidh {
   position: absolute;
   transition: all 1s;
   top: 15%;
@@ -986,6 +986,16 @@ a{
   .fullvidh{
     height: 35%;
       padding-bottom: calc(20px + 40%);
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      top: 65%;
+      left: 0;
+      margin: 0;
+      right: 1%;
+      overflow: hidden;
+      min-height: 200px;
   }
     .ital{
       top: 0%;
