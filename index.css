@@ -971,8 +971,7 @@ a{
       min-height: 100px;
     }
     .fullimgh{
-      height: 35%;
-      padding-bottom: 40%;
+      height: 75%;
       bottom: 0;
       width: 100%;
       margin: 0;
@@ -984,6 +983,10 @@ a{
       overflow: hidden;
       min-height: 200px;
     }
+  .fullvidh{
+    height: 35%;
+      padding-bottom: calc(20px + 40%);
+  }
     .ital{
       top: 0%;
       width: 96%;
