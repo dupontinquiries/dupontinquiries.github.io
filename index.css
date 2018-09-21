@@ -966,9 +966,9 @@ a{
     }
     .ytv{
       margin-top: -35%;
-      width: 80%;
-      height: 80%;
-      min-height: 200px;
+      width: 100%;
+      height: 56%;
+      min-height: 100px;
     }
     .fullimgh{
       height: 75%;
