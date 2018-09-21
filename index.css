@@ -202,12 +202,13 @@
   max-width: 50.75%;
   min-width: 50.75%;
   margin-left: 35%;
-  z-index: 2;
+  z-index: 5;
   opacity: 0;
 }
 .ytv{
   margin-top: 0%;
   height: 100%;
+  z-index: 5;
   width: 100%;
 }
 .in-view-fullimg{
