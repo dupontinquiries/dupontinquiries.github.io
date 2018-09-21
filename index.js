@@ -100,9 +100,7 @@ $("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
 
           var factor = ($('html').scrollTop()%$('#content0').height())/$('#content0').height();
           console.log($('html').scrollTop() + ', ' + factor + ', ' + 1*((100-factor)/100))
-          if(!isMobile){
-		  $('#landimg').css('filter', 'brightness(' + 1.2*((.7 + factor)/1.7) + ')');
-	  }
+		        $('#landimg').css('filter', 'brightness(' + 1.2*((.7 + factor)/1.7) + ')');
 
   				 var st = $(this).scrollTop();
 
@@ -149,7 +147,7 @@ $("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
            lastScrollTop = st;
            scrolltype = "none";
            //console.log('update');
-   }, 100));
+   }, 300));
   //end scrolling function
 
 //sliders init
