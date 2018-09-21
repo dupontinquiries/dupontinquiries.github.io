@@ -18,7 +18,7 @@ var last_height = init_height;
 var current_height = init_height;
 var set_height = init_height;
 var htext = .7; //.325
-var hpage = .8; //1.8
+var hpage = .7; //1.8
 var fpa = 1.8;
 (function($) {
 	'use strict';
@@ -98,9 +98,12 @@ $("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
   					});
   				}
 
+
+          if(!isMobile){
           var factor = ($('html').scrollTop()%$('#content0').height())/$('#content0').height();
           console.log($('html').scrollTop() + ', ' + factor + ', ' + 1*((100-factor)/100))
-		        $('#landimg').css('filter', 'brightness(' + 1.2*((.7 + factor)/1.7) + ')');
+		      $('#landimg').css('filter', 'brightness(' + 1.2*((.7 + factor)/1.7) + ')');
+          }
 
   				 var st = $(this).scrollTop();
 

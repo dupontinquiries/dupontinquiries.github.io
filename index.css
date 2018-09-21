@@ -1070,7 +1070,11 @@ a{
       width: 150vh;
       top: 0%;
       left: -40vh;
-      filter: brightness(1);
+      filter: none;
+    }
+    iframe {
+      width: 365px;
+      height: 560px;
     }
     html, body {
       overflow: hidden;
