@@ -974,7 +974,7 @@ a{
       margin-top: -35%;
       width: 100vw;
       height: 56vw;
-      min-height: 100px;
+      min-height: calc( 100px + 25vw);
     }
     .fullimgh{
       height: 75%;
