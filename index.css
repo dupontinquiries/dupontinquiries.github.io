@@ -202,10 +202,14 @@
   max-width: 50.75%;
   min-width: 50.75%;
   margin-left: 35%;
+  margin-bottom: 0;
   z-index: 5;
   opacity: 0;
 }
 .ytv{
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-top: 0%;
   height: 100%;
   z-index: 5;
@@ -984,7 +988,8 @@ a{
       min-height: 200px;
     }
   .fullvidh{
-    height: calc(20px + 70%);
+      height: 0;
+      maring-bottom: calc(20px + 65%);
       bottom: 0;
       width: 100%;
       margin: 0;
