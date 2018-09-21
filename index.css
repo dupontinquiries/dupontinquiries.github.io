@@ -961,9 +961,11 @@ a{
       left: 0;
       margin: 0;
       right: 1%;
+      min-height: 200px;
     }
     .ytv{
       margin-top: -35%;
+      min-height: 200px;
     }
     .fullimgh{
       height: 65%;
@@ -976,6 +978,7 @@ a{
       margin: 0;
       right: 1%;
       overflow: hidden;
+      min-height: 200px;
     }
     .ital{
       top: 0%;
