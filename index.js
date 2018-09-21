@@ -18,7 +18,7 @@ var last_height = init_height;
 var current_height = init_height;
 var set_height = init_height;
 var htext = .7; //.325
-var hpage = .7; //1.8
+var hpage = 1.05; //1.8
 var fpa = 1.8;
 (function($) {
 	'use strict';
