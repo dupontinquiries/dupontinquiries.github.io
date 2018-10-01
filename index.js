@@ -17,9 +17,9 @@ var init_height = $(window).height();
 var last_height = init_height;
 var current_height = init_height;
 var set_height = init_height;
-var htext = .7; //.325
-var hpage = .7; //1.8
-var fpa = 1.8;
+var htext = .9; //.325
+var hpage = .8; //1.8
+var fpa = 1;
 (function($) {
 	'use strict';
 
@@ -99,11 +99,13 @@ $("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
   				}
 
 
+          /**
           if(!isMobile){
           var factor = ($('html').scrollTop()%$('#content0').height())/$('#content0').height();
           console.log($('html').scrollTop() + ', ' + factor + ', ' + 1*((100-factor)/100))
 		      $('#landimg').css('filter', 'brightness(' + 1.2*((.7 + factor)/1.7) + ')');
-          }
+        }
+        **/
 
   				 var st = $(this).scrollTop();
 
@@ -150,7 +152,7 @@ $("#content" + pglast).css('height', (fpa)*set_height*1 + 'px');
            lastScrollTop = st;
            scrolltype = "none";
            //console.log('update');
-   }, 300));
+   }, 600));
   //end scrolling function
 
 //sliders init
@@ -167,15 +169,16 @@ $('.ba-slider').each(function(){
 //end slider init code
 
 $('.dma').on('click', function(e, i) {
+  var destinationne = ($($(this).attr('href')).offset().top - (current_height*.07));
   $('html').animate({
-  scrollTop: '' + ($($(this).attr('href')).offset().top - 100) + 'px'
+  scrollTop: '' + destinationne + 'px'
   },
   {
   easing: 'swing',
-  duration: 700,
+  duration: 500,
   complete: function(){
-  lastScrollTop = $($(this).attr('href')).offset().top - 100;
-  scrolltype = "none";
+  lastScrollTop = destinationne;
+  check_if_in_view();
   }
   });
 
@@ -462,7 +465,7 @@ function r(min, max) {
     function check_if_in_view() {
   var window_height = $(window).height();
   var window_top_position = $(window).scrollTop()-(.4*$(window).height());
-  var window_bottom_position = (window_top_position + window_height);
+  var window_bottom_position = (window_top_position + (window_height*1.3));
 
   $('.jumpin').each(function() {
     var $element = $(this);
