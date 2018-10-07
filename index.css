@@ -282,12 +282,14 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
   background: rgba(233, 239, 244, 1);
   z-index: 8;
+  float: left;
 }
 .oval_wide {
   width: 45%;
   height: 45%;
+  shape-outside: rect(45%, 45%);
+  shape-margin: 5px;
   float: left;
-  shape-outside: rect();
   background-color: none;
   background-clip: content-box;
   position: absolute;
@@ -299,12 +301,13 @@
 }
 .oval_tall {
   float: left;
-  shape-outside: rect();
   background-color: none;
   background-clip: content-box;
   position: absolute;
   width: 20%;
   height: 50%;
+  shape-outside: rect(20%, 50%);
+  shape-margin: 5px;
   z-index: 10;
   top: 25%;
   left: 35%;
@@ -315,6 +318,9 @@
   background-image: url('images/jv_right.png');
 }
 #volunteer_oval{
+  background-image: url('images/volunteering.jpg');
+}
+#fll_oval{
   background-image: url('images/volunteering.jpg');
 }
 .textimg{
