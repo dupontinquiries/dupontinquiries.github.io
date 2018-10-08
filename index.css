@@ -403,7 +403,7 @@ ul {
 }
 .ital {
   transition: all 1s;
-  display: block;
+  display: inline-block;
   position: absolute;
   right: 0;
   top: -5vh;
@@ -412,11 +412,12 @@ ul {
   height: 10%;
   padding: 0px;
   padding-bottom: 40px;
+  padding-top: 40px;
   background: rgba(0, 50, 80, 1);
   z-index: 2;
-  font-style: italic;
   text-align: left;
-  font-size: calc(.85vw + 12px);
+  font-size: calc(.5em + 12px);
+  line-height: 50%;
   font-weight: 600;
   line-height: 240%;
   padding-right: 10px;
@@ -1062,9 +1063,12 @@ a{
   }
     .ital{
       top: 0%;
-      width: 96%;
-      height: 2.0%;
+      width: auto;
+      height: 2em;
       background: rgba(0, 50, 80, .9);
+      padding-top: 0px;
+      font-size: .9em;
+      padding-right: 45px;
     }
     .right_side {
       position: absolute;
