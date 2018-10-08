@@ -2004,7 +2004,7 @@ ul.icons {
     display: block;
     height: 100%;
     left: 0;
-    opacity: 0.45;
+    opacity: 0.0; /** layer 1 top vid opacity **/
     position: absolute;
     top: 0;
     width: 100%;
@@ -2015,7 +2015,7 @@ ul.icons {
     display: block;
     height: 100%;
     left: 0;
-    opacity: 0.6;
+    opacity: 0.0; /** banner vid layer 2 opacity **/
     position: absolute;
     top: 0;
     webkit-linear-gradientidth: 100%;
