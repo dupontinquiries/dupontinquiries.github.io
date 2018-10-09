@@ -7,8 +7,12 @@
 
 	//KDT adsense
 
-	$("#adsense").find("iframe").appendTo("#ad_container");
-  $("#adsense").remove();
+	//$("#adsense").find("iframe").appendTo("#ad_container");
+  //$("#adsense").remove();
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	/** if($("#ad_container iframe")[0] == null){
+		$("#ad_container").remove();
+	} **/
 
 	var	$window = $(window),
 		$banner = $('#banner'),

@@ -90,12 +90,13 @@ input, select, textarea {
 
 /** KDT adsense **/
 
-#ad_container{
+.ad_a {
+  width: 100%;
+  height: 16em;
   overflow: hidden;
-  padding: 0;
-}
-#adsense{
-  display: none;
+  margin-top: 16em;
+  margin-bottom: 20em;
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Typography */
@@ -2355,7 +2356,7 @@ ul.icons {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none; }
     #footer a:hover {
-      color: #ce1b28; }
+      color: lightblue; }
   #footer .content {
     display: -moz-flex;
     display: -webkit-flex;
