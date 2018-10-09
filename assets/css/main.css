@@ -87,6 +87,17 @@ input, select, textarea {
   -ms-appearance: none;
   appearance: none; }
 
+
+/** KDT adsense **/
+
+#ad_container{
+  overflow: hidden;
+  padding: 0;
+}
+#adsense{
+  display: none;
+}
+
 /* Typography */
 html {
   font-size: 13pt; }
@@ -2062,7 +2073,7 @@ ul.icons {
   color: rgba(255, 255, 255, 1);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(16, 114, 189, 0.25), rgba(89, 156, 207, 0.25)), url('../../images/piano_keys.jpg');
+  background-image: linear-gradient(rgba(16, 114, 189, 0.85), rgba(89, 156, 207, 0.85)), url('../../images/piano_keys.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;

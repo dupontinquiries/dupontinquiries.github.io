@@ -5,6 +5,11 @@
 */
 (function($) {
 
+	//KDT adsense
+
+	$("#adsense").find("iframe").appendTo("#ad_container");
+  $("#adsense").remove();
+
 	var	$window = $(window),
 		$banner = $('#banner'),
 		$body = $('body');
