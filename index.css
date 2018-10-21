@@ -284,10 +284,9 @@
   z-index: 8;
   float: left;
 }
-.oval_wide {
+.oval_wide{
   width: 45%;
   height: 45%;
-  shape-outside: rect(45%, 45%);
   shape-margin: 5px;
   float: left;
   background-color: none;
@@ -298,20 +297,32 @@
   top: 37%;
   left: 7.5%;
   background-size: 100% 100%;
+  cursor: pointer;
+  animation: bounce .5s 3s infinite alternate ease;
 }
-.oval_tall {
+.oval_tall{
   float: left;
   background-color: none;
   background-clip: content-box;
   position: absolute;
   width: 20%;
   height: 50%;
-  shape-outside: rect(20%, 50%);
   shape-margin: 5px;
   z-index: 10;
   top: 25%;
   left: 35%;
   box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, .4);
+  background-size: 100% 100%;
+  cursor: pointer;
+  animation: bounce .5s 3s infinite alternate ease;
+}
+.oval_off{
+  width: 15%;
+  height: 15%;
+  box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0);
+  z-index: 10;
+  top: 77%;
+  left: 1%;
   background-size: 100% 100%;
 }
 #soccer_oval{
@@ -1183,4 +1194,11 @@ a{
       top: 35%;
       left: 2.5%;
     }
+}
+
+/** keyframes **/
+
+@keyframes bounce {
+    0%   {transform: translateY(0);}
+    100% {transform: translateY(12px);}
 }

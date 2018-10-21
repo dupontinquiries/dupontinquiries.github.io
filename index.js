@@ -168,6 +168,13 @@ $('.ba-slider').each(function(){
 
 //end slider init code
 
+$('.oval_wide').on('click', function(e, i) {
+  $(this).toggleClass('oval_off');
+});
+$('.oval_tall').on('click', function(e, i) {
+  $(this).toggleClass('oval_off');
+});
+
 $('.dma').on('click', function(e, i) {
   var destinationne = ($($(this).attr('href')).offset().top - (current_height*.07));
   $('html').animate({
