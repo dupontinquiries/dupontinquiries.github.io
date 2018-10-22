@@ -716,6 +716,9 @@ ul {
   margin: 0;
   padding: 0;
   background-image: url('img/center8.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+
 }
 #landimg {
   transition: all 0.2s;
