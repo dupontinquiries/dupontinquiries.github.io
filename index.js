@@ -168,11 +168,9 @@ $('.ba-slider').each(function(){
 
 //end slider init code
 
-$('.oval_wide').on('click', function(e, i) {
+$('.oval_wide, .oval_tall').on('click', function(e, i) {
   $(this).toggleClass('oval_off');
-});
-$('.oval_tall').on('click', function(e, i) {
-  $(this).toggleClass('oval_off');
+  return false;
 });
 
 $('.dma').on('click', function(e, i) {

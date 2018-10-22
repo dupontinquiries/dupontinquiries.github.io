@@ -996,11 +996,12 @@ a{
   }
     .ital{
       top: 0%;
-      width: 45%;
+      width: 100%;
+      left: 0;
       height: 2em;
-      background: rgba(0, 50, 80, .9);
+      background: rgba(0, 50, 80, 1);
       padding-top: 0px;
-      font-size: .9em;
+      font-size: .7em;
       padding-right: 0em;
       border-right: solid 5px white;
     }
