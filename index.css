@@ -934,7 +934,7 @@ a{
       left: 0%;
       top: 0px;
       background-color: blue;
-      background-size: cover;
+      background-size: 100% 820px;
     }
     .text{
       height: 35%;
