@@ -715,7 +715,7 @@ ul {
   left: 0;
   margin: 0;
   padding: 0;
-  background-image: 0;
+  background-image: none;
 }
 #landimg {
   transition: all 0.2s;

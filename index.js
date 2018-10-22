@@ -321,55 +321,6 @@ $('.dma').on('click', function(e, i) {
   });
 // end L&R listeners
 
-$('#story').on('click', function(){
-  if($('#story').attr('id') == 'story')
-  {
-    scrolltype = "override";
-    pg = 1;
-    $('html').animate({
-    scrollTop: '' + $('#content1').offset().top + 'px'
-    },
-    {
-    easing: 'swing',
-    duration: 10,
-    complete: function(){
-    lastScrollTop = $('#content1').offset().top;
-    scrolltype = "none";
-    }
-    });
-    menuBanner();
-  }
-  else {
-  {
-    scrolltype = "override";
-    pg = 0;
-    $('html').animate({
-    scrollTop: '' + 0 + 'px'
-    },
-    {
-    easing: 'swing',
-    duration: 10,
-    complete: function(){
-    lastScrollTop = 0;
-    scrolltype = "none";
-    }
-    });
-    menuLanding();
-  }
-  }
-});
-
-//mobile site
-if(isMobile){
-
-
-}
-//pc site
-if(!isMobile){
-	$('#mobile').hide();
-	//
-
-}
 //jquery end tags
 });
 })(jQuery); //end of load reqs
