@@ -321,6 +321,12 @@ $('.dma').on('click', function(e, i) {
   });
 
 
+  if($('#content0').css('background-color') == 'rgb(0, 0, 255)'){
+    $('#content0').css('background-color', 'rgba(0, 0, 0, 0)')
+    .css('background-image', 'url(\'img/center8_2.jpg\')');
+    $('#fullimg').attr('src', 'img/center8_2.jpg');
+  }
+
 $(window).resize(_.debounce(function(){
   current_height = $(window).height();
   if(Math.abs(last_height - current_height) > 90){
@@ -347,6 +353,8 @@ $(window).resize(_.debounce(function(){
 
   }
 }), 1000);
+//
+
 
 //jquery end tags
 });

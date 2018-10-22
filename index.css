@@ -933,7 +933,7 @@ a{
       width: 100%;
       left: 0%;
       top: 0px;
-      background-image: url('img/center8.jpg');
+      background-color: blue;
       background-size: 100% 100%;
     }
     .text{
