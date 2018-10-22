@@ -452,10 +452,10 @@ function r(min, max) {
 //
 
     function menuBanner(){
-      $('#dot_menu').css('transform', 'translateY(calc(95vh - 70px))');
+      //$('#dot_menu').css('transform', 'translateY(calc(95vh - 70px))');
     }
     function menuLanding(){
-      $('#dot_menu').css('transform', 'translateY(0)');
+      //$('#dot_menu').css('transform', 'translateY(0)');
     }
 
     function displayEl(on, _el){

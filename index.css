@@ -77,13 +77,15 @@
   transition: all .6s;
   position: fixed;
   transition: all 1s;
-  top: 10px;
-  left: calc(50% - 192.5px);
+  bottom: 10px;
+  margin: auto;
+  left: -5px;
+  width: auto;
   z-index: 14;
   background: none;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background: rgba(0, 0, 0, .3);
-  border-radius: 5%;
+  border-radius: 0;
 }
 .dm:hover{
   background: rgba(0, 0, 0, .7);
@@ -91,11 +93,16 @@
 }
 .dm ul{
   list-style: none;
+  margin: auto;
+  width: auto;
+  padding: auto;
+  float: center;
+  margin-left: -5px;
 }
 .dm ul li{
   display: inline;
   color: rgba(255, 255, 255 .7);
-  font-size: 45%;
+  font-size: 35%;
   text-align: center;
   padding: 10px;
 }
@@ -104,7 +111,7 @@
 }
 .fullpage{
   transition: all 0.7s;
-  display: block;
+  display: inline-block;
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -203,9 +210,9 @@
   height: 85%;
   max-height: 85%;
   right: 0;
-  width: 50.75%;
-  max-width: 50.75%;
-  min-width: 50.75%;
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
   margin-left: 35%;
   margin-bottom: 0;
   z-index: 5;
@@ -273,7 +280,7 @@
   position: absolute;
   top: calc(-5vh - 1px);
   padding-bottom: 50px;
-  width: 49.2%;
+  width: 50%;
   text-align: left;
   font-size: 175%;
   overflow-y: auto;
@@ -285,6 +292,7 @@
   float: left;
 }
 .oval_wide{
+  transition: all .5s;
   width: 45%;
   height: 45%;
   shape-margin: 5px;
@@ -299,8 +307,10 @@
   background-size: 100% 100%;
   cursor: pointer;
   animation: bounce .5s 3s infinite alternate ease;
+  opacity: 1;
 }
 .oval_tall{
+  transition: all .5s;
   float: left;
   background-color: none;
   background-clip: content-box;
@@ -315,15 +325,15 @@
   background-size: 100% 100%;
   cursor: pointer;
   animation: bounce .5s 3s infinite alternate ease;
+  opacity: 1;
 }
 .oval_off{
   width: 15%;
   height: 15%;
-  box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0);
-  z-index: 10;
   top: 77%;
   left: 1%;
-  background-size: 100% 100%;
+  animation: none;
+  opacity: .5;
 }
 #soccer_oval{
   background-image: url('images/jv_right.png');
@@ -355,9 +365,6 @@
 .text::-webkit-scrollbar-thumb{
   height: calc(.3vh + 16px);
   background-color: rgba(190, 77, 77, 1);
-}
-.blocke{
-
 }
 .vis {
   transition: all .5s;
@@ -416,75 +423,22 @@ ul {
   transition: all 1s;
   display: inline-block;
   position: absolute;
-  right: 0;
   top: -5vh;
   color: white;
-  width: calc(50.75% - 20px);
+  width: 50%;
   height: 10%;
   padding: 0px;
-  padding-bottom: 40px;
-  padding-top: 40px;
+  padding-bottom: 35px;
+  padding-top: 20px;
   background: rgba(0, 50, 80, 1);
   z-index: 2;
   text-align: left;
   font-size: calc(.5em + 12px);
-  line-height: 50%;
   font-weight: 600;
   line-height: 240%;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.left_chevron {
-  transition: all .5s;
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  top: 0vh;
-  z-index: 1;
-  text-align: center;
-  font-size: fill;
-  padding-top: 10vh;
-  left: 0vw;
-}
-.left_chevron_after {
-  transform: all 2s;
-  box-shadow: 0px 8px 12px 2px rgba(0,0,0,0.42);
-  text-align: center;
-  background: white;
-  position: absolute;
-  top: 0vh;
-  left: 100vw;
-  border-radius: 0 2vw 2vw 0;
-  padding: 0;
-  vertical-align: center;
-  font-size: 3.5vw;
-  width: 14vw;
-  height: 140vh;
-  color: black;
-  z-index: 2;
-}
-.left_chevron_after .lip {
-  transform: all 2s;
-  font-size: 2vw;
-  font-weight: 800;
-  color: black;
-  padding-top: 40vh;
-  z-index: 2;
-}
-#action_arrow {
-  position: relative;
-  width: 12vw;
-  left: 31vw;
-  animation: jump 1s ease-in-out 0s infinite alternate;
-}
-.bar_hide {
-  overflow: hidden;
-  position: absolute;
-  left: 5vw;
-  top: 5vh;
-  width: 69vw;
-  height: 90vw;
-  z-index: 7;
+  padding-left: 2.5%;
+  padding-right: 0%;
+  left: 50%;
 }
 ._close {
   z-index: 15;
@@ -663,39 +617,6 @@ ul {
   padding-bottom: 2%;
   top: 35%;
   cursor: pointer;
-}
-.center_land_high {
-  transition: all .5s;
-  position: absolute;
-  left: 0;
-  top: 20%;
-  color: black;
-  width: 90vw;
-  height: 70px;
-  background: rgba(255, 255, 255, .6);
-  z-index: 4;
-  text-align: center;
-  vertical-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  padding-top: 25px;
-}
-.top_land {
-  transition: all .5s;
-  position: absolute;
-  right: 5%;
-  top: calc(-10px - 5vh);
-  color: black;
-  width: 50%;
-  height: 70px;
-  background: rgba(255, 255, 255, 1);
-  z-index: 4;
-  text-align: center;
-  vertical-align: center;
-  font-size: 50px;
-  font-weight: 600;
-  padding-top: 50px;
-  padding-bottom: 10px;
 }
 .jumpin{
   transition: all 1s;
@@ -996,6 +917,7 @@ a{
   font-family: Times;
 }
 @media only screen and (max-width: 780px) {
+  html{width:100%; height:100%;}
     .fullpage{
       width: 100%;
       background-color: rgba(233, 239, 244, 1);
@@ -1074,12 +996,13 @@ a{
   }
     .ital{
       top: 0%;
-      width: auto;
+      width: 45%;
       height: 2em;
       background: rgba(0, 50, 80, .9);
       padding-top: 0px;
       font-size: .9em;
-      padding-right: 45px;
+      padding-right: 0em;
+      border-right: solid 5px white;
     }
     .right_side {
       position: absolute;
@@ -1193,6 +1116,13 @@ a{
       height: 40%;
       top: 35%;
       left: 2.5%;
+    }
+    .oval_off{
+      transform: scale(.5);
+      top: 57%;
+      left: 1%;
+      animation: none;
+      opacity: .7;
     }
 }
 
