@@ -1862,6 +1862,16 @@ ul.icons {
       padding: 2rem 0 0.1rem 0 ; } }
 
 /* Banner */
+#nextpage{
+  transition: all 1s;
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.3);
+}
+#nextpage:hover{
+  opacity: 1;
+  transform: scale(1.7);
+}
 #banner {
   -ms-flex-align: center;
   -ms-flex-pack: center;

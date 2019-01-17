@@ -51,4 +51,10 @@
 				side: 'right'
 			});
 
+			$('#nextpage').on('click', function() {
+					$('html, body').animate({scrollTop: $('#page_highlights').offset().top
+      }, 800, function(){
+      });
+			});
+
 })(jQuery);
