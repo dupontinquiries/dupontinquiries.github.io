@@ -20,6 +20,42 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+html{
+  width: 100vw;
+}
+html::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none;
+}
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  display: none;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  transition: all .5s;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100vw !important;
+  height: auto !important;
+}
+#bodywrapper::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 1);
+}
+#bodywrapper::-webkit-scrollbar-thumb {
+  background-color: lightblue;
+}
+#bodywrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100% !important;
+  z-index: 0;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   background: #ffffff; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1823,14 +1859,14 @@ ul.icons {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: url("../../images/banner.jpg");
+  background-image: url("../../images/banner.jpg") !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-top: 0;
   display: -ms-flexbox;
-  height: 50rem !important;
-  min-height: 50rem;
+  height: 55rem !important;
+  min-height: 55rem;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -2419,6 +2455,7 @@ body {
     opacity: 0.25; }
 
 #header {
+  transition: 1s;
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
