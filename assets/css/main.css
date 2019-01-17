@@ -1866,7 +1866,8 @@ ul.icons {
   border-top: 0;
   display: -ms-flexbox;
   height: 55rem !important;
-  min-height: 55rem;
+  min-height: 100vh;
+  max-height: 115vh;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -2077,8 +2078,9 @@ ul.icons {
       display: none; } }
   @media screen and (max-width: 736px) {
     #banner {
-      height: auto !important;
-      min-height: 0;
+      height: 55rem !important;
+      min-height: 100vh;
+      max-height: 115vh;
       padding: 4rem 2rem 4rem 2rem; }
       #banner .inner {
         width: 100%; }
