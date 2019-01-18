@@ -20,15 +20,16 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-html{
-  width: 100vw;
-}
-html::-webkit-scrollbar, html::-webkit-scrollbar {
-  display: none;
-}
-html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
-  display: none;
-}
+  html{
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  html::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none;
+  }
+  html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    display: none;
+  }
 body {
   font-family: 'Nunito', sans-serif;
   transition: all .5s;
@@ -36,7 +37,7 @@ body {
   top: 0;
   margin: 0;
   width: 100vw !important;
-  height: auto !important;
+  height: 100vh !important;
 }
 html, body {
   font-size: calc(10pt + 35vw);
@@ -69,7 +70,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100vw !important;
-  height: 100% !important;
+  height: 100vh !important;
   z-index: 0;
   overflow-y: scroll; /* has to be scroll, not auto */
   overflow-x: hidden !important;
