@@ -43,19 +43,19 @@ html, body {
 }
   @media screen and (min-width: 1680px) {
     html, body {
-      font-size: calc(16pt + .35vw); } }
+      font-size: calc(16px + .55vw); } }
   @media screen and (min-width: 1880px) {
     html, body {
-      font-size: calc(14pt + .35vw); } }
+      font-size: calc(14px + .35vw); } }
   @media screen and (min-width: 1680px) {
     html, body {
-      font-size: calc(12pt + .35vw); } }
+      font-size: calc(12px + .35vw); } }
   @media screen and (max-width: 1680px) {
     html, body {
-      font-size: calc(11pt + .5vw); } }
+      font-size: calc(11px + .5vw); } }
   @media screen and (max-width: 980px) {
       html {
-        font-size: calc(10pt + .5vw);
+        font-size: calc(12px + .5vw);
       }
   }
 #bodywrapper::-webkit-scrollbar {
