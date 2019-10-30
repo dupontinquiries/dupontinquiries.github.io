@@ -290,6 +290,7 @@
   background: rgba(233, 239, 244, 1);
   z-index: 8;
   float: left;
+  line-height: 1.25em;
 }
 .oval_wide{
   transition: all .5s;
@@ -433,7 +434,7 @@ ul {
   background: rgba(0, 50, 80, 1);
   z-index: 2;
   text-align: left;
-  font-size: calc(.5em + 12px);
+  font-size: calc(.5em + 8px + 1.8vw);
   font-weight: 600;
   line-height: 240%;
   padding-left: 2.5%;
@@ -923,6 +924,7 @@ a{
   html{width:100%; height:100%;}
   #design {
     top: 45vh;
+    background: rgba(0, 0, 0, .7)
   }
     .fullpage{
       width: 100%;
@@ -936,7 +938,6 @@ a{
       width: 100%;
       left: 0%;
       top: 0px;
-      background-color: blue;
       background-size: 100% 820px;
     }
     .text{
@@ -1007,7 +1008,7 @@ a{
       height: 2em;
       background: rgba(0, 50, 80, 1);
       padding-top: 0px;
-      font-size: .7em;
+      font-size: calc(1.2em + .2vw);
       padding-right: 0em;
       border-right: solid 5px white;
     }
