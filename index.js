@@ -66,12 +66,40 @@ var fpa = 1;
 
         $('.fullpage').each(function(index, element) {
             pages.push($('.fullpage')[index].id);
-            $(element).css('height', hpage * set_height * 1 + 'px');
+            //$(element).css('height', hpage * set_height * 1 + 'px');
             pglast++;
+        }); //'.text li'
+
+        /*
+        var url = URL.createObjectURL(this.files[0]);
+var img = new Image;
+
+img.onload = function() {
+    alert(img.width);
+};
+
+img.src = url;
+        var img, url;
+        $('.bi').each(function(index, element) {
+          img = new Image();
+          url = URL.createObjectURL(element.src);
+          img.src = //add image file size reader...
+          //if aspect ration is certain number, add certain css class
+          //based on three classes, format images
+            $(element).css('transform', 'translateX(' + Math.floor((Math.random()-.5) * 25) + '%)');
+        });*/
+        var offset = 0;
+        $('.text ul').each(function(index, element) {
+          offset = Math.random()-.5;
+          $(element).css('transform', 'translateX(' + Math.floor(offset * 25) + '%)');
+          if ($(element).offset().left < 0) {
+            $(element).css('transform', 'translateX(0)');
+
+          }
         });
         pglast--;
         $('.text').each(function(index, element) {
-            $(element).css('height', htext * set_height * 1 + 'px');
+            //$(element).css('height', htext * set_height * 1 + 'px');
         });
         $("#content0").css('height', fpa * set_height * 1 + 'px');
         $("#content" + pglast).css('height', (fpa) * set_height * 1 + 'px');
@@ -322,12 +350,13 @@ var fpa = 1;
             $(this).toggleClass('img_on img_off');
         });
 
-
+        /*
         if ($('#content0').css('background-color') == 'rgb(0, 0, 255)') {
             $('#content0').css('background-color', 'rgba(0, 0, 0, 0)')
                 .css('background-image', 'url(\'img/center8.jpg\')');
             $('#fullimg').attr('src', 'img/center8.jpg');
         }
+        */
 
         $(window).resize(_.debounce(function() {
             current_height = $(window).height();
@@ -343,12 +372,12 @@ var fpa = 1;
                 });
                 //
                 $('.fullpage').each(function(index, element) {
-                    $(element).css('height', hpage * set_height * 1 + 'px');
+                    //$(element).css('height', hpage * set_height * 1 + 'px');
                 });
                 $("#content0").css('height', fpa * set_height * 1 + 'px');
                 $("#content6").css('height', (fpa) * set_height * 1 + 'px');
                 $('.text').each(function(index, element) {
-                    $(element).css('height', htext * set_height * 1 + 'px');
+                    //$(element).css('height', htext * set_height * 1 + 'px');
                 });
 
                 //
@@ -470,9 +499,11 @@ function check_if_in_view() {
         //check to see if this current container is within viewport
         if ((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
-            $element.addClass('in-view');
+          $element.addClass('in-view');
+          $element.removeClass('no-view');
         } else {
-            $element.removeClass('in-view');
+          $element.addClass('no-view');
+          $element.removeClass('in-view');
         }
     });
     $('.jumpimg').each(function() {
