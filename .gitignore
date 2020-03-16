@@ -1,2 +1,2 @@
 *.pdn
-/unused
+**/unused
