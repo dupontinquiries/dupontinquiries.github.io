@@ -93,6 +93,7 @@ body {
   height: 0;
   opacity: 0;
   display: none;
+  z-index: -100;
 }
 
 .dm a {

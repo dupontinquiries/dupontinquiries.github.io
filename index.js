@@ -454,7 +454,10 @@ function updateRocketPoints() {
           console.log('succes: ' + data.earned );
           if ( data.earned == null ) {
             $("#pointsTracker").text( "Tracker currently unavailable..." );
-          } else $("#pointsTracker").text( data.earned + " Points!" );
+          } else {
+            $("#pointsTracker").text( data.earned + " Points!" );
+            $("#sourceTracker").remove();
+          }
         }
       });
 
