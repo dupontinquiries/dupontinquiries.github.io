@@ -468,11 +468,17 @@ function updateRocketPoints() {
           if ( data.earned == null ) {
             $("#pointsTracker").text( "Tracker currently unavailable..." );
           } else {
-            $("#pointsTracker").text( data.earned + " Points!" );
+            $("#pointsTracker").text( data.earned + " Points!" ).digits();
           }
         }
       });
 
+}
+
+$.fn.digits = function(){
+    return this.each(function(){
+        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+    })
 }
 
 function assignFullpageIndexes() {
