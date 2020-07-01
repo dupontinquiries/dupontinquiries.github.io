@@ -46,16 +46,10 @@ var fpa = 1;
     }, 20000);
 
     $("#sourceTracker").on("load", function() {
-      console.log("hello");
       updateRocketPoints();
     });
 
     function sizeCover() {
-      $("html").css('height',
-      '' + ( $(window).height() * 1 ) + 'px');
-      $("body").css('height',
-      '' + ( $(window).height() * 1 ) + 'px');
-
       $("landimg_mobile").css('height',
       '' + ( $(window).height() * 1 ) + 'px');
       $("content0").css('height',
@@ -459,8 +453,6 @@ function updateRocketPoints() {
 
   var inp = $("#sourceTracker");
 
-  console.log( "breakpoint" );
-
   $("#pointsTracker").text( "Tracker currently unavailable..." );
 
   $.ajax({
@@ -473,52 +465,13 @@ function updateRocketPoints() {
         dataType: 'jsonp',
         data: '',
         success: function(data){
-          console.log('succes: ' + data.earned );
           if ( data.earned == null ) {
             $("#pointsTracker").text( "Tracker currently unavailable..." );
           } else {
             $("#pointsTracker").text( data.earned + " Points!" );
-            //$("#sourceTracker").remove();
           }
         }
       });
-
-  /*
-
-  $.ajax({
-        url: "https://stats.foldingathome.org/api/donor/The_Rocket",
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type':'application/json'
-        },
-        method: 'GET',
-        dataType: 'jsonp',
-        data: "",
-        success: function( result ){
-          $("#pointsTracker").text( result.credit );
-        }
-    })
-
-
-  console.log( "breakpoint 2" );
-  var json = JSON.parse( inp.contents().text() );
-  console.log( json );
-  console.log( json.credit );
-  var pos = inp.length;
-  var tag = "\"credit:\"";
-  var tagLength = tag.length;
-  while ( pos > tagLength && inp.substring(pos) != tag ) {
-    --pos;
-  }
-  var rem = inp.substring(pos + tagLength, inp.length);
-
-
-  */
-
-  //console.log( $( "#sourceTracker").contents().filter("body").wrap("<b/>") );
-
-  //$("#pointsTracker").text( $( "#sourceTracker").text() );
-  //$("#pointsTracker").text( "Tracker currently unavailable..." );
 
 }
 
