@@ -28,7 +28,11 @@ var fpa = 1;
       detectDevice();
       assignIndexes();
       assignFullpageIndexes();
-      shiftBlocks('.text ul');
+      if ( !isMobile ) {
+        shiftBlocks('.text ul');
+      } else {
+        sizeCover();
+      }
       setClocks();
     });
 
@@ -36,10 +40,19 @@ var fpa = 1;
       resizeBlocks();
     });
 
+    setInterval(function () {
+       updateRocketPoints();
+    }, 20000);
+
     $("#sourceTracker").on("load", function() {
       console.log("hello");
       updateRocketPoints();
     });
+
+    function sizeCover() {
+      $("landimg_mobile").css('height', \
+      '' + ( $(window).height() * 1.1 ) + 'px');
+    }
 
     function shiftBlocks(id) {
       var offset = 0;
