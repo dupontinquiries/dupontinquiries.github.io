@@ -84,6 +84,14 @@ body {
     position: absolute;
 }
 
+#pointsTracker {
+  display: inline;
+}
+
+#sourceTracker {
+  display: none;
+}
+
 .dm a {
     transition: all .4s;
     text-decoration: none;

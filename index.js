@@ -27,12 +27,18 @@ var fpa = 1;
     $(window).on("load", function() {
       detectDevice();
       assignIndexes();
+      assignFullpageIndexes();
       shiftBlocks('.text ul');
       setClocks();
     });
 
     $(window).on("resize", function() {
       resizeBlocks();
+    });
+
+    $("#sourceTracker").on("load", function() {
+      console.log("hello");
+      updateRocketPoints();
     });
 
     function shiftBlocks(id) {
@@ -98,9 +104,6 @@ var fpa = 1;
 
 
     $(window).on("load", function() { //make sure everything is loaded
-
-
-
 
 
          //'.text li'
@@ -429,6 +432,78 @@ img.src = url;
 
 // Update sliders on resize.
 // Because we all do this: i.imgur.com/YkbaV.gif
+
+function updateRocketPoints() {
+
+  var inp = $("#sourceTracker");
+
+  console.log( "breakpoint" );
+
+  $.ajax({
+        url: 'https://api.foldingathome.org/user/The_Rocket/stats',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type':'application/json'
+        },
+        method: 'GET',
+        dataType: 'jsonp',
+        data: '',
+        success: function(data){
+          console.log('succes: ' + data.earned );
+          $("#pointsTracker").text( data.earned + " Points!" );
+        },
+        fail: function(){
+          $("#pointsTracker").text( "Tracker currently unavailable..." );
+        }
+      });
+
+  /*
+
+  $.ajax({
+        url: "https://stats.foldingathome.org/api/donor/The_Rocket",
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type':'application/json'
+        },
+        method: 'GET',
+        dataType: 'jsonp',
+        data: "",
+        success: function( result ){
+          $("#pointsTracker").text( result.credit );
+        }
+    })
+
+
+  console.log( "breakpoint 2" );
+  var json = JSON.parse( inp.contents().text() );
+  console.log( json );
+  console.log( json.credit );
+  var pos = inp.length;
+  var tag = "\"credit:\"";
+  var tagLength = tag.length;
+  while ( pos > tagLength && inp.substring(pos) != tag ) {
+    --pos;
+  }
+  var rem = inp.substring(pos + tagLength, inp.length);
+
+
+  */
+
+  //console.log( $( "#sourceTracker").contents().filter("body").wrap("<b/>") );
+
+  $("#pointsTracker").text( $( "#sourceTracker").text() );
+  //$("#pointsTracker").text( "Tracker currently unavailable..." );
+
+}
+
+function assignFullpageIndexes() {
+  var x = 0;
+  $('.fullpage').each(function() {
+      var cur = $(this);
+      cur.attr("id", "content" + x);
+      ++x;
+  });
+}
 
 
 function drags(dragElement, resizeElement, container) {
