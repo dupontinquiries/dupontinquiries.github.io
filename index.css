@@ -37,7 +37,7 @@ html {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    src: url(https://fonts.googleapis.com/icon?family=Material+Icons) format('woff2');
 }
 
 .material-icons {
@@ -875,7 +875,6 @@ ul {
     left: 0;
     margin: 0;
     padding: 0;
-    background-image: url('img/center8.jpg');
     background-attachment: fixed;
     background-size: cover;
 
@@ -1130,9 +1129,29 @@ a {
 }
 
 @media only screen and (max-width: 780px) {
+
+  .dm {
+    width: 100%;
+    font-size: 1.1em;
+    padding : 0px;
+    margin: 0;
+  }
+
+  .dm ul {
+    padding: 0;
+    padding-left: 2.5%;
+  }
+
+  .dma {
+    padding: 0;
+    margin: 0;
+    width: 1px;
+    padding-left: .1rem;
+  }
+
     html, body {
         min-width: 100vw;
-        min-height: 100vh;
+        overflow-y: auto;
     }
 
     #design {
@@ -1153,7 +1172,6 @@ a {
         width: 100%;
         left: 0%;
         top: 0px;
-        background-size: 100% 820px;
     }
 
     .text {
@@ -1232,14 +1250,12 @@ a {
     }
 
     .ital {
-      padding: 5%;
       top: 0%;
-      width: 100%;
-      left: -5%;
-      height: 2em;
+      width: calc( 100% - 2em );
+      height: calc( 1em + 2% );
       background: rgba(0, 50, 80, 1);
-      padding-top: 0px;
-      font-size: calc(1.2em + .2vw);
+      padding-top: 1.2em;
+      font-size: calc(1.4em + .2vw);
       padding-right: 0em;
     }
 
@@ -1348,8 +1364,8 @@ a {
         position: relative;
         margin-top: 15%;
         width: 75%;
-        margin-left: 2%;
-        left: 13%;
+        margin-left: 0%;
+        left: 12%;
         height: 50%;
     }
 
