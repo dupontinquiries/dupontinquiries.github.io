@@ -25,6 +25,7 @@ var fpa = 1;
     'use strict';
 
     $(window).on("load", function() {
+      updateRocketPoints();
       detectDevice();
       assignIndexes();
       assignFullpageIndexes();
@@ -50,8 +51,16 @@ var fpa = 1;
     });
 
     function sizeCover() {
-      $("landimg_mobile").css('height', \
-      '' + ( $(window).height() * 1.1 ) + 'px');
+      $("html").css('height',
+      '' + ( $(window).height() * 1 ) + 'px');
+      $("body").css('height',
+      '' + ( $(window).height() * 1 ) + 'px');
+
+      $("landimg_mobile").css('height',
+      '' + ( $(window).height() * 1 ) + 'px');
+      $("content0").css('height',
+      '' + ( $(window).height() * 1 ) + 'px');
+
     }
 
     function shiftBlocks(id) {
@@ -469,7 +478,7 @@ function updateRocketPoints() {
             $("#pointsTracker").text( "Tracker currently unavailable..." );
           } else {
             $("#pointsTracker").text( data.earned + " Points!" );
-            $("#sourceTracker").remove();
+            //$("#sourceTracker").remove();
           }
         }
       });
