@@ -439,6 +439,8 @@ function updateRocketPoints() {
 
   console.log( "breakpoint" );
 
+  $("#pointsTracker").text( "Tracker currently unavailable..." );
+
   $.ajax({
         url: 'https://api.foldingathome.org/user/The_Rocket/stats',
         headers: {
@@ -450,10 +452,9 @@ function updateRocketPoints() {
         data: '',
         success: function(data){
           console.log('succes: ' + data.earned );
-          $("#pointsTracker").text( data.earned + " Points!" );
-        },
-        fail: function(){
-          $("#pointsTracker").text( "Tracker currently unavailable..." );
+          if ( data.earned == null ) {
+            $("#pointsTracker").text( "Tracker currently unavailable..." );
+          } else $("#pointsTracker").text( data.earned + " Points!" );
         }
       });
 
@@ -491,7 +492,7 @@ function updateRocketPoints() {
 
   //console.log( $( "#sourceTracker").contents().filter("body").wrap("<b/>") );
 
-  $("#pointsTracker").text( $( "#sourceTracker").text() );
+  //$("#pointsTracker").text( $( "#sourceTracker").text() );
   //$("#pointsTracker").text( "Tracker currently unavailable..." );
 
 }
