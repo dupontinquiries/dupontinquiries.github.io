@@ -84,8 +84,10 @@ body {
     position: absolute;
 }
 
-#pointsTracker {
+#pointsTracker, #wuTracker {
   display: inline;
+  color: rgba(33, 174, 222, 1);
+  font-weight: 5rem;
 }
 
 #sourceTracker {

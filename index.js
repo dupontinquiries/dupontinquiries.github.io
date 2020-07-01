@@ -38,12 +38,12 @@ var fpa = 1;
     });
 
     $(window).on("resize", function() {
-      //resizeBlocks();
+      resizeBlocks();
     });
 
     setInterval(function () {
        updateRocketPoints();
-    }, 20000);
+    }, 7000);
 
     $("#sourceTracker").on("load", function() {
       updateRocketPoints();
@@ -461,10 +461,12 @@ function updateRocketPoints() {
 
   var inp = $("#sourceTracker");
 
-  $("#pointsTracker").text( "Tracker currently unavailable..." );
-
+  /*
+  var url = "https://api.foldingathome.org/user/The_Rocket/stats"
+  */
+  var url = "https://api.foldingathome.org/user/The_Rocket"
   $.ajax({
-        url: 'https://api.foldingathome.org/user/The_Rocket/stats',
+        url: url,
         headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-Type':'application/json'
@@ -472,12 +474,21 @@ function updateRocketPoints() {
         method: 'GET',
         dataType: 'jsonp',
         data: '',
-        success: function(data){
-          if ( data.earned == null ) {
+        success: function( data ){
+          if ( data.score == null ) {
             $("#pointsTracker").text( "Tracker currently unavailable..." );
           } else {
-            $("#pointsTracker").text( data.earned + " Points!" ).digits();
+            $("#pointsTracker").text( data.score + " Points!" ).digits();
           }
+          if ( data.wus == null ) {
+            $("#wuTracker").text( "Tracker currently unavailable..." );
+          } else {
+            $("#wuTracker").text( data.wus + " Work Units!" );
+          }
+        },
+        error: function( error ) {
+          $("#pointsTracker").text( "Tracker currently unavailable..." );
+          $("#wuTracker").text( "Tracker currently unavailable..." );
         }
       });
 
