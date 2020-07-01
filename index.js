@@ -63,9 +63,9 @@ var fpa = 1;
       */
 
       $("landimg_mobile").css('height',
-      '' + ( $(window).height() * 1 ) + 'px');
+      '' + ( $(window).height() * 1.3 ) + 'px');
       $("content0").css('height',
-      '' + ( $(window).height() * 1 ) + 'px');
+      '' + ( $(window).height() * 1.3 ) + 'px');
 
     }
 
