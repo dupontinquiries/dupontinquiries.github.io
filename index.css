@@ -1168,10 +1168,12 @@ a {
         margin-left: 0;
         min-height: 500px;
         padding: 0%;
+        padding-top: calc( 2em + 2% );
     }
 
     #content0 {
         width: 100%;
+        min-height: 100vh;
         left: 0%;
         top: 0px;
     }
@@ -1253,11 +1255,13 @@ a {
 
     .ital {
       top: 0%;
-      width: calc( 100% - 2em );
-      height: calc( 1em + 2% );
+      position: absolute;
+      transform: translate( calc( -5% - .3em ), 0);
+      width: calc( 100% - 1em + 5% );
+      height: calc( .25em + 1% );
       background: rgba(0, 50, 80, 1);
-      padding-top: 1.2em;
-      font-size: calc(1.4em + .2vw);
+      padding-top: .65em;
+      font-size: calc( 1.4em + .2vw + 10px );
       padding-right: 0em;
     }
 

@@ -25,16 +25,20 @@ var fpa = 1;
     'use strict';
 
     $(window).on("load", function() {
-      updateRocketPoints();
       detectDevice();
-      assignIndexes();
-      assignFullpageIndexes();
       if ( !isMobile ) {
         shiftBlocks('.text ul');
       } else {
         sizeCover();
       }
+      updateRocketPoints();
+      assignIndexes();
+      assignFullpageIndexes();
       setClocks();
+    });
+
+    $("#landimg_mobile").ready(function() {
+      $("#landimg_mobile").attr("src", "visuals/center8.jpg");
     });
 
     $(window).on("resize", function() {
