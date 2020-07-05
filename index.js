@@ -42,7 +42,7 @@ var fpa = 1;
     });
 
     $(window).on("resize", function() {
-      resizeBlocks();
+      //resizeBlocks();
     });
 
     setInterval(function () {
