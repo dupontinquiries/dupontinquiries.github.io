@@ -35,6 +35,7 @@ var fpa = 1;
       assignIndexes();
       assignFullpageIndexes();
       setClocks();
+      //drawPath();
     });
 
     $("#landimg_mobile").ready(function() {
@@ -48,6 +49,10 @@ var fpa = 1;
     setInterval(function () {
        updateRocketPoints();
     }, 7000);
+
+    setInterval(function () {
+      //drawPath();
+    }, 1000);
 
     $("#sourceTracker").on("load", function() {
       updateRocketPoints();
@@ -66,6 +71,61 @@ var fpa = 1;
       '' + ( $(window).height() * 1.3 ) + 'px');
       $("content0").css('height',
       '' + ( $(window).height() * 1.3 ) + 'px');
+
+    }
+
+    function drawPath() {
+      //var arr = [];
+      $(".text ul").each(function(index, element) {
+        //arr.push( $(element).offset().top );
+        //console.log( $(element).offset().top );
+        jQuery('<div/>', {
+          "class": 'pin_abs'
+        })
+        .css("transform", "translate(" + ( $(window).width() - ( $(element).offset().left / 2. ) ) + "px, " + ( $(element).offset().top ) + "px)")
+        .appendTo("body");
+
+        //$("body").add(
+        //  $("div").addClass("pin_abs").css("transform", "translate(" + ( $(element).offset().left + 120 ) + "px, " + ( $(element).offset().top ) + "px)"));
+      });
+      //arr = arr.reverse();
+      //for (int g = arrl.length() - 1; g != 0; --g)
+      //$("body").add("div").addClass("pin").css("transform")
+
+      var arr = [];
+      var i = 0;
+      $('.pin_abs').each(function()
+      {
+              arr[i++] = $(this);
+      });
+
+      $("#canvhold").width( $("body").width() )
+      $("#canvhold").height( $("body").height() )
+
+
+      /*
+      $("#canv").width( $("body").width() )
+      $("#canv").height( $("body").height() )
+
+      var c=document.getElementById("canv");
+      var ctx=c.getContext("2d");
+      ctx.canvas.height = $("body").width();
+      ctx.canvas.width = $("body").height();
+      */
+
+
+      for (var g = 0; g < arr.length - 2; ++g) {
+
+        var c=document.getElementById("canv");
+        var ctx=c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.lineWidth="15";
+        ctx.strokeStyle="red";
+        ctx.moveTo($(arr[g]).offset().left, $(arr[g]).offset().top);
+        ctx.lineTo($(arr[g + 1]).offset().left, $(arr[g + 1]).offset().top);
+        ctx.stroke();
+      }
 
     }
 
@@ -581,11 +641,11 @@ function r(min, max) {
 //
 
 function menuBanner() {
-    //$('#dot_menu').css('transform', 'translateY(calc(95vh - 70px))');
+  $('#dot_menu').removeClass('front_menu');
 }
 
 function menuLanding() {
-    //$('#dot_menu').css('transform', 'translateY(0)');
+  $('#dot_menu').addClass('front_menu');
 }
 
 function displayEl(on, _el) {
