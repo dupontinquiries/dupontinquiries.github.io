@@ -1246,7 +1246,7 @@ a {
     }
 
     #share_rocket {
-      transform: translate(calc( .5rem + 2rem + 6rem + 1rem ), calc( -.2em - 3rem - 2.5rem ));
+      transform: translate(calc( .5rem + 1rem + 3rem ), calc( -.2em - 2.5rem + 3rem ));
     }
 
     .text::-webkit-scrollbar {}
