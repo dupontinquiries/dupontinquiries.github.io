@@ -933,6 +933,32 @@ a {
   color: black;
 }
 
+.donate_button {
+  transition: all .4s;
+  background: rgba(36, 160, 237, 1);
+  border: solid 5px rgba(17, 131, 202, 1);
+  width: auto;
+  height: 3rem;
+  width: 11rem;
+  padding-left: 0rem;
+  padding-top: .5rem;
+  padding-bottom: 0rem;
+  color: white;
+  font-weight: 3rem;
+  transform: translate(1.5rem, -.2em);
+  text-align: center;
+}
+
+.donate_button:hover {
+  transition: all .7s;
+  background: rgba(0, 160, 0, 1);
+  border: solid 5px rgba(0, 128, 0, 1);
+}
+
+#share_rocket {
+  transform: translate(calc( .5rem + 2rem + 11rem + 2rem ), calc( -.2em - 3rem - .5rem ));
+}
+
 .white_link {
   position: relative;
   padding-top: 10px;
@@ -1196,6 +1222,29 @@ a {
     }
 
     .text ul li {
+    }
+
+    .donate_button {
+      width: auto;
+      height: 3rem;
+      width: 6rem;
+      padding-left: 0rem;
+      padding-top: .5rem;
+      padding-bottom: 0rem;
+      color: white;
+      font-weight: 3rem;
+      transform: translate(1.5rem, -.2em);
+      text-align: center;
+    }
+
+    .donate_button:hover {
+      transition: all .7s;
+      background: rgba(36, 160, 0, 1);
+      border: solid 5px rgba(17, 131, 0, 0);
+    }
+
+    #share_rocket {
+      transform: translate(calc( .5rem + 2rem + 6rem + 1rem ), calc( -.2em - 3rem - 2.5rem ));
     }
 
     .text::-webkit-scrollbar {}
