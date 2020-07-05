@@ -1162,7 +1162,7 @@ a {
     width: 100%;
     font-size: 1.1em;
     padding : 0px;
-    margin: 0;
+    margin: 10px;
   }
 
   .dm ul {
@@ -1225,6 +1225,8 @@ a {
     }
 
     .donate_button {
+      background: rgba(36, 160, 237, 1);
+      border: solid 5px rgba(17, 131, 202, 1);
       width: auto;
       height: 3rem;
       width: 6rem;
@@ -1307,9 +1309,9 @@ a {
       position: absolute;
       transform: translate( calc( -5% - .3em ), 0);
       width: calc( 100% - 1em + 5% );
-      height: calc( .25em + 1% );
+      height: calc( .05em + .2% );
       background: rgba(0, 50, 80, 1);
-      padding-top: .65em;
+      padding-top: .45em;
       font-size: calc( 1.4em + .2vw + 10px );
       padding-right: 0em;
     }
@@ -1317,6 +1319,7 @@ a {
     .tab_img {
       height: 100%;
       width: auto;
+      max-width: 25%;
     }
 
     .right_side {
