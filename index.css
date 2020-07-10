@@ -517,15 +517,28 @@ a {
     text-decoration: none;
 }
 
+.white_link {
+  transition: all .7s;
+  color: white;
+}
+
 .white_link i {
+    transition: all .7s;
     font-family: 'Material Icons';
     font-size: 30px;
-    color: black;
     padding-right: 10px;
 }
 
 .white_link a {
-  color: black;
+  transition: all .7s;
+  color: white;
+}
+
+.white_link:hover i {
+  color: rgba(36, 160, 237, 1);
+}
+
+.white_link:hover a {
 }
 
 .donate_button {
