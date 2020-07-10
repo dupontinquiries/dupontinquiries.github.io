@@ -48,6 +48,9 @@ var clientHeight = window.document.documentElement.clientHeight;
     });
 
     $(window).on("resize", function() {
+      if ( !isMobile ) {
+        sizeCover();
+      }
       //resizeBlocks();
     });
 
