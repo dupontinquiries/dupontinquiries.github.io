@@ -21,6 +21,7 @@ var set_height = init_height;
 var htext = .9; //.325
 var hpage = .8; //1.8
 var fpa = 1;
+var clientHeight = window.document.documentElement.clientHeight;
 (function($) {
     'use strict';
 
@@ -86,9 +87,9 @@ var fpa = 1;
       */
 
       $("landimg_mobile").css('height',
-      '' + ( $(window).height() * 1.3 ) + 'px');
+      '' + ( clientHeight * 1.3 ) + 'px');
       $("content0").css('height',
-      '' + ( $(window).height() * 1.3 ) + 'px');
+      '' + ( clientHeight * 1.3 ) + 'px');
 
       $("#content0").css('height', fpa * set_height * 1 + 'px');
       $("#content7").css('height', fpa * set_height * 1 + 'px');
