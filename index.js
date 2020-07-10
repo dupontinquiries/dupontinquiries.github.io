@@ -27,7 +27,7 @@ var fpa = 1;
     $(window).on("load", function() {
       detectDevice();
       if ( !isMobile ) {
-        //shiftBlocks('.text ul');
+        shiftBlocks('.text ul');
       } else {
         sizeCover();
       }
