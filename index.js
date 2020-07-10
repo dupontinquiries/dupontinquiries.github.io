@@ -31,8 +31,11 @@ var fpa = 1;
       } else {
         sizeCover();
       }
-      updateRocketPoints();
       assignIndexes();
+      //
+      $("#contentwrapper").removeClass("not_loaded");
+      $("#contentwrapper").addClass("loaded");
+      updateRocketPoints();
       assignFullpageIndexes();
       hideLayers();
       setClocks();
