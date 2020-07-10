@@ -22,24 +22,25 @@ var htext = .9; //.325
 var hpage = .8; //1.8
 var fpa = 1;
 var clientHeight = window.document.documentElement.clientHeight;
+var check_scroll = true;
 (function($) {
     'use strict';
 
     $(window).on("load", function() {
       detectDevice();
+      assignIndexes();
       if ( !isMobile ) {
         shiftBlocks('.text ul');
       } else {
-        sizeCover();
       }
-      assignIndexes();
-      //
+      sizeCover();
       $("#contentwrapper").removeClass("not_loaded");
       $("#contentwrapper").addClass("loaded");
       updateRocketPoints();
       assignFullpageIndexes();
       hideLayers();
       setClocks();
+      check_if_in_view();
       //drawPath();
     });
 
@@ -87,70 +88,18 @@ var clientHeight = window.document.documentElement.clientHeight;
 
       $("body").css('height',
       '' + ( $(window).height() * 1 ) + 'px');
-      */
+
+
 
       $("landimg_mobile").css('height',
       '' + ( clientHeight * 1.3 ) + 'px');
       $("content0").css('height',
       '' + ( clientHeight * 1.3 ) + 'px');
-
-      $("#content0").css('height', fpa * set_height * 1 + 'px');
-      $("#content7").css('height', fpa * set_height * 1 + 'px');
-
-    }
-
-    function drawPath() {
-      //var arr = [];
-      $(".text ul").each(function(index, element) {
-        //arr.push( $(element).offset().top );
-        //console.log( $(element).offset().top );
-        jQuery('<div/>', {
-          "class": 'pin_abs'
-        })
-        .css("transform", "translate(" + ( $(window).width() - ( $(element).offset().left / 2. ) ) + "px, " + ( $(element).offset().top ) + "px)")
-        .appendTo("body");
-
-        //$("body").add(
-        //  $("div").addClass("pin_abs").css("transform", "translate(" + ( $(element).offset().left + 120 ) + "px, " + ( $(element).offset().top ) + "px)"));
-      });
-      //arr = arr.reverse();
-      //for (int g = arrl.length() - 1; g != 0; --g)
-      //$("body").add("div").addClass("pin").css("transform")
-
-      var arr = [];
-      var i = 0;
-      $('.pin_abs').each(function()
-      {
-              arr[i++] = $(this);
-      });
-
-      $("#canvhold").width( $("body").width() )
-      $("#canvhold").height( $("body").height() )
-
-
-      /*
-      $("#canv").width( $("body").width() )
-      $("#canv").height( $("body").height() )
-
-      var c=document.getElementById("canv");
-      var ctx=c.getContext("2d");
-      ctx.canvas.height = $("body").width();
-      ctx.canvas.width = $("body").height();
       */
 
-
-      for (var g = 0; g < arr.length - 2; ++g) {
-
-        var c=document.getElementById("canv");
-        var ctx=c.getContext("2d");
-
-        ctx.beginPath();
-        ctx.lineWidth="15";
-        ctx.strokeStyle="red";
-        ctx.moveTo($(arr[g]).offset().left, $(arr[g]).offset().top);
-        ctx.lineTo($(arr[g + 1]).offset().left, $(arr[g + 1]).offset().top);
-        ctx.stroke();
-      }
+      $("landimg_mobile").css("height", fpa * set_height * 1 + 'px');
+      $("#content0").css("height", fpa * set_height * 1 + 'px');
+      $(".contentLast").css("height", fpa * set_height * 1 + 'px');
 
     }
 
@@ -171,7 +120,6 @@ var clientHeight = window.document.documentElement.clientHeight;
 
       $('.fullpage').each(function(index, element) {
           pages.push($('.fullpage')[index].id);
-          //$(element).css('height', hpage * set_height * 1 + 'px');
           pglast++;
       });
     }
@@ -218,37 +166,12 @@ var clientHeight = window.document.documentElement.clientHeight;
 
     $(window).on("load", function() { //make sure everything is loaded
 
-
-         //'.text li'
-
-        /*
-        var url = URL.createObjectURL(this.files[0]);
-var img = new Image;
-
-img.onload = function() {
-    alert(img.width);
-};
-
-img.src = url;
-        var img, url;
-        $('.bi').each(function(index, element) {
-          img = new Image();
-          url = URL.createObjectURL(element.src);
-          img.src = //add image file size reader...
-          //if aspect ration is certain number, add certain css class
-          //based on three classes, format images
-            $(element).css('transform', 'translateX(' + Math.floor((Math.random()-.5) * 25) + '%)');
-        });*/
-
         --pglast;
         $('.text').each(function(index, element) {
             //$(element).css('height', htext * set_height * 1 + 'px');
         });
-        $("#content0").css('height', fpa * set_height * 1 + 'px');
-        $("#content" + pglast).css('height', (fpa) * set_height * 1 + 'px');
-        if (isMobile) {
-            $('#landimg').css('filter', 'brightness(1)');
-        }
+        //$("#content0").css('height', fpa * set_height * 1 + 'px');
+        //$("#content" + pglast).css('height', (fpa) * set_height * 1 + 'px');
 
         $('.text').each(function(index, element) {
             $(element).addClass('jumpin');
@@ -288,15 +211,6 @@ img.src = url;
                 });
             }
 
-
-            /**
-          if(!isMobile){
-          var factor = ($('html').scrollTop()%$('#content0').height())/$('#content0').height();
-          console.log($('html').scrollTop() + ', ' + factor + ', ' + 1*((100-factor)/100))
-		      $('#landimg').css('filter', 'brightness(' + 1.2*((.7 + factor)/1.7) + ')');
-        }
-        **/
-
             var st = $(this).scrollTop();
 
             if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -333,64 +247,39 @@ img.src = url;
                 }
             }
 
-            check_if_in_view();
-
+            if ( check_scroll ) {
+              check_if_in_view();
+            }
             //console.log(lastScrollTop + ', ' + st);
             lastScrollTop = st;
             scrolltype = "none";
             //console.log('update');
 
         }, 50));
-
-      //if (window.addEventListener) {window.addEventListener('DOMMouseScroll', wheel, false);}
-      //window.onmousewheel = document.onmousewheel = wheel;
-
-        //end scrolling function
-
-        //sliders init
-
-        $('.ba-slider').each(function() {
-            var cur = $(this);
-            // Adjust the slider
-            var width = (cur.width() * slider_mod) + 'px';
-            cur.find('.resize img').css('width', width);
-            // Bind dragging events
-            drags(cur.find('.handle'), cur.find('.resize'), cur);
-        });
-
         //end slider init code
-
-        $('.oval_wide, .oval_tall').on('click', function(e, i) {
-            $(this).toggleClass('oval_off');
-            return false;
-        });
 
         $('.dma').on('click', function(e, i) {
             //console.log($(this).attr("data"));
             var target = $($(this).attr("data")).offset().top;
             if ( !( $($(this).attr("data")).hasClass("contentLast") ) ) {
-              target -= ($(window).height() * .005);
+              target -= ($(window).height() * .007);
+            } else {
+              target += 10;
             }
+            check_scroll = false;
             $('html').animate({
-                scrollTop: '' + target + 'px'
+                scrollTop: '' + (target) + 'px'
             }, {
                 easing: 'swing',
-                duration: 500,
+                duration: 450,
                 complete: function() {
+                    check_scroll = true;
                     lastScrollTop = target;
                     check_if_in_view();
                 }
             });
 
         });
-
-        /*
-        if ($('#content0').css('background-color') == 'rgb(0, 0, 255)') {
-            $('#content0').css('background-color', 'rgba(0, 0, 0, 0)')
-                .css('background-image', 'url(\'img/center8.jpg\')');
-            $('#fullimg').attr('src', 'img/center8.jpg');
-        }
-        */
 
         $(window).resize(_.debounce(function() {
             current_height = $(window).height();
@@ -515,7 +404,7 @@ function displayEl(on, _el) {
 function check_if_in_view() {
     var window_height = $(window).height();
     var window_top_position = $(window).scrollTop() - (.25 * $(window).height());
-    var window_bottom_position = (window_top_position + (window_height * 0.8));
+    var window_bottom_position = (window_top_position + (window_height * 0.85));
 
     $('.jumpin').each(function() {
         var $element = $(this);
