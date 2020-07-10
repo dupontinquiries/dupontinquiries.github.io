@@ -34,7 +34,6 @@ var fpa = 1;
       updateRocketPoints();
       assignIndexes();
       assignFullpageIndexes();
-      hideLayers();
       setClocks();
       //drawPath();
     });
@@ -58,20 +57,6 @@ var fpa = 1;
     $("#sourceTracker").on("load", function() {
       updateRocketPoints();
     });
-
-    function hideLayers() {
-      $(".ital").each(function(index, element) {
-        //if ( lastScrollTop < $(element).offset().top ) {
-          $(element).addClass("ital_out");
-        //}
-      });
-
-      $(".image_ul").each(function(index, element) {
-        if ( Math.random() < 0.3 ) {
-          $(element).addClass("image_ul_out");
-        }
-      });
-    }
 
     function sizeCover() {
       /*
@@ -329,12 +314,7 @@ img.src = url;
             lastScrollTop = st;
             scrolltype = "none";
             //console.log('update');
-
-        }, 50));
-
-      //if (window.addEventListener) {window.addEventListener('DOMMouseScroll', wheel, false);}
-      //window.onmousewheel = document.onmousewheel = wheel;
-
+        }, 600));
         //end scrolling function
 
         //sliders init
@@ -356,22 +336,140 @@ img.src = url;
         });
 
         $('.dma').on('click', function(e, i) {
-            //console.log($(this).attr("data"));
-            var target = $($(this).attr("data")).offset().top;
-            if ( !( $($(this).attr("data")).hasClass("contentLast") ) ) {
-              target -= ($(window).height() * .005);
-            }
+            var destinationne = ($($(this).attr('href')).offset().top - (current_height * .07));
             $('html').animate({
-                scrollTop: '' + target + 'px'
+                scrollTop: '' + destinationne + 'px'
             }, {
                 easing: 'swing',
                 duration: 500,
                 complete: function() {
-                    lastScrollTop = target;
+                    lastScrollTop = destinationne;
                     check_if_in_view();
                 }
             });
 
+        });
+
+        $('.mobile_right').on('click', function() {
+            //
+            var number = $(this).attr('id').toString().slice(1, 2);
+            //
+            $(this).toggleClass('right_half_before').toggleClass('right_half_after');
+            //
+            if ($(this).hasClass('right_half_after')) {
+                $('#label_left_' + number).css('opacity', 0);
+                $('#label_right_' + number).css('opacity', 0);
+                $('.left_half_after').each(function(key, value) {
+                    //console.log('fixing left side');
+                    //$(this).toggleClass('right_half_after').toggleClass('right_half_before');
+                    if ($(this).attr('id').toString().slice(1, 2) == number) {
+                        $(this).toggleClass('left_half_after').toggleClass('left_half_before');
+                    }
+                });
+            } else {
+                $('#label_left_' + number).css('opacity', 1);
+                $('#label_right_' + number).css('opacity', 1);
+            }
+            //
+        });
+
+
+        $('.mobile_left').on('click', function() {
+            //
+            var number = $(this).attr('id').toString().slice(1, 2);
+            //
+            $(this).toggleClass('left_half_before').toggleClass('left_half_after');
+            //
+            if ($(this).hasClass('left_half_after')) {
+                $('#mobile_label_left_' + number).css('opacity', 0);
+                $('#mobile_label_right_' + number).css('opacity', 0);
+                $('.right_half_after').each(function(key, value) {
+                    //console.log('fixing right side');
+                    //$(this).toggleClass('right_half_after').toggleClass('right_half_before');
+                    if ($(this).attr('id').toString().slice(1, 2) == number) {
+                        $(this).toggleClass('right_half_after').toggleClass('right_half_before');
+                    }
+                });
+            } else {
+                $('#mobile_label_left_' + number).css('opacity', 1);
+                $('#mobile_label_right_' + number).css('opacity', 1);
+            }
+            //
+        });
+        $('.l').on('click', function() {
+            var z_el = $(this).parent();
+            //
+            var number = z_el.attr('id').toString().slice(1, 2);
+            //
+            z_el.toggleClass('left_half_before').toggleClass('left_half_after');
+            //
+            if (z_el.hasClass('left_half_after')) {
+                $('#label_left_' + number).addClass('move_l');
+                $('#label_right_' + number).addClass('move_r');
+                $('.right_half_after').each(function(key, value) {
+                    //console.log('fixing right side');
+                    //$(this).toggleClass('right_half_after').toggleClass('right_half_before');
+                    if ($(this).attr('id').toString().slice(1, 2) == number) {
+                        $(this).removeClass('right_half_after').addClass('right_half_before');
+                    }
+                });
+            } else {
+                $('#label_left_' + number).removeClass('move_l');
+                $('#label_right_' + number).removeClass('move_r');
+            }
+            //
+        });
+        $('.r').on('click', function() {
+            var z_el = $(this).parent();
+            //
+            var number = z_el.attr('id').toString().slice(1, 2);
+            //
+            z_el.toggleClass('right_half_before').toggleClass('right_half_after');
+            //
+            if (z_el.hasClass('right_half_after')) {
+                $('#label_left_' + number).addClass('move_l');
+                $('#label_right_' + number).addClass('move_r');
+                $('.left_half_after').each(function(key, value) {
+                    //console.log('fixing left side');
+                    //$(this).toggleClass('right_half_after').toggleClass('right_half_before');
+                    if ($(this).attr('id').toString().slice(1, 2) == number) {
+                        $(this).removeClass('left_half_after').addClass('left_half_before');
+                    }
+                });
+            } else {
+                $('#label_left_' + number).removeClass('move_l');
+                $('#label_right_' + number).removeClass('move_r');
+            }
+            //
+        });
+        $('.cont_gd_off_after').on('click',
+            function() {
+                if (!$(this).hasClass('gd_on_after')) {
+                    $(this).toggleClass('gd_on_after').toggleClass('cont_gd_off_after').html('Close   ' +
+                        $(this).html().substring(8, $(this).html().length));
+                    $(this).parent().toggleClass('gd_on').toggleClass('cont_gd_off').toggleClass('jumpin');
+                    $(this).parent().offset().top = $(this).parent().parent().offset().top;
+                    $(this).parent().offset().left = $(this).parent().parent().offset().left;
+                } else {
+                    $(this).toggleClass('gd_on_after').toggleClass('cont_gd_off_after').html('Enlarge ' +
+                        $(this).html().substring(8, $(this).html().length));
+                    $(this).parent().toggleClass('gd_on').toggleClass('cont_gd_off').toggleClass('jumpin');
+                    $(this).parent().offset().top = $(this).parent().offset().top;
+                    $(this).parent().offset().left = $(this).parent().offset().left;
+                }
+            }
+        );
+        $('.left_chevron_after').on('click', function() {
+            $(this).parent().css('transform', 'translate(0vw, 0)')
+        });
+        $('._close').on('click', function() {
+            $(this).parent().css('transform', 'translate(-100vw, 0)');
+        });
+        $('.img_off').on('click', function() {
+            $(this).toggleClass('img_on img_off');
+        });
+        $('.img_on').on('click', function() {
+            $(this).toggleClass('img_on img_off');
         });
 
         /*
@@ -398,7 +496,7 @@ img.src = url;
                 $('.fullpage').each(function(index, element) {
                     //$(element).css('height', hpage * set_height * 1 + 'px');
                 });
-                $("#content0").css('height', fpa * set_height * 1 + 'px'); //////might be causing mobile issue
+                $("#content0").css('height', fpa * set_height * 1 + 'px');
                 $("#content6").css('height', (fpa) * set_height * 1 + 'px');
                 $('.text').each(function(index, element) {
                     //$(element).css('height', htext * set_height * 1 + 'px');
@@ -475,6 +573,65 @@ function assignFullpageIndexes() {
   });
 }
 
+
+function drags(dragElement, resizeElement, container) {
+
+    // Initialize the dragging event on mousedown.
+    dragElement.on('mousedown touchstart', function(e) {
+
+        dragElement.addClass('draggable');
+        resizeElement.addClass('resizable');
+
+        // Check if it's a mouse or touch event and pass along the correct value
+        var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+        // Get the initial position
+        var dragWidth = dragElement.outerWidth(),
+            posX = dragElement.offset().left + dragWidth - startX,
+            containerOffset = container.offset().left,
+            containerWidth = container.outerWidth();
+
+        // Set limits
+        minLeft = containerOffset + 10;
+        maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+        // Calculate the dragging distance on mousemove.
+        dragElement.parents().on("mousemove touchmove", function(e) {
+
+            // Check if it's a mouse or touch event and pass along the correct value
+            var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+            leftValue = moveX + posX - dragWidth;
+
+            // Prevent going off limits
+            if (leftValue < minLeft) {
+                leftValue = minLeft;
+            } else if (leftValue > maxLeft) {
+                leftValue = maxLeft;
+            }
+
+            // Translate the handle's left value to masked divs width.
+            widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+
+            // Set the new values for the slider and the handle.
+            // Bind mouseup events to stop dragging.
+            $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function() {
+                $(this).removeClass('draggable');
+                resizeElement.removeClass('resizable');
+            });
+            $('.resizable').css('width', widthValue);
+        }).on('mouseup touchend touchcancel', function() {
+            dragElement.removeClass('draggable');
+            resizeElement.removeClass('resizable');
+        });
+        e.preventDefault();
+    }).on('mouseup touchend touchcancel', function(e) {
+        dragElement.removeClass('draggable');
+        resizeElement.removeClass('resizable');
+    });
+}
+
+
 //end slider funcs
 function r(min, max) {
     var minNumber = min; // le minimum
@@ -535,36 +692,6 @@ function check_if_in_view() {
             $element.addClass('in-view-fullimg');
         } else {
             $element.removeClass('in-view-fullimg');
-        }
-    });
-
-    $('.ital').each(function() {
-        var $element = $(this);
-        var element_height = $element.outerHeight();
-        var element_top_position = $element.offset().top;
-        var element_bottom_position = (element_top_position + element_height);
-
-        //check to see if this current container is within viewport
-        if ((element_bottom_position >= window_top_position) &&
-            (element_top_position + 50 <= window_bottom_position)) {
-            $element.removeClass('ital_out');
-        } else {
-            //$element.addClass('ital_out');
-        }
-    });
-
-    $('.image_ul').each(function() {
-        var $element = $(this);
-        var element_height = $element.outerHeight();
-        var element_top_position = $element.offset().top;
-        var element_bottom_position = (element_top_position + element_height);
-
-        //check to see if this current container is within viewport
-        if ((element_bottom_position >= window_top_position) &&
-            (element_top_position + 50 <= window_bottom_position)) {
-            $element.removeClass('image_ul_out');
-        } else {
-            //$element.addClass('ital_out');
         }
     });
 }
