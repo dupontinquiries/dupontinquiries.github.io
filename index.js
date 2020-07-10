@@ -87,6 +87,9 @@ var fpa = 1;
       $("content0").css('height',
       '' + ( $(window).height() * 1.3 ) + 'px');
 
+      $("#content0").css('height', fpa * set_height * 1 + 'px');
+      $("#content7").css('height', fpa * set_height * 1 + 'px');
+
     }
 
     function drawPath() {
@@ -398,8 +401,8 @@ img.src = url;
                 $('.fullpage').each(function(index, element) {
                     //$(element).css('height', hpage * set_height * 1 + 'px');
                 });
-                $("#content0").css('height', fpa * set_height * 1 + 'px'); //////might be causing mobile issue
-                $("#content6").css('height', (fpa) * set_height * 1 + 'px');
+                //$("#content0").css('height', fpa * set_height * 1 + 'px'); //////might be causing mobile issue
+                //$("#content7").css('height', (fpa) * set_height * 1 + 'px');
                 $('.text').each(function(index, element) {
                     //$(element).css('height', htext * set_height * 1 + 'px');
                 });
