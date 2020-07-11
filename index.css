@@ -398,6 +398,7 @@ ul {
   /*
   transform: translate(-100vw, 0);
   */
+  opacity: 0;
   height: 0;
 }
 
@@ -594,7 +595,7 @@ a {
 .close_graphic {
     position: absolute;
     margin-top: 12rem;
-    width: 35rem;
+    width: calc( 33rem + .5vw );
     margin-left: calc(33.33% - 17.5rem);
     height: auto; /*25rem;*/
     background: none;
