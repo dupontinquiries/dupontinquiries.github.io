@@ -65,6 +65,7 @@ var check_scroll = true;
           $(element).addClass("ital_out");
         //}
       });
+      $("#COVID").removeClass("ital_out");
 
       $(".image_ul").each(function(index, element) {
         if ( Math.random() < 0.3 ) {
@@ -88,10 +89,9 @@ var check_scroll = true;
       $("content0").css('height',
       '' + ( clientHeight * 1.3 ) + 'px');
       */
-
-      $("landimg_mobile").css("height", fpa * set_height * 1 + 'px');
-      $("#content0").css("height", fpa * set_height * 1 + 'px');
-      $(".contentLast").css("height", fpa * set_height * 1 + 'px');
+      $("landimg_mobile").css("height", set_height * 1.15 + 'px');
+      $("#content0").css("height", set_height * 1.15 + 'px');
+      $(".contentLast").css("height", set_height * 1 + 'px');
 
     }
 
