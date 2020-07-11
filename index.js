@@ -27,7 +27,7 @@ var check_scroll = true;
     'use strict';
 
     $(window).on("load", function() {
-      $("img").unveil();
+      //$("img").unveil();
       detectDevice();
       assignIndexes();
       if ( !isMobile ) {
