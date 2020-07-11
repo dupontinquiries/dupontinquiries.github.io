@@ -90,7 +90,7 @@ var check_scroll = true;
       '' + ( clientHeight * 1.3 ) + 'px');
       */
       $("landimg_mobile").css("height", set_height * 1.15 + 'px');
-      $("#content0").css("height", set_height * 1.15 + 'px');
+      $("#content0").css("height", set_height * 1 + 'px');
       $(".contentLast").css("height", set_height * 1 + 'px');
 
     }
