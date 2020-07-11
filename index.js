@@ -34,13 +34,16 @@ var check_scroll = true;
       } else {
       }
       sizeCover();
-      $("#contentwrapper").removeClass("not_loaded");
-      $("#contentwrapper").addClass("loaded");
-      //updateRocketPoints();
+      //$("#contentwrapper").removeClass("not_loaded");
+      //$("#contentwrapper").addClass("loaded");
       assignFullpageIndexes();
       hideLayers();
       setClocks();
       check_if_in_view();
+      updateRocketPoints();
+      setInterval(function () {
+         updateRocketPoints();
+      }, 7000);
       //drawPath();
     });
 
@@ -53,19 +56,6 @@ var check_scroll = true;
         sizeCover();
       }
       //resizeBlocks();
-    });
-
-    $("#sourceTracker").on("load", function() {
-      updateRocketPoints();
-    });
-
-    //API calls
-
-    $("#pointsTracker").ready(function() {
-      updateRocketPoints();
-      setInterval(function () {
-         updateRocketPoints();
-      }, 7000);
     });
 
     function hideLayers() {
