@@ -1,9 +1,9 @@
+var rocketTracker = true;
 var canScroll = true;
 var isMobile = false;
 var lastScrollTop, delta;
 var last, _element;
 var min = true;
-var songNum = 0;
 var isChrome;
 var pages = new Array();
 var pglast = 0;
@@ -31,14 +31,14 @@ var check_scroll = true;
       detectDevice();
       assignIndexes();
       if ( !isMobile ) {
-        shiftBlocks('.text ul');
+        //shiftBlocks('.text ul');
       } else {
       }
       sizeCover();
       //$("#contentwrapper").removeClass("not_loaded");
       //$("#contentwrapper").addClass("loaded");
       assignFullpageIndexes();
-      hideLayers();
+      //hideLayers();
       setClocks();
       check_if_in_view();
       //drawPath();
@@ -85,7 +85,7 @@ var check_scroll = true;
       $("content0").css('height',
       '' + ( clientHeight * 1.3 ) + 'px');
       */
-      $("landimg_mobile").css("height", set_height * 1.15 + 'px');
+      $("landimg_mobile").css("height", max(set_height * 1.15, clientHeight) + 'px');
       $("#content0").css("height", set_height * 1 + 'px');
       $(".contentLast").css("height", set_height * 1 + 'px');
 
@@ -178,27 +178,6 @@ var check_scroll = true;
 
             var phv = hpage * current_height;
 
-            if (scrolltype == "override") {
-                event.preventDefault();
-                return;
-            }
-
-            if (!canScroll) { //lock mode
-                var $elemen = pages[pg];
-                //alert('#' + $elemen);
-                var px = ($('#' + $elemen).offset().top);
-                //anim
-                $('html').animate({
-                    scrollTop: '' + px + 'px'
-                }, {
-                    easing: 'swing',
-                    duration: 100,
-                    complete: function() {
-                        lastScrollTop = $(this).scrollTop();
-                    }
-                });
-            }
-
             var st = $(this).scrollTop();
 
             if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -243,7 +222,7 @@ var check_scroll = true;
             scrolltype = "none";
             //console.log('update');
 
-        }, 50));
+        }, 70));
         //end slider init code
 
         $('.dma').on('click', function(e, i) {
@@ -275,12 +254,6 @@ var check_scroll = true;
                 last_height = current_height;
                 set_height = current_height;
 
-                //resize sliders
-                $('.ba-slider').each(function() {
-                    var cur = $(this);
-                    var width = (cur.width() * slider_mod) + 'px';
-                    cur.find('.resize img').css('width', width);
-                });
                 //
                 $('.fullpage').each(function(index, element) {
                     //$(element).css('height', hpage * set_height * 1 + 'px');
@@ -346,7 +319,7 @@ function updateRocketPoints() {
 
 }
 
-$.fn.digits = function(){
+$.fn.digits = function() {
     return this.each(function(){
         $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
     })
@@ -377,23 +350,13 @@ function menuLanding() {
   $('#dot_menu').addClass('front_menu');
 }
 
-function displayEl(on, _el) {
-    if (on) {
-        //console.log('+');
-        _el.css('opacity', '1').css('transform', 'none');
-
-    } else {
-        //console.log('-');
-        _el.css('opacity', '0').css('transform', 'translate(0, -5vh)');
-    }
-}
-
 function check_if_in_view() {
     var window_height = $(window).height();
     var window_top_position = $(window).scrollTop() - (.25 * $(window).height());
     var window_bottom_position = (window_top_position + (window_height * 0.85));
 
-    {
+    if (!rocketTracker) {
+      rocketTracker = true;
       var $element = $('#pointsTracker');
       var element_height = $element.outerHeight();
       var element_top_position = $element.offset().top;
@@ -481,4 +444,20 @@ function scroll(top, time) {
 
         }
     });
+}
+
+function min(a, b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+function max(a, b) {
+  if (a < b) {
+    return b;
+  } else {
+    return a;
+  }
 }

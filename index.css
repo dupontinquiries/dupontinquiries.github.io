@@ -478,7 +478,7 @@ ul {
 }
 
 #landimg_desktop {
-    transition: all 0.2s;
+    transition: all 0.4s;
     height: auto;
     min-height: 100%;
     width: 100%;
@@ -490,7 +490,7 @@ ul {
 }
 
 #landimg_mobile {
-    transition: all 0.2s;
+    transition: all 0.4s;
     /*
     height: auto;
     min-height: 100%;
@@ -725,12 +725,13 @@ a {
     }
 
     #content0 {
-        width: 100%;
-        /*
-        min-height: 100vh;
-        */
-        left: 0%;
-        top: 0px;
+      transition: all 1s;
+      width: 100%;
+      /*
+      min-height: 100vh;
+      */
+      left: 0%;
+      top: 0px;
     }
 
     .text {
