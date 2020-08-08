@@ -1,4 +1,4 @@
-var rocketTracker = true;
+var rocketTracker = false;
 var canScroll = true;
 var isMobile = false;
 var lastScrollTop, delta;
@@ -284,8 +284,10 @@ var check_scroll = true;
 
 function updateRocketPoints() {
 
-  var inp = $("#sourceTracker");
+  console.log("updating rocket points");
 
+  var inp = $("#sourceTracker");
+  $.support.cors = true;
   /*
   var url = "https://api.foldingathome.org/user/The_Rocket/stats"
   */
@@ -356,8 +358,11 @@ function check_if_in_view() {
     var window_bottom_position = (window_top_position + (window_height * 0.85));
 
     if (!rocketTracker) {
+      console.log("toggling rocketTracker");
+      console.log(rocketTracker);
       rocketTracker = true;
-      var $element = $('#pointsTracker');
+      console.log(rocketTracker);
+      var $element = $('#containsPointTracker');
       var element_height = $element.outerHeight();
       var element_top_position = $element.offset().top;
       var element_bottom_position = (element_top_position + element_height);
