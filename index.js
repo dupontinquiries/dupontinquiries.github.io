@@ -357,11 +357,7 @@ function check_if_in_view() {
     var window_top_position = $(window).scrollTop() - (.25 * $(window).height());
     var window_bottom_position = (window_top_position + (window_height * 0.85));
 
-    if (!rocketTracker) {
-      console.log("toggling rocketTracker");
-      console.log(rocketTracker);
-      rocketTracker = true;
-      console.log(rocketTracker);
+    {
       var $element = $('#containsPointTracker');
       var element_height = $element.outerHeight();
       var element_top_position = $element.offset().top;
@@ -370,10 +366,13 @@ function check_if_in_view() {
       //check to see if this current container is within viewport
       if ((element_bottom_position >= window_top_position) &&
           (element_top_position <= window_bottom_position)) {
-        updateRocketPoints();
-        setInterval(function () {
-           updateRocketPoints();
-        }, 7000);
+        if (!rocketTracker) {
+          rocketTracker = true;
+          updateRocketPoints();
+          setInterval(function () {
+            updateRocketPoints();
+          }, 7000);
+        }
       }
     }
 
