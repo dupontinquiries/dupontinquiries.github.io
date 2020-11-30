@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Spotify",
+    "description": "This is where you put description about your projects.",
+    "image": "images/image1.jpg",
+    "link": "https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=UuOryZueRL2hSHIA4IRopg"
+  },
+  {
+    "name": "Apple Music",
+    "description": "This is where you put description about your projects.",
+    "image": "images/image1.jpg",
+    "link": "https://music.apple.com/us/artist/the-kitchen/1480129249"
+  },
+  {
+    "name": "YouTube",
+    "description": "This is where you put description about your projects.",
+    "image": "images/image1.jpg",
+    "link": "https://www.youtube.com/channel/UCw7YTR6oSIan42thJCtWC9g"
+  },
+  {
+    "name": "BeatStars",
+    "description": "This is where you put description about your projects.",
+    "image": "images/image1.jpg",
+    "link": "https://www.beatstars.com/yokthatscrazy"
+  },
+  {
+    "name": "COVID-19 Fundraiser",
+    "description": "This is where you put description about your projects.",
+    "image": "images/image1.jpg",
+    "link": "https://www.beatstars.com/yokthatscrazy"
+  }
+]
