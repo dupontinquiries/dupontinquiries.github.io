@@ -187,3 +187,14 @@
 .secondary-dark-b {
     background-color: #FFA000;
 }
+
+/* K Media */
+
+@media screen and (min-width: 994px) {
+  #profileColumn {
+    position: fixed;
+  }
+  #portfolioColumn {
+    margin-left: 32%;
+  }
+}
