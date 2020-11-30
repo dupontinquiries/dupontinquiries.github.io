@@ -135,6 +135,14 @@ var items = {"data": [
     "link": "https://open.spotify.com/track/0us3QPqtjr5N0vnMFxvI3y?si=nSSM8oLQQM2PeSxNUsZxhw",
     "songDemo" : true,
     "audioFile" : "audio/known.mp3"
+  },
+  {
+    "name": "I Don't Know You Tell Me",
+    "description": "Eric Weir's debut album, I Don't Know You Tell Me, is available on all platforms.",
+    "image": "images/songs/idkytm.jpg",
+    "link": "https://open.spotify.com/album/2d4iFet1Qw8vCQmcNm75iT?si=eZUu2PrbTLuT6cw_YqPClw",
+    "songDemo" : true,
+    "audioFile" : "audio/idkytm.mp3"
   }
 ]
 }
@@ -161,7 +169,7 @@ for ( var i = 0; i < items.data.length; ++i ) {
   console.log(it.name);
   if ( it.songDemo ) {
     html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
-    html += "<br>" + "<p>new stuff</p>" + "<audio controls><source src=\"" + it.audioFile + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>" + "</p></div></div></div>";
+    html += "<br>" + "<p><audio controls><source src=\"" + it.audioFile + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></p>" + "</p></div></div></div>";
   } else {
     html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description + "</p></div></div></div>";
   }
@@ -170,6 +178,15 @@ for ( var i = 0; i < items.data.length; ++i ) {
 
 }
 document.getElementById("portfolioItemContainer").innerHTML = html;
+
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
 
 /*
 
