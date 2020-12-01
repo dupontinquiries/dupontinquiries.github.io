@@ -33,7 +33,7 @@ var links = {"data": [
    },
    {
       "name":"COVID-19 Fundraiser",
-      "color":"yellow",
+      "color":"brown",
       "icon":"rocket",
       "url":"https://www.gofundme.com/f/fund-the-rocket"
    }
