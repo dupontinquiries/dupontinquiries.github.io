@@ -5,7 +5,7 @@ var links = {"data": [
      "name":"Instagram",
      "color":"pink",
      "icon":"instagram",
-     "url":"https://www.instagram.com/yo.k.thats.crazy/"
+     "url":"https://www.instagram.com/yo.k.thats.crazy"
   },
   {
       "name":"Spotify",
@@ -79,21 +79,21 @@ var items = {"data": [
     "name": "The Kitchen",
     "description": "Coming soon!",
     "image": "images/people/thekitchen.jpg",
-    "link": "https://www.instagram.com/yo.k.thats.crazy/",
+    "link": "https://www.instagram.com/yo.k.thats.crazy",
     "songDemo" : false
   },
   {
     "name": "TripLit",
     "description": "Coming soon!",
     "image": "images/people/triplit.jpg",
-    "link": "https://www.instagram.com/triplit_official/",
+    "link": "https://dupontinquiries.github.io/triplit",
     "songDemo" : false
   },
   {
     "name": "SJ",
     "description": "Coming soon!",
     "image": "images/people/sj.jpg",
-    "link": "https://www.instagram.com/sj.menon/",
+    "link": "https://www.instagram.com/sj.menon",
     "songDemo" : false
   },
   {

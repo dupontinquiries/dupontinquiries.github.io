@@ -5,13 +5,13 @@ var links = {"data": [
     "name":"The Kitchen",
     "color":"orange",
     "icon":"home",
-    "url":"https://www.gofundme.com/f/fund-the-rocket"
+    "url":"https://dupontinquiries.github.io/thekitchen"
   },
   {
      "name":"Instagram",
      "color":"pink",
      "icon":"instagram",
-     "url":"https://www.instagram.com/triplit_official/"
+     "url":"https://www.instagram.com/triplit_official"
   },
   {
       "name":"Spotify",
