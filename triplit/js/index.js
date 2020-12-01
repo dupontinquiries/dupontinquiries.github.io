@@ -41,34 +41,6 @@ var links = {"data": [
 
 var items = {"data": [
   {
-    "name": "Spotify",
-    "description": "Listen to songs from The Kitchen and featured artists.",
-    "image": "images/spotify.jpg",
-    "link": "https://open.spotify.com/artist/3L1H7asE9rUOGpLZcRQodt?si=R1b346NESFCWJetW3LzfBg",
-    "songDemo" : false
-  },
-  {
-    "name": "Apple Music",
-    "description": "Listen to songs from The Kitchen and featured artists.",
-    "image": "images/applemusic.png",
-    "link": "https://music.apple.com/us/artist/the-kitchen/1480129249",
-    "songDemo" : false
-  },
-  {
-    "name": "YouTube",
-    "description": "Music videos & more await.",
-    "image": "images/youtube.png",
-    "link": "https://www.youtube.com/channel/UCw7YTR6oSIan42thJCtWC9g",
-    "songDemo" : false
-  },
-  {
-    "name": "COVID-19 Fundraiser",
-    "description": "Support The Rocket Initiative, our fight against COVID-19.",
-    "image": "images/avengers.jpg",
-    "link": "https://www.beatstars.com/yokthatscrazy",
-    "songDemo" : false
-  },
-  {
     "name": "TripLit",
     "description": "Coming soon!",
     "image": "images/people/triplit.jpg",
@@ -82,6 +54,14 @@ var items = {"data": [
     "link": "https://open.spotify.com/track/2XfOcve72EWAVC4PBVQs1D?si=h0csgpFOR5eQtV_mQDgL-g",
     "songDemo" : true,
     "audioFile" : "audio/aml.mp3"
+  },
+  {
+    "name": "REVOLUTION",
+    "description": "TripLit - REVOLUTION coming January 2021.",
+    "image": "images/album.jpg",
+    "link": "",
+    "songDemo" : false,
+    "embed": false
   }
 ]
 }
