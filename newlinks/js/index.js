@@ -28,7 +28,7 @@ var links = {"data": [
    {
       "name":"BeatStars",
       "color":"red",
-      "icon":"music-accidental-flat",
+      "icon":"shopping",
       "url":"https://www.beatstars.com/yokthatscrazy"
    },
    {
@@ -90,9 +90,9 @@ var items = {"data": [
     "songDemo" : false
   },
   {
-    "name": "SJ Raps",
+    "name": "SJ",
     "description": "Coming soon!",
-    "image": "images/people/sjraps.jpg",
+    "image": "images/people/sj.jpg",
     "link": "https://www.instagram.com/sj.menon/",
     "songDemo" : false
   },
