@@ -4910,8 +4910,8 @@ small {
   width: 100%;
   overflow-y: auto;
   left: 0;
-  top: 100%;
-  height: 100%;
+  top: 85%;
+  height: 85%;
   z-index: 3;
   display: none;
 }

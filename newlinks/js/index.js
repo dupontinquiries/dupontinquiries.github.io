@@ -153,7 +153,7 @@ for ( var i = 0; i < links.data.length; ++i ) {
 
   // // // //
 
-  console.log(it.name);
+  //console.log(it.name);
   html += "<div class=\"links waves-effect\"><a href=" + it.url + " class=\"black-text valign-wrapper\" target=\"_blank\"><i class=\"link_icon mdi mdi-" + it.icon + "\" style=\"color: " + it.color + "\"></i>&nbsp; " + it.name + "</a></div>";
 
   // // // //
@@ -166,12 +166,14 @@ for ( var i = 0; i < items.data.length; ++i ) {
   var it = items.data[i];
   // // // //
 
-  console.log(it.name);
+  //console.log(it.name);
   if ( it.songDemo ) {
-    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
+    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Listen</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
     html += "<br>" + "<p><audio controls><source src=\"" + it.audioFile + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></p>" + "</p></div></div></div>";
   } else {
-    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description + "</p></div></div></div>";
+    //var extravisit = "<p><a href=" + it.link + " target=\"_blank\">Visit</a></p>";
+    var extravisit = "";
+    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description + "</p>" + extravisit + "</div></div></div>";
   }
 
   // // // //

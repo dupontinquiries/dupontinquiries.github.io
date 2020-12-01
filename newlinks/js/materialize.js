@@ -5448,16 +5448,29 @@ if (Vel) {
     $(document).on('click.card', '.card', function (e) {
 
       // close all other tabs
-      /*
+      ///*
       $('.card').each(function () {
         if ($(this) ) {
-          $card.css('overflow', 'hidden');
-          $(this).find('.card-reveal').css({ display: 'block' }).velocity("stop", false).velocity({ translateY: '-100%' }, { duration: 300, queue: false, easing: 'easeInOutQuad' });
-          //console.log ( 'toggline (' + 1 + ')' );
-          $(this).find('.activator').toggleClass('blurred-image');
+          if ( $(this) == e.target ) {
+
+          } else {
+            $(this).find('.card-reveal').velocity({ translateY: 0 }, {
+              duration: 100,
+              queue: false,
+              easing: 'easeInOutQuad',
+              complete: function () {
+                $(this).css({ display: 'none' });
+                $(this).css('overflow', $card.data('initialOverflow'));
+              }
+            });
+            //console.log ( 'toggline (' + 0 + ')' );
+            if ( $(this).find('.activator').hasClass('blurred-image') ) {
+              $(this).find('.activator').toggleClass('blurred-image');
+            }
+          }
         }
       });
-      */
+      //*/
 
       if ($(this).find('> .card-reveal').length) {
         var $card = $(e.target).closest('.card');
@@ -5467,7 +5480,7 @@ if (Vel) {
         if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i'))) {
           // Make Reveal animate down and display none
           $(this).find('.card-reveal').velocity({ translateY: 0 }, {
-            duration: 225,
+            duration: 100,
             queue: false,
             easing: 'easeInOutQuad',
             complete: function () {
@@ -5479,7 +5492,7 @@ if (Vel) {
           $(this).find('.activator').toggleClass('blurred-image');
         } else if ($(e.target).is($('.card .activator')) || $(e.target).is($('.card .activator i'))) {
           $card.css('overflow', 'hidden');
-          $(this).find('.card-reveal').css({ display: 'block' }).velocity("stop", false).velocity({ translateY: '-100%' }, { duration: 300, queue: false, easing: 'easeInOutQuad' });
+          $(this).find('.card-reveal').css({ display: 'block' }).velocity("stop", false).velocity({ translateY: '-100%' }, { duration: 200, queue: false, easing: 'easeInOutQuad' });
           //console.log ( 'toggline (' + 1 + ')' );
           $(this).find('.activator').toggleClass('blurred-image');
         }
