@@ -5472,7 +5472,7 @@ if (Vel) {
             if ($(this) ) {
               if ( $(this) == e.target ) {
               } else {
-                console.log('sim hit');
+                //console.log('sim hit');
                 $(this).find('.card-reveal').velocity({ translateY: 0 }, {
                   duration: 100,
                   queue: false,

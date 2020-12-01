@@ -218,6 +218,12 @@ document.addEventListener('play', function(e){
             audios[i].pause();
         }
     }
+    var audios = document.getElementsByTagName('iframe');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
 }, true);
 
 /*
