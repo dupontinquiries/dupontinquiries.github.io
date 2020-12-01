@@ -5452,7 +5452,7 @@ if (Vel) {
         if ($card.data('initialOverflow') === undefined) {
           $card.data('initialOverflow', $card.css('overflow') === undefined ? '' : $card.css('overflow'));
         }
-        if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i'))) {
+        if ($(e.target).is($('.card-reveal .card-close')) || $(e.target).is($('.card-reveal .card-title i'))) {
           // Make Reveal animate down and display none
           $(this).find('.card-reveal').velocity({ translateY: 0 }, {
             duration: 100,
@@ -5471,8 +5471,8 @@ if (Vel) {
           $('.card').each(function () {
             if ($(this) ) {
               if ( $(this) == e.target ) {
-
               } else {
+                console.log('sim hit');
                 $(this).find('.card-reveal').velocity({ translateY: 0 }, {
                   duration: 100,
                   queue: false,
