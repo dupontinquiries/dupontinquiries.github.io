@@ -36,6 +36,12 @@ var links = {"data": [
      "color":"brown",
      "icon":"rocket",
      "url":"https://www.gofundme.com/f/fund-the-rocket"
+   },
+   {
+      "name":"Audiomakers RPI Discord",
+      "color":"grey",
+      "icon":"discord",
+      "url":"https://discord.gg/bvZWXgdzbW"
    }
 ]}
 
