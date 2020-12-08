@@ -63,7 +63,7 @@ var items = {"data": [
   },
   {
     "name": "REVOLUTION",
-    "description": "TripLit - REVOLUTION coming January 2021.",
+    "description": "TripLit - REVOLUTION coming February 2021.",
     "image": "images/album.jpg",
     "link": "",
     "songDemo" : false,
