@@ -41,7 +41,7 @@ var links = {"data": [
       "name":"Audiomakers RPI Discord",
       "color":"grey",
       "icon":"discord",
-      "url":"https://discord.gg/bvZWXgdzbW"
+      "url":"https://discord.gg/Sr9CHYBZuN"
    }
 ]}
 
