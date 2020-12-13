@@ -3,25 +3,25 @@
 var links = {"data": [
   {
     "name":"The Kitchen",
-    "color":"orange",
+    "color":"black",
     "icon":"home",
     "url":"https://dupontinquiries.github.io/thekitchen"
   },
   {
      "name":"Instagram",
-     "color":"pink",
+     "color":"purple",
      "icon":"instagram",
      "url":"https://www.instagram.com/triplit_official"
   },
   {
       "name":"Spotify",
       "color":"green",
-      "icon":"music",
+      "icon":"spotify",
       "url":"https://open.spotify.com/artist/3L1H7asE9rUOGpLZcRQodt?si=R1b346NESFCWJetW3LzfBg"
    },
    {
       "name":"Apple Music",
-      "color":"purple",
+      "color":"black",
       "icon":"apple",
       "url":"https://music.apple.com/us/artist/the-kitchen/1480129249"
    },

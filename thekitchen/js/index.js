@@ -3,19 +3,19 @@
 var links = {"data": [
   {
      "name":"Instagram",
-     "color":"pink",
+     "color":"purple",
      "icon":"instagram",
      "url":"https://www.instagram.com/yo.k.thats.crazy"
   },
   {
       "name":"Spotify",
       "color":"green",
-      "icon":"music",
+      "icon":"spotify",
       "url":"https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=UuOryZueRL2hSHIA4IRopg"
    },
    {
       "name":"Apple Music",
-      "color":"purple",
+      "color":"black",
       "icon":"apple",
       "url":"https://music.apple.com/us/artist/the-kitchen/1480129249"
    },
@@ -141,6 +141,24 @@ var items = {"data": [
     "embed": false
   }
 ]
+}
+
+
+
+//links.data = shuffle(links.data);
+items.data = shuffle(items.data);
+
+function shuffle(arr) {
+    for (var i = 1; i < arr.length; i++) {
+      // get random index
+      var j = i + Math.floor(Math.random() * (arr.length - i));
+      // shuffle
+      var temp = arr[j];
+      arr[j] = arr[i];
+      arr[i] = temp;
+      console.log(i + ", " + j);
+    }
+    return arr;
 }
 
 var html = "";
