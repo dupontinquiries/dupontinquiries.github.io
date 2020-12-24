@@ -136,7 +136,7 @@ var items = {"data": [
     "name": "Beat Tape: Quarantine Cookups",
     "description": "Quarantine Cookups beat tape coming soon to all platforms.",
     "image": "images/klogo.jpg",
-    "link": "",
+    "link": "https://distrokid.com/hyperfollow/thekitchen/quarantine-cookups",
     "songDemo" : false,
   },
   {
