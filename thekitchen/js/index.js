@@ -47,13 +47,13 @@ var links = {"data": [
 
 
 var items = {"data": [
-  {
+  /*{
     "name": "The Kitchen",
     "description": "Coming soon!",
     "image": "images/people/thekitchen.jpg",
     "link": "https://www.instagram.com/yo.k.thats.crazy",
     "songDemo" : false
-  },
+  }, */
   {
     "name": "TripLit - Featured Artist",
     "description": "Coming soon!",
@@ -68,7 +68,7 @@ var items = {"data": [
     "link": "https://www.instagram.com/sj.menon",
     "songDemo" : false
   },
-  {
+  /*{
     "name": "The Kitchen - Fire Keep",
     "description": "The Kitchen - Fire Keep is available on all platforms.",
     "image": "images/songs/firekeep.jpg",
@@ -83,7 +83,7 @@ var items = {"data": [
     "link": "https://open.spotify.com/track/0wX3BuEBY2ahao3bSHslD4?si=r5hXSq7vSO2r8tcrrnoMcw",
     "embed" : true,
     "embedCode" : "<iframe src=\"https://open.spotify.com/embed/track/0wX3BuEBY2ahao3bSHslD4\" width=\"300\" height=\"80\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"
-  },
+  }, */
   {
     "name": "Run Up (feat. SJ)",
     "description": "The Kitchen - Run Up (feat. SJ) is available on all platforms.",
@@ -133,6 +133,13 @@ var items = {"data": [
     "audioFile" : "audio/idkytm.mp3"
   },
   {
+    "name": "Beat Tape: Quarantine Cookups",
+    "description": "Quarantine Cookups beat tape coming soon to all platforms.",
+    "image": "images/klogo.jpg",
+    "link": "",
+    "songDemo" : false,
+  },
+  {
     "name": "Merchandise",
     "description": "Coming soon.",
     "image": "images/tshirt.jpg",
@@ -149,7 +156,7 @@ var items = {"data": [
 items.data = shuffle(items.data);
 
 function shuffle(arr) {
-    for (var i = 1; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
       // get random index
       var j = i + Math.floor(Math.random() * (arr.length - i));
       // shuffle
