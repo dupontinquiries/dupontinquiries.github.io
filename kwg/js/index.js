@@ -75,7 +75,7 @@ var n_workouts = 6;
 
 function build (data, arr, n) {
   var tmp = new Array();
-  for (var i = 0; i < n; i++) {
+  for (var i = 0; i < n; ++i) {
     // get unique random index
     var j = -1;
     var k = -1;
@@ -83,7 +83,7 @@ function build (data, arr, n) {
     while (j == -1 && b < data.length) {
       j = k;
       k = Math.floor(Math.random() * (data.length - 1));
-      for (var a = 0; a < tmp.length; a++) {
+      for (var a = 0; a < tmp.length; ++a) {
         if (k == tmp[a]) {
           k = -1;
           break;
@@ -98,11 +98,12 @@ function build (data, arr, n) {
   return arr;
 }
 
+var items = new Array();
 function newWorkout () {
-  var items = new Array();
+  items = [];
   items = build(Object.keys(data), items, n_workouts);
   var html = "";
-  for ( var i = 0; i < items.length; ++i ) {
+  for (var i = 0; i < items.length; ++i) {
     var it = items[i];
     html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"></div<div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">"
      + it + "</span><p class = \"right spaced\">" + (data[it][0] == 0 || data[it].length < 1 ? "n/a" : data[it][0]) + "</p><p class = \"right spaced\">" + (data[it][2] == "testToken" || data[it].length < 3 ? "n/a" : data[it][2]) + "</p></div></div></div>";
@@ -125,6 +126,65 @@ function sub () {
   if (n_workouts == 1) return;
   --n_workouts;
   newWorkout();
+}
+
+/*
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');  // Create a <textarea> element
+  el.value = str;                                 // Set its value to the string that you want copied
+  el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';                      // Move outside the screen to make it invisible
+  document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
+  const selected =
+    document.getSelection().rangeCount > 0        // Check if there is any content selected previously
+      ? document.getSelection().getRangeAt(0)     // Store selection if found
+      : false;                                    // Mark as false to know no selection existed before
+  el.select();                                    // Select the <textarea> content
+  document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
+  document.body.removeChild(el);                  // Remove the <textarea> element
+  if (selected) {                                 // If a selection existed before copying
+    document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
+    document.getSelection().addRange(selected);   // Restore the original selection
+  }
+};
+*/
+
+function copyToClipboard (input) {
+  const el = document.createElement('textarea');  // Create a <textarea> element
+  el.value = input;                                 // Set its value to the string that you want copied
+  el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';                      // Move outside the screen to make it invisible
+  document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
+  const selected =
+    document.getSelection().rangeCount > 0        // Check if there is any content selected previously
+      ? document.getSelection().getRangeAt(0)     // Store selection if found
+      : false;                                    // Mark as false to know no selection existed before
+  el.select();                                    // Select the <textarea> content
+  document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
+  document.body.removeChild(el);                  // Remove the <textarea> element
+  if (selected) {                                 // If a selection existed before copying
+    document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
+    document.getSelection().addRange(selected);   // Restore the original selection
+  }
+}
+
+function share () {
+  var l = items.length;
+  var tmpStr = " === My Workout ===\n";
+  if (l == 0) {
+    return;
+  }
+  tmpStr += items[0] + "\n";
+  if (l > 1) {
+    for (var i = 1; i < items.length; ++i) {
+      tmpStr += items[i] + "\n";
+    }
+  }
+  tmpStr += "=== ========== ==="
+  copyToClipboard(tmpStr);
+  alert("Your workout has been copied to your clipboard!");
 }
 
 newWorkout();
