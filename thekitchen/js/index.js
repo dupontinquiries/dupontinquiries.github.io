@@ -55,6 +55,21 @@ var items = {"data": [
     "songDemo" : false
   }, */
   {
+    "name": "Beat Tape: Quarantine Cookups",
+    "description": "Quarantine Cookups beat tape coming soon to all platforms.",
+    "image": "images/klogo.jpg",
+    "link": "https://distrokid.com/hyperfollow/thekitchen/quarantine-cookups",
+    "songDemo" : false,
+  },
+  {
+    "name": "Merchandise",
+    "description": "Coming soon.",
+    "image": "images/tshirt.jpg",
+    "link": "",
+    "songDemo" : false,
+    "embed": false
+  },
+  {
     "name": "TripLit - Featured Artist",
     "description": "Coming soon!",
     "image": "images/people/triplit.jpg",
@@ -131,21 +146,6 @@ var items = {"data": [
     "link": "https://open.spotify.com/album/2d4iFet1Qw8vCQmcNm75iT?si=eZUu2PrbTLuT6cw_YqPClw",
     "songDemo" : true,
     "audioFile" : "audio/idkytm.mp3"
-  },
-  {
-    "name": "Beat Tape: Quarantine Cookups",
-    "description": "Quarantine Cookups beat tape coming soon to all platforms.",
-    "image": "images/klogo.jpg",
-    "link": "https://distrokid.com/hyperfollow/thekitchen/quarantine-cookups",
-    "songDemo" : false,
-  },
-  {
-    "name": "Merchandise",
-    "description": "Coming soon.",
-    "image": "images/tshirt.jpg",
-    "link": "",
-    "songDemo" : false,
-    "embed": false
   }
 ]
 }
@@ -156,7 +156,7 @@ var items = {"data": [
 items.data = shuffle(items.data);
 
 function shuffle(arr) {
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = 2; i < arr.length; i++) {
       // get random index
       var j = i + Math.floor(Math.random() * (arr.length - i));
       // shuffle
