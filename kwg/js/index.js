@@ -107,12 +107,6 @@ function newWorkout () {
     var it = items[i];
     html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"></div<div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">"
      + it + "</span><p class = \"right spaced\">" + (data[it][0] == 0 || data[it].length < 1 ? "n/a" : data[it][0]) + "</p><p class = \"right spaced\">" + (data[it][2] == "testToken" || data[it].length < 3 ? "n/a" : data[it][2]) + "</p></div></div></div>";
-
-     /*
-     html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src="
-      + "images/" + it + "></div<div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">"
-      + it + "</span><p class = \"right\">" + data[it][0] + "</p><p>" + data[it][2] + "</p></div></div></div>";
-     */
   }
   document.getElementById("portfolioItemContainer").innerHTML = html;
 }
@@ -128,28 +122,7 @@ function sub () {
   newWorkout();
 }
 
-/*
-const copyToClipboard = str => {
-  const el = document.createElement('textarea');  // Create a <textarea> element
-  el.value = str;                                 // Set its value to the string that you want copied
-  el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
-  el.style.position = 'absolute';
-  el.style.left = '-9999px';                      // Move outside the screen to make it invisible
-  document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
-  const selected =
-    document.getSelection().rangeCount > 0        // Check if there is any content selected previously
-      ? document.getSelection().getRangeAt(0)     // Store selection if found
-      : false;                                    // Mark as false to know no selection existed before
-  el.select();                                    // Select the <textarea> content
-  document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
-  document.body.removeChild(el);                  // Remove the <textarea> element
-  if (selected) {                                 // If a selection existed before copying
-    document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
-    document.getSelection().addRange(selected);   // Restore the original selection
-  }
-};
-*/
-
+// tut from https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
 function copyToClipboard (input) {
   const el = document.createElement('textarea');  // Create a <textarea> element
   el.value = input;                                 // Set its value to the string that you want copied
