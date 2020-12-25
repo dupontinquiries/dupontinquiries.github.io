@@ -1,0 +1,39 @@
+/*
+// border to main flat ui
+// top banner
+// bottom banner
+// text
+*/
+
+#header {
+  width: 100%;
+  height: 500px;
+  background: gray;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: red;
+}
+
+#lbar {
+  width: 15%;
+  display: inline;
+  background: black;
+}
+
+#center {
+  width: 60%;
+  padding: 5%;
+  display: inline;
+  background: purple;
+}
+
+#rbar {
+  width: 15%;
+  display: inline;
+  background: orange;
+}

@@ -1,0 +1,82 @@
+{
+  "chest": {
+    "push-up": [],
+    "u push-up": [],
+    "archer push-up": [],
+    "typewriter push-up": [],
+    "explosive push-up": [],
+    "one-handed push-up": [],
+    "finger push-up": [],
+    "waist push-up": [],
+    "planche push-up": [],
+    "up-and-down plank": [],
+    "wide push-up": [],
+    "narrow push-up": [],
+    "pec fly push-up": [],
+    "feet on wall push-up": [],
+    "sideways push-up": []
+  },
+  "shoulders": {
+    "hantstand push-up": [],
+    "handstand": [],
+    "down dog push-up": [],
+    "incline push-up": [],
+    "upside-down pull-up": [],
+    "upside-down chin-up": []
+  },
+  "back": {
+    "inclined pull-up": [ 4, 12 ],
+    "inclined chin-up": [ 4, 12 ],
+    "one-arm inclined chin-up": [  ],
+    "one-arm inclined pull-up": [  ],
+    "wide pull-up": []
+  },
+  "arms": {
+    "muscle-up": [ 9, 1 ],
+    "pull-up": [ 6, 7 ],
+    "one arm pull-up": [ 10, 1 ],
+    "one arm chin-up": [ 10, 1 ],
+    "l-sit pull-up": [ 7, 5 ],
+    "chin-up": [ 5, 8 ],
+    "behind-the-back pull-up": [],
+    "front lever pull-up": [],
+    "high pull-up": [],
+    "slow pull-up": [],
+    "commando pull-up": [],
+    "neutral-grip pull-up": [],
+    "pull-through pull-up": [],
+    "narrow pull-up": [],
+    "explosive pull-up": [],
+    "typewriter pull-up": [],
+    "jump-negative pull-up": [],
+    "archer pull-up": [],
+    "grip-switch pull-up": [],
+    "alternating grip-switch pull-up": [],
+    "one-arm negative pull-up": [],
+    "one-arm negative chin-up": []
+  },
+  "core": {
+    "l-sit hold on bar": [],
+    "l-sit hold on floor": [],
+    "crunch": [],
+    "plank": [],
+    "v-up": [ 4, 15 ],
+    "v-up on bar": [ 8, 5 ],
+    "crunch on bar": [ 4, 15 ],
+    "crunch in pull up hold": [ 5, 10 ],
+    "ab circles on bar": []
+  },
+  "legs": {
+    "squat": [],
+    "weighted squat": [],
+    "jump squat": [],
+    "one leg balance": [],
+    "one leg toe touch": [],
+    "pistol squat": [],
+    "hamstring raise": [],
+    "calf raise": [],
+    "bulgarian squat": [],
+    "dead lift": [],
+    "box jump": [ 5, 100 ]
+  }
+}

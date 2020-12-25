@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Spotify",
+    "description": "Listen to songs from The Kitchen and featured artists.",
+    "image": "images/spotify.jpg",
+    "link": "https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=UuOryZueRL2hSHIA4IRopg",
+    "songDemo" : "false"
+  },
+  {
+    "name": "Apple Music",
+    "description": "Listen to songs from The Kitchen and featured artists.",
+    "image": "images/applemusic.png",
+    "link": "https://music.apple.com/us/artist/the-kitchen/1480129249",
+    "songDemo" : "false"
+  },
+  {
+    "name": "YouTube",
+    "description": "Music videos & more await.",
+    "image": "images/youtube.png",
+    "link": "https://www.youtube.com/channel/UCw7YTR6oSIan42thJCtWC9g",
+    "songDemo" : "false"
+  },
+  {
+    "name": "BeatStars",
+    "description": "Pick up some fire beats.",
+    "image": "images/beatstars.jpg",
+    "link": "https://www.beatstars.com/yokthatscrazy",
+    "songDemo" : "false"
+  },
+  {
+    "name": "COVID-19 Fundraiser",
+    "description": "Support The Rocket Initiative, our fight against COVID-19.",
+    "image": "images/avengers.jpg",
+    "link": "https://www.beatstars.com/yokthatscrazy",
+    "songDemo" : "false"
+  },
+  {
+    "name": "The Kitchen",
+    "description": "Coming soon!",
+    "image": "images/people/thekitchen.jpg",
+    "link": "https://www.instagram.com/yo.k.thats.crazy/",
+    "songDemo" : "false"
+  },
+  {
+    "name": "TripLit",
+    "description": "Coming soon!",
+    "image": "images/people/triplit.jpg",
+    "link": "https://www.instagram.com/triplit_official/",
+    "songDemo" : "false"
+  },
+  {
+    "name": "SJ Raps",
+    "description": "Coming soon!",
+    "image": "images/people/sjraps.jpg",
+    "link": "https://www.instagram.com/sj.menon/",
+    "songDemo" : "false"
+  },
+  {
+    "name": "Run Up",
+    "description": "The Kitchen - Run Up (feat. SJ) is available on all platforms.",
+    "image": "images/songs/runup.jpg",
+    "link": "https://open.spotify.com/track/3rwRLRQdAqNFmc5mG4wsa2?si=y-2z5-zOR4SZ2U2WjgTRww",
+    "songDemo" : "false"
+  },
+  {
+    "name": "Rho",
+    "description": "The Kitchen - Rho (feat. SJ) is available on all platforms.",
+    "image": "images/songs/rho.jpg",
+    "link": "https://open.spotify.com/track/12VX4vJ4T1JhFMN3BirYzu?si=d0QBFUS3Tv29ye6YkE8kvw",
+    "songDemo" : "false"
+  },
+  {
+    "name": "All My Life",
+    "description": "The Kitchen - All My Life (feat. TripLit) is available on all platforms.",
+    "image": "images/songs/allmylife.jpg",
+    "link": "https://open.spotify.com/track/2XfOcve72EWAVC4PBVQs1D?si=h0csgpFOR5eQtV_mQDgL-g",
+    "songDemo" : "false"
+  },
+  {
+    "name": "Bars",
+    "description": "The Kitchen - Bars (feat. SJ) is available on all platforms.",
+    "image": "images/songs/bars.jpg",
+    "link": "https://open.spotify.com/track/5iMD9mnkWyIcJDoACq3B8W?si=SmAfOUCMQCeWBWgHrjwt8g",
+    "songDemo" : "false"
+  },
+  {
+    "name": "Known",
+    "description": "The Kitchen - Known (feat. SJ) is available on all platforms.",
+    "image": "images/songs/known.jpg",
+    "link": "https://open.spotify.com/track/0us3QPqtjr5N0vnMFxvI3y?si=nSSM8oLQQM2PeSxNUsZxhw",
+    "songDemo" : "false"
+  }
+]
