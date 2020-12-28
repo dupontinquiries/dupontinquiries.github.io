@@ -106,7 +106,7 @@ function newWorkout () {
   for (var i = 0; i < items.length; ++i) {
     var it = items[i];
     html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"></div<div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">"
-     + it + "</span><p class = \"right spaced\">" + (data[it][0] == 0 || data[it].length < 1 ? "n/a" : data[it][0]) + "</p><p class = \"right spaced\">" + (data[it][2] == "testToken" || data[it].length < 3 ? "n/a" : data[it][2]) + "</p></div></div></div>";
+     + it + "</span><p class = \"right spaced hide_mobile\">" + (data[it][0] == 0 || data[it].length < 1 ? "n/a" : data[it][0]) + "</p><p class = \"right spaced hide_mobile\">" + (data[it][2] == "testToken" || data[it].length < 3 ? "n/a" : data[it][2]) + "</p></div></div></div>";
   }
   document.getElementById("portfolioItemContainer").innerHTML = html;
 }

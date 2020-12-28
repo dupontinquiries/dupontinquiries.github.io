@@ -7560,6 +7560,9 @@ input[type=range]:focus::-ms-fill-upper {
   .side-nav .userView {
     padding: 16px 16px 0;
   }
+  .hide_mobile {
+    opacity: 0;
+  }
 }
 
 .side-nav .collapsible-body > ul:not(.collapsible) > li.active,
