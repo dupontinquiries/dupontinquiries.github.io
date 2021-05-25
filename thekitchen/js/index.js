@@ -55,8 +55,23 @@ var items = {"data": [
     "songDemo" : false
   }, */
   {
+    "name": "Blue Moon (feat. A.M.)",
+    "description": "Blue Moon (feat. A.M.) coming soon to all platforms.",
+    "image": "images/songs/bluemoon.jpg",
+    "link": "https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=O6NvWlXmRE2ksOaNbfAMGw",
+    "songDemo" : true,
+    "audioFile" : "audio/bluemoondemo.mp3"
+  },
+  {
+    "name": "Beat Tape: Green Island",
+    "description": "Green Island beat tape coming soon to all platforms.",
+    "image": "images/songs/greenisland.jpg",
+    "link": "https://www.youtube.com/watch?v=tS-THkpp0Qc&list=PL8empeWnnQ6m2qu26ychP9PE09o5INT8L",
+    "songDemo" : true
+  },
+  {
     "name": "Beat Tape: Quarantine Cookups",
-    "description": "Quarantine Cookups beat tape coming soon to all platforms.",
+    "description": "Quarantine Cookups is available on Spotify & YouTube.",
     "image": "images/klogo.jpg",
     "link": "https://distrokid.com/hyperfollow/thekitchen/quarantine-cookups",
     "songDemo" : false,
@@ -69,6 +84,7 @@ var items = {"data": [
     "songDemo" : false,
     "embed": false
   },
+  /*
   {
     "name": "TripLit - Featured Artist",
     "description": "Coming soon!",
@@ -76,6 +92,7 @@ var items = {"data": [
     "link": "https://dupontinquiries.github.io/triplit",
     "songDemo" : false
   },
+  */
   {
     "name": "SJ - Featured Artist",
     "description": "Coming soon!",
@@ -115,6 +132,7 @@ var items = {"data": [
     "songDemo" : true,
     "audioFile" : "audio/rho.mp3"
   },
+  /*
   {
     "name": "All My Life (feat. TripLit)",
     "description": "The Kitchen - All My Life (feat. TripLit) is available on all platforms.",
@@ -123,6 +141,7 @@ var items = {"data": [
     "songDemo" : true,
     "audioFile" : "audio/aml.mp3"
   },
+  */
   {
     "name": "Bars (feat. SJ)",
     "description": "The Kitchen - Bars (feat. SJ) is available on all platforms.",
