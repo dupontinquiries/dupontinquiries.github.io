@@ -58,7 +58,7 @@ var items = {"data": [
     "name": "Blue Moon (feat. A.M.)",
     "description": "Blue Moon (feat. A.M.) coming soon to all platforms.",
     "image": "images/songs/bluemoon.jpg",
-    "link": "https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=O6NvWlXmRE2ksOaNbfAMGw",
+    "link": "https://share.amuse.io/track/the-kitchen-blue-moon",
     "songDemo" : true,
     "audioFile" : "audio/bluemoondemo.mp3"
   },
