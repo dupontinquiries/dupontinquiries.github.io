@@ -36,13 +36,15 @@ var links = {"data": [
       "color":"brown",
       "icon":"rocket",
       "url":"https://www.gofundme.com/f/fund-the-rocket"
-   },
+   }
+  /*
    {
       "name":"Audiomakers RPI Discord",
       "color":"grey",
       "icon":"discord",
       "url":"https://discord.gg/Sr9CHYBZuN"
    }
+   */
 ]}
 
 
@@ -56,7 +58,7 @@ var items = {"data": [
   }, */
   {
     "name": "Blue Moon (feat. A.M.)",
-    "description": "Blue Moon (feat. A.M.) coming soon to all platforms.",
+    "description": "Blue Moon (feat. A.M.) is available on all platforms.",
     "image": "images/songs/bluemoon.jpg",
     "link": "https://open.spotify.com/album/1WIC4LqDnQS8jI1l7xPMyN?si=nqDJXmppTsa9mzvm0lFuRA",
     "songDemo" : true,
@@ -73,7 +75,7 @@ var items = {"data": [
     "name": "Beat Tape: Quarantine Cookups",
     "description": "Quarantine Cookups is available on Spotify & YouTube.",
     "image": "images/klogo.jpg",
-    "link": "https://distrokid.com/hyperfollow/thekitchen/quarantine-cookups",
+    "link": "https://open.spotify.com/album/4ztdzogpONJn0JJ1TJFHrt?si=t16vjeBHSwWEKHx1fEAToQ",
     "songDemo" : false,
   },
   {
@@ -95,9 +97,16 @@ var items = {"data": [
   */
   {
     "name": "SJ - Featured Artist",
-    "description": "Coming soon!",
+    "description": "SJ and The Kitchen make hip hop & rap songs.  Learn more about SJ at the link below.",
     "image": "images/people/sj.jpg",
     "link": "https://www.instagram.com/sj.menon",
+    "songDemo" : false
+  },
+  {
+    "name": "A.M. - Featured Artist",
+    "description": "Learn more about A.M. at the link below.",
+    "image": "images/people/am.jpg",
+    "link": "https://www.instagram.com/alli.e.martin",
     "songDemo" : false
   },
   /*{
