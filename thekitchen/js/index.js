@@ -105,7 +105,7 @@ var items = {"data": [
   {
     "name": "A.M. - Featured Artist",
     "description": "Learn more about A.M. at the link below.",
-    "image": "images/people/am.jpg",
+    "image": "images/people/8BEA827D-D2DD-4041-857E-7F7653E17D12.jpeg",
     "link": "https://www.instagram.com/alli.e.martin",
     "songDemo" : false
   },
