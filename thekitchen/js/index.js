@@ -67,7 +67,7 @@ var items = {"data": [
   {
     "name": "Neptune",
     "description": "Neptune is a sneak peek at the Green Island beat tape, which is coming soon to all platforms.",
-    "image": "images/songs/neptune.jpg",
+    "image": "images/songs/75A4EDCD-0417-4785-B505-DE645B63B855.jpeg",
     "link": "https://open.spotify.com/album/4QnrjKUIronRYliXKUjEfW?si=sxspi2FUSPWFCiI15vuvAg&dl_branch=1",
     "songDemo" : false
   },
