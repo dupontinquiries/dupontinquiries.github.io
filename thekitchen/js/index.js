@@ -65,6 +65,13 @@ var items = {"data": [
     "audioFile" : "audio/bluemoondemo.mp3"
   },
   {
+    "name": "Neptune",
+    "description": "Neptune is a sneak peek at the Green Island beat tape, which is coming soon to all platforms.",
+    "image": "images/songs/neptune.jpg",
+    "link": "https://open.spotify.com/album/4QnrjKUIronRYliXKUjEfW?si=sxspi2FUSPWFCiI15vuvAg&dl_branch=1",
+    "songDemo" : false
+  },
+  {
     "name": "Beat Tape: Green Island",
     "description": "Green Island beat tape coming soon to all platforms.",
     "image": "images/songs/greenisland.jpg",
