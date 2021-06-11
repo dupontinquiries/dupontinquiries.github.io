@@ -60,16 +60,29 @@ var items = {"data": [
     "name": "Blue Moon (feat. A.M.)",
     "description": "Blue Moon (feat. A.M.) is available on all platforms.",
     "image": "images/songs/bluemoon.jpg",
-    "link": "https://open.spotify.com/album/1WIC4LqDnQS8jI1l7xPMyN?si=nqDJXmppTsa9mzvm0lFuRA",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/album/1WIC4LqDnQS8jI1l7xPMyN?si=nqDJXmppTsa9mzvm0lFuRA",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/blue-moon-feat-am-single/1565864783",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://youtu.be/9-9fN415e_o",
     "songDemo" : true,
     "audioFile" : "audio/bluemoondemo.mp3"
   },
   {
     "name": "Neptune",
     "description": "Neptune is a sneak peek at the Green Island beat tape, which is coming soon to all platforms.",
-    "image": "images/songs/75A4EDCD-0417-4785-B505-DE645B63B855.jpeg",
-    "link": "https://open.spotify.com/album/4QnrjKUIronRYliXKUjEfW?si=sxspi2FUSPWFCiI15vuvAg&dl_branch=1",
-    "songDemo" : false
+    "image": "images/songs/neptune.jpeg",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/album/4QnrjKUIronRYliXKUjEfW?si=8_B1QUnFT4WQagjT9eNOQA&dl_branch=1",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/neptune-single/1569554801",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://www.youtube.com/watch?v=IyKJOHP0gmo&list=PL8empeWnnQ6m2qu26ychP9PE09o5INT8L&index=5",
+    "songDemo" : true,
+    "audioFile" : "audio/neptune.mp3"
   },
   {
     "name": "Beat Tape: Green Island",
@@ -82,14 +95,21 @@ var items = {"data": [
     "name": "Beat Tape: Quarantine Cookups",
     "description": "Quarantine Cookups is available on Spotify & YouTube.",
     "image": "images/klogo.jpg",
-    "link": "https://open.spotify.com/album/4ztdzogpONJn0JJ1TJFHrt?si=t16vjeBHSwWEKHx1fEAToQ",
-    "songDemo" : false,
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/album/4ztdzogpONJn0JJ1TJFHrt?si=IpqUm2oKQxytMzzD-Lm9dg&dl_branch=1",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/quarantine-cookups/1546342063",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://www.youtube.com/watch?v=aHR14w2-Kh0&list=PL8empeWnnQ6nXNoJlwv9Fgcs1RQzmRlS0",
+    "songDemo" : true,
   },
   {
-    "name": "Merchandise",
-    "description": "Coming soon.",
-    "image": "images/tshirt.jpg",
-    "link": "",
+    "name": "Merchandise - Blue Moon",
+    "description": "Blue Moon T-Shirts now available!  Other designs will appear here when they become available.",
+    "image": "images/tshirt_bm.jpg",
+    "link": "https://forms.gle/wr9a9wpJnA7Wd9DK8",
+    "shop": true,
     "songDemo" : false,
     "embed": false
   },
@@ -136,7 +156,13 @@ var items = {"data": [
     "name": "Run Up (feat. SJ)",
     "description": "The Kitchen - Run Up (feat. SJ) is available on all platforms.",
     "image": "images/songs/runup.jpg",
-    "link": "https://open.spotify.com/track/3rwRLRQdAqNFmc5mG4wsa2?si=y-2z5-zOR4SZ2U2WjgTRww",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/track/3rwRLRQdAqNFmc5mG4wsa2?si=y-2z5-zOR4SZ2U2WjgTRww",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/run-up-feat-sj/1539330796?i=1539330797",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://www.youtube.com/watch?v=LgYwdx6bFJE&list=PL8empeWnnQ6lyQ2dfo0RV7eGg614v0wYu&index=1",
     "songDemo" : true,
     "audioFile" : "audio/runup.mp3"
   },
@@ -144,11 +170,16 @@ var items = {"data": [
     "name": "Rho (feat. SJ)",
     "description": "The Kitchen - Rho (feat. SJ) is available on all platforms.",
     "image": "images/songs/rho.jpg",
-    "link": "https://open.spotify.com/track/12VX4vJ4T1JhFMN3BirYzu?si=d0QBFUS3Tv29ye6YkE8kvw",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/track/12VX4vJ4T1JhFMN3BirYzu?si=d0QBFUS3Tv29ye6YkE8kvw",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/rho-feat-sj/1517720924?i=1517720927",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://www.youtube.com/watch?v=LpzGY9OubQ4&list=PL8empeWnnQ6lyQ2dfo0RV7eGg614v0wYu&index=2",
     "songDemo" : true,
     "audioFile" : "audio/rho.mp3"
   },
-  /*
   {
     "name": "All My Life (feat. TripLit)",
     "description": "The Kitchen - All My Life (feat. TripLit) is available on all platforms.",
@@ -157,12 +188,17 @@ var items = {"data": [
     "songDemo" : true,
     "audioFile" : "audio/aml.mp3"
   },
-  */
   {
     "name": "Bars (feat. SJ)",
     "description": "The Kitchen - Bars (feat. SJ) is available on all platforms.",
     "image": "images/songs/bars.jpg",
-    "link": "https://open.spotify.com/track/5iMD9mnkWyIcJDoACq3B8W?si=SmAfOUCMQCeWBWgHrjwt8g",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/track/5iMD9mnkWyIcJDoACq3B8W?si=SmAfOUCMQCeWBWgHrjwt8g",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/bars-feat-sj/1502033165?i=1502033408",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://www.youtube.com/watch?v=h11Q_P26k44&list=PL8empeWnnQ6lyQ2dfo0RV7eGg614v0wYu&index=4",
     "songDemo" : true,
     "audioFile" : "audio/bars.mp3"
   },
@@ -170,10 +206,17 @@ var items = {"data": [
     "name": "Known (feat. SJ)",
     "description": "The Kitchen - Known (feat. SJ) is available on all platforms.",
     "image": "images/songs/known.jpg",
-    "link": "https://open.spotify.com/track/0us3QPqtjr5N0vnMFxvI3y?si=nSSM8oLQQM2PeSxNUsZxhw",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/track/0us3QPqtjr5N0vnMFxvI3y?si=nSSM8oLQQM2PeSxNUsZxhw",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/known-feat-sj/1480132960?i=1480132965",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://www.youtube.com/watch?v=fptBgfJElEo&list=PL8empeWnnQ6lyQ2dfo0RV7eGg614v0wYu&index=5",
     "songDemo" : true,
     "audioFile" : "audio/known.mp3"
-  },
+  }
+  /*
   {
     "name": "I Don't Know You Tell Me (feat. Eric Weir)",
     "description": "Eric Weir's debut album, I Don't Know You Tell Me, is available on all platforms.",
@@ -182,6 +225,7 @@ var items = {"data": [
     "songDemo" : true,
     "audioFile" : "audio/idkytm.mp3"
   }
+  */
 ]
 }
 
@@ -191,19 +235,21 @@ var items = {"data": [
 items.data = shuffle(items.data);
 
 function shuffle(arr) {
-    for (var i = 2; i < arr.length; i++) {
+    for (var i = 1; i < arr.length; i++) {
       // get random index
       var j = i + Math.floor(Math.random() * (arr.length - i));
       // shuffle
       var temp = arr[j];
       arr[j] = arr[i];
       arr[i] = temp;
-      console.log(i + ", " + j);
+      //console.log(i + ", " + j);
     }
     return arr;
 }
 
 var html = "";
+var html1 = "";
+var html2 = "";
 for ( var i = 0; i < links.data.length; ++i ) {
   var it = links.data[i];
 
@@ -216,29 +262,55 @@ for ( var i = 0; i < links.data.length; ++i ) {
 }
 document.getElementById("socialLinkContent").innerHTML = html;
 
-html = "";
+htm = "";
+html1 = "";
+html2 = "";
 for ( var i = 0; i < items.data.length; ++i ) {
-
+  var tmp = "";
   var it = items.data[i];
   // // // //
 
   //console.log(it.name);
   if ( it.embed ) {
-    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Listen</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
-    html += "<br><br>" + it.embedCode + "</p></div></div></div>";
+    tmp += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Listen</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
+    tmp += "<br><br>" + it.embedCode + "</p></div></div></div>";
   } else if ( it.songDemo ) {
-    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Listen</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
-    html += "<br>" + "<p><audio controls><source src=\"" + it.audioFile + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></p>" + "</p></div></div></div>";
+    tmp += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p>";
+    if ( it.useSpotifyLink || it.useAppleLink || it.useYouTubeLink ) {
+      if ( it.useSpotifyLink ) {
+        tmp += "<a href=" + it.spotifyLink + " target=\"_blank\"><i class=\"link_icon mdi mdi-" + "spotify" + "\" style=\"color: " + "black" + "\"></i></a>"
+      }
+      if ( it.useAppleLink ) {
+        tmp += "<a href=" + it.appleLink + " target=\"_blank\"><i class=\"link_icon mdi mdi-" + "apple" + "\" style=\"color: " + "black" + "\"></i></a>"
+      }
+      if ( it.useYouTubeLink ) {
+        tmp += "<a href=" + it.youtubeLink + " target=\"_blank\"><i class=\"link_icon mdi mdi-" + "video" + "\" style=\"color: " + "black" + "\"></i></a>"
+      }
+    }
+    else {
+      + "<a href=" + it.link + " target=\"_blank\">Listen</a>";
+    }
+    tmp += "</p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description;
+    tmp += "<br>" + "<p><audio controls><source src=\"" + it.audioFile + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio></p>" + "</p></div></div></div>";
   } else {
     //var extravisit = "<p><a href=" + it.link + " target=\"_blank\">Visit</a></p>";
     var extravisit = "";
-    html += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description + "</p>" + extravisit + "</div></div></div>";
+    tmp += "<div class=\"col s12 m6 l6\"><div class=\"card hoverable\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=" + it.image + "></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">keyboard_arrow_up</i></span><p><a href=" + it.link + " target=\"_blank\">Visit</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">" + it.name + "<i class=\"material-icons right\">close</i></span><p>" + it.description + "</p>" + extravisit + "</div></div></div>";
   }
 
+  if ( i < items.data.length / 2 ) {
+    html1 += tmp;
+  } else {
+    html2 += tmp;
+  }
   // // // //
 
+
 }
-document.getElementById("portfolioItemContainer").innerHTML = html;
+html += html1 + html2;
+//document.getElementById("portfolioItemContainer").innerHTML = html;
+document.getElementById("pic1").innerHTML = html1;
+document.getElementById("pic2").innerHTML = html2;
 
 document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
