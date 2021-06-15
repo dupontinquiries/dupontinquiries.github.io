@@ -57,6 +57,20 @@ var items = {"data": [
     "songDemo" : false
   }, */
   {
+    "name": "Beat Tape: Green Island",
+    "description": "Green Island beat tape coming soon to all platforms.",
+    "image": "images/songs/greenisland.jpg",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/album/5COC7zoOohB4la9TCn4jui?si=YqeBLTrwSQyahaQfjEhaBQ&dl_branch=1",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/green-island/1570665645",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://youtube.com/playlist?list=PL8empeWnnQ6m2qu26ychP9PE09o5INT8L",
+    "songDemo" : true,
+    "audioFile" : "audio/takeoff.mp3"
+  },
+  {
     "name": "Blue Moon (feat. A.M.)",
     "description": "Blue Moon (feat. A.M.) is available on all platforms.",
     "image": "images/songs/bluemoon.jpg",
@@ -83,13 +97,6 @@ var items = {"data": [
     "youtubeLink": "https://www.youtube.com/watch?v=IyKJOHP0gmo&list=PL8empeWnnQ6m2qu26ychP9PE09o5INT8L&index=5",
     "songDemo" : true,
     "audioFile" : "audio/neptune.mp3"
-  },
-  {
-    "name": "Beat Tape: Green Island",
-    "description": "Green Island beat tape coming soon to all platforms.",
-    "image": "images/songs/greenisland.jpg",
-    "link": "https://www.youtube.com/watch?v=tS-THkpp0Qc&list=PL8empeWnnQ6m2qu26ychP9PE09o5INT8L",
-    "songDemo" : true
   },
   {
     "name": "Beat Tape: Quarantine Cookups",
