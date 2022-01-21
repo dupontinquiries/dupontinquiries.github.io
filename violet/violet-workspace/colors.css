@@ -1,0 +1,14 @@
+
+/* colors */
+
+:root {
+  --text-color: #f3f1f4; /* e1dde3 d0cad4 */
+  --body-color: #838ba4; /* 838ba4 */
+  --font-size: calc(20px + .7vh + 1.2vw);
+}
+
+html {
+  color: var(--text-color);
+  background-color: var(--body-color);
+  font-size: var(--font-size);
+}

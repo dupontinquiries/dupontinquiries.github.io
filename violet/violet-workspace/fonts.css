@@ -1,0 +1,30 @@
+
+/* fonts */
+
+@font-face {
+  font-family: "Quantico";
+  src: url("fonts/Quantico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("fonts/VT323-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Share Tech Mono";
+  src: url("fonts/ShareTechMono-Regular.ttf");
+}
+
+html {
+  font-family: "Quantico";
+  /* letter-spacing: .1em; */
+}
+
+.monospace {
+  font-family: "VT323";
+}
+
+.monospace2 {
+  font-family: "Share Tech Mono";
+}

@@ -1,0 +1,52 @@
+
+/* keypad */
+
+:root {
+  --p-color: #f3f1f4;
+  --s-color: #d3e8fd;
+}
+
+.keypad_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50%;
+  transform: translateY(-50%); */
+  z-index: 2;
+}
+
+.keypad {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.keypad .line {
+  list-style-type: none;
+  text-align: center;
+}
+
+.keypad .line .dial {
+  display: inline;
+  cursor: pointer;
+  color: inherit;
+  border: solid 1px var( --p-color );
+  border-radius: 10%;
+  padding: 2px;
+  margin: 1px;
+  letter-spacing: .4em;
+  line-height: 1.3em;
+}
+
+.keypad ul li .dial:hover {
+  color: var( --s-color );
+  /* animation: typing 0.35s steps(50, end);
+  animation-delay: .05s;
+  animation-iteration-count: 1s;
+  animation-fill-mode: forwards; */
+}
