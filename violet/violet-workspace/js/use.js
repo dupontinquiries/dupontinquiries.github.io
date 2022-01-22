@@ -73,4 +73,9 @@ $(function() {
 	// 	output += key.charAt( ( (i ** 2) + parseInt(shout.charAt(i), 16) ) % key.length );
 	// }
 
+	$('#copy_password').on('click', function() {
+		$('#password_box').select();
+		document.execCommand("copy");
+	} );
+
 })
