@@ -9,11 +9,6 @@ $(function() {
 	const key_string = "abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
 	var page_key = "";
 
-	function showKeypad() {
-		kw.toggleClass('vis pop');
-		appear_elements.toggleClass('appear');
-	}
-
 	function getRandomDigit() {
 		return Math.floor( 10 * (window.crypto.getRandomValues(new Uint32Array(1))[0]) / (Math.pow(2, 32) - 1) );
 		// var cryptoRandom2 = window.crypto.getRandomValues(new Uint32Array(1))[0];
@@ -25,26 +20,17 @@ $(function() {
 			secureNumber += Math.pow(10, i) * getRandomDigit();
 		}
 		return secureNumber;
-		// var tmp = getRandomDigit();
-		// var cryptoRandom1 = window.crypto.getRandomValues(new Uint32Array(1))[0];
-		// var cryptoRandom2 = window.crypto.getRandomValues(new Uint32Array(1))[0];
-		// var cryptoRandom3 = window.crypto.getRandomValues(new Uint32Array(1))[0];
-		// console.log(cryptoRandom1 * cryptoRandom2);
-		// console.log(getRandomDigit());
 	}
 
 	function getRandomKey(l) {
 		var tmp_key = "";
 		for (var i = 0; i < l; ++i) {
 			tmp_key += key_string[getRandomNumber(3) % key_string.length];
-			// secureNumber += Math.pow(10, i) * getRandomDigit();
 		}
 		return tmp_key;
 	}
 
 	function updateKeyText(l, ww, hh) {
-		// const ww = 3;
-		// const hh = 3;
 		var tmp_keyfile = "";
 		kt.html("");
 		for (var i = 0; i < hh; ++i) {
@@ -62,42 +48,9 @@ $(function() {
 		return tmp_keyfile;
 	}
 
-	function getCharCodes(s){
-  	let charCodeArr = [];
-
-		// for (var i = 0; i < s.length; ++i) {
-		// 	let code = key_string.indexOf(s[i]);
-	  //   charCodeArr.push(code);
-		// }
-
-   	for(let i = 0; i < s.length; i++){
-    	let code = s.charCodeAt(i);
-      charCodeArr.push(code);
-    }
-
-    return charCodeArr;
-	}
-
-	function getCharsFromCodes(arr){
-		var tmp_s = "";
-
-		// for (var i = 0; i < arr.length; ++i) {
-		// 	let ch = key_string[arr[i]];
-	  //   tmp_s += ch;
-		// }
-
-   	for(let i = 0; i < arr.length; ++i){
-    	let ch = String.fromCharCode(arr[i]);
-			// console.log(arr[i] + ' -> ' + ch); // works
-      tmp_s += ch;
-    }
-
-    return tmp_s;
-	}
-
 	// take in strings
 	function encrypt(kk, pp) {
-		return TEA.TEAencrypt(getCharCodes(kk),getCharCodes(pp));
+		return TEA.TEAencrypt(CharLib.getCharCodes(kk), CharLib.getCharCodes(pp));
 	}
 
 	// takes in arrays of numbers
@@ -108,21 +61,6 @@ $(function() {
 	page_key = updateKeyText(512, 3, 3);
 	console.log(page_key);
 	// console.log(updateKeyText(512, 3, 3));
-
-
-
-	// console.log(getRandomKey(5));
-	// console.log(getRandomNumber(5));
-	// console.log(getRandomNumber(5));
-
-	// $('body').on('click', function() {
-	// 	console.log(pa.text());
-	// });
-
-	// kd.on('click', function() {
-	// 	pa.text("");
-	// 	showKeypad();
-	// }); // replaced by library Keypad
 
 	kd.on('click', function() {
 		Keypad.showKeypad();
@@ -147,40 +85,9 @@ $(function() {
   	}
 	}
 
-	$('.dial').on('click', function(e) {
-		if (!$(this).hasClass('dial_clickable'))
-			return;
-
-		let passcode = $('#passcode_area').text();
-		if ($(this).text() == '-') {
-			if (passcode != "______" && passcode.length > 0)
-				passcode = passcode.slice(0,-1);
-		} else {
-			if (passcode == "______")
-				passcode = $(this).text();
-			// else if (passcode.lenght < 6)
-			else
-				passcode += $(this).text();
-		}
-
-		pa.text(passcode);
-		console.log(passcode);
-		console.log(passcode.length);
-
-		if (passcode.length === 6) {
-			showKeypad()
-			console.log('passcode is: ' + passcode);
-			console.log('key starts as: ' + page_key.slice(0,5));
-			// encrypt file (working)
-			tmp_enc_arr = encrypt(page_key, pa.text());
-			download(JSON.stringify(tmp_enc_arr), 'keyfile.json', 'json');
-
-			// test decrypt // works
-			test = JSON.parse(JSON.stringify(tmp_enc_arr));
-			tmp1 = decrypt(test, getCharCodes(pa.text()));
-			// console.log(tmp1);
-			// console.log(getCharsFromCodes(tmp1));
-
+	$('.dial').on('click', function() {
+		if (Keypad.ready) {
+			download(JSON.stringify( encrypt(page_key, pa.text()) ), 'keyfile.json', 'json');
 		}
 	});
 

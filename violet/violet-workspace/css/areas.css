@@ -1,6 +1,12 @@
 
 /* areas */
 
+/* html, body {
+  overflow-x: hidden;
+  max-width: 50vw !important;
+  margin-left: 0;
+} */
+
 :root {
   --blue: #d3e8fd;
   --card-height: 100%;

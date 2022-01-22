@@ -22,6 +22,8 @@
   <!-- less important  -->
   <link rel="stylesheet" type="text/css" href="css/icons.css">
   <!-- less important  -->
+  <link rel="stylesheet" type="text/css" href="css/squares.css">
+  <!-- less important  -->
   <!-- <link rel="stylesheet" type="text/css" href="css/inputs.css"> -->
   <!-- not important  -->
   <!-- <link rel="stylesheet" type="text/css" href="animations.css"> -->
@@ -53,15 +55,23 @@
       <!-- <br> -->
       <!-- <button type="button" class="user-btn draw small_text">Use a Keyfile</button> -->
     </div>
+
+
   </div>
+
+  <ul class="bg-bubbles">
+    <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li>
+  </ul>
   <!-- <div class="landing block wide">
     maybe make this an iframe
   </div> -->
+
+
   <div class="keypad_wrapper hidden">
     <div class="keypad monospace2 no_highlight">
       <ul>
         <div class="line">
-          <div id="passcode_area" class="center dial no_border"></div>
+          <div id="passcode_area" class="passcode_area center dial no_border"></div>
         </div>
         <div class="line">
           <div id="1" class="dial dial_clickable draw">1</div>
@@ -86,6 +96,7 @@
       </ul>
     </div>
   </div>
+
 </body>
 <footer>
   <div class="wide fill">
@@ -95,5 +106,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/tea.js" type="text/javascript"></script>
 <script src="js/keypad.js" type="text/javascript"></script>
+<script src="js/charlib.js" type="text/javascript"></script>
 <script src="js/make.js" type="text/javascript"></script>
 </html>

@@ -1,3 +1,21 @@
+
+/* inputs */
+
+.text_input {
+  width: 100%;
+  padding: 10px 0;
+  /*font-size: 1em;*/
+  font-size: .7em;
+  color: #fff;
+  margin-bottom: .3em;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  /*background: rgba(255, 255, 255, .1);*/
+  background: transparent;
+}
+
+
 .file-upload-wrapper {
   position: absolute;
   transform: translateY(-1em);

@@ -8,7 +8,7 @@ const appear_elements = $('.appear');
 
 Keypad.showKeypad = function() {
   // const pa = $('#passcode_area');
-  pa.text("");
+  // pa.text("");
   // const kw = $('.keypad_wrapper');
   kw.toggleClass('vis pop');
   appear_elements.toggleClass('appear');
@@ -19,6 +19,7 @@ const key_string = "abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNS
 var page_key = "";
 Keypad.page_key = "";
 Keypad.page_passcode = "";
+Keypad.ready = false;
 
 $('.dial').on('click', function(e) {
   if (!$(this).hasClass('dial_clickable'))
@@ -36,11 +37,12 @@ $('.dial').on('click', function(e) {
       passcode += $(this).text();
   }
 
-  pa.text(passcode);
+  $('#passcode_area').text(passcode);
 
   if (passcode.length == 6) { // close keypad
     Keypad.showKeypad();
     Keypad.page_passcode = passcode;
+    Keypad.ready = true;
     // Keypad.page_key = passcode;
     // console.log('passcode is: ' + passcode);
     // console.log('key starts as: ' + page_key.slice(0,5));
@@ -53,7 +55,9 @@ $('.dial').on('click', function(e) {
     // tmp1 = decrypt(test, getCharCodes(pa.text()));
     // console.log(tmp1);
     // console.log(getCharsFromCodes(tmp1));
-
+  }
+  else {
+    Keypad.ready = false;
   }
 });
 
