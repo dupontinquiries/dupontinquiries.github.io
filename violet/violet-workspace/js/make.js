@@ -95,13 +95,12 @@ $(function() {
     return tmp_s;
 	}
 
+	// take in strings
 	function encrypt(kk, pp) {
 		return TEA.TEAencrypt(getCharCodes(kk),getCharCodes(pp));
-		// ciphertext = CryptoJS.AES.encrypt(kk, pp).toString();
-		// return Tea.encrypt(kk, pp);
-		// return "encrypted";
 	}
 
+	// takes in arrays of numbers
 	function decrypt(kk, pp) {
 		return TEA.TEAdecrypt(kk,pp);
 	}
@@ -120,9 +119,13 @@ $(function() {
 	// 	console.log(pa.text());
 	// });
 
+	// kd.on('click', function() {
+	// 	pa.text("");
+	// 	showKeypad();
+	// }); // replaced by library Keypad
+
 	kd.on('click', function() {
-		pa.text("");
-		showKeypad();
+		Keypad.showKeypad();
 	});
 
 	// Function to download data to a file
