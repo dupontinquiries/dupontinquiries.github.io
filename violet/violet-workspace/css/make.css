@@ -6,7 +6,10 @@
   animation-delay: 1s !important;
   animation-iteration-count: 1s !important;
   animation-fill-mode: forwards !important; */
+  max-width: 120vw !important;
   width: 10em !important;
+  height:10em !important;
+  overflow: visible !important;
   /* width: auto !important; */
 }
 

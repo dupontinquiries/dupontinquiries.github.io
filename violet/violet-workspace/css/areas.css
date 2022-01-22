@@ -3,6 +3,9 @@
 
 :root {
   --blue: #d3e8fd;
+  --card-height: 100%;
+  --p-color: #f3f1f4;
+  --s-color: #d3e8fd;
 }
 
 .header:first-child {
@@ -112,15 +115,6 @@ footer .fill {
   animation-fill-mode: forwards;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @media only screen and (min-width: 600px) {
   .inline_desktop {
     display: inline;
@@ -163,4 +157,41 @@ footer .fill {
 
 .clickable {
   cursor: pointer;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.hidden:not(.vis) {
+  display: none;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: .35s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+}
+
+.hidden .vis {
+  display: inherit;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: .35s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.no_border {
+  border-radius: none !important;
+  border: none !important;
 }
