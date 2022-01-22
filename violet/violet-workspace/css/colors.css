@@ -4,7 +4,7 @@
 :root {
   --text-color: #f3f1f4; /* e1dde3 d0cad4 */
   --body-color: #838ba4; /* 838ba4 */
-  --font-size: calc(20px + .7vh + 1.2vw);
+  --font-size: calc(22px + .7vh + 1.0vw);
 }
 
 html {

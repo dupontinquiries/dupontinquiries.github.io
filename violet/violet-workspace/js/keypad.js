@@ -14,30 +14,31 @@ Keypad.showKeypad = function() {
   appear_elements.toggleClass('appear');
 }
 
-
 const key_string = "abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
 var page_key = "";
 Keypad.page_key = "";
 Keypad.page_passcode = "";
 Keypad.ready = false;
 
+
 $('.dial').on('click', function(e) {
   if (!$(this).hasClass('dial_clickable'))
     return;
 
-  let passcode = $('#passcode_area').text();
+  let passcode = Keypad.page_passcode; //$('#passcode_area').text();
   if ($(this).text() == '-') {
-    if (passcode != "______" && passcode.length > 0)
+    if (passcode && passcode.length > 0)
       passcode = passcode.slice(0,-1);
   } else {
-    if (passcode == "______")
+    if (!passcode)
       passcode = $(this).text();
     // else if (passcode.lenght < 6)
     else
       passcode += $(this).text();
   }
 
-  $('#passcode_area').text(passcode);
+  Keypad.page_passcode = passcode;
+  // $('#passcode_area').text(passcode);
 
   if (passcode.length == 6) { // close keypad
     Keypad.showKeypad();
@@ -59,6 +60,7 @@ $('.dial').on('click', function(e) {
   else {
     Keypad.ready = false;
   }
+  $('#passcode_area').text( Keypad.page_passcode );
 });
 
 // $(function() {

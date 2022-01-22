@@ -86,6 +86,7 @@ $(function() {
 	}
 
 	$('.dial').on('click', function() {
+		// pa.text( Keypad.page_passcode );
 		if (Keypad.ready) {
 			download(JSON.stringify( encrypt(page_key, pa.text()) ), 'keyfile.json', 'json');
 		}

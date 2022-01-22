@@ -3,6 +3,8 @@ $(function() {
 	// need keypad
 	// need file upload, salt (hidden away on the side), passphrase box, & result box
 
+	const password_lenght = 30;
+
 	const key_string = CharLib.char_map; //"abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
 	// move key_string into separate js file if it is used in both make & use, but unlikely since key is supposed to be from file (maybe make this the default key???)
 	var page_key = "";
@@ -41,35 +43,28 @@ $(function() {
 	// var has_uploaded = false;
 	// updates the page_key_arr to match the file contents
 	document.getElementById('file_input').addEventListener('change', function(e) {
-		page_key = '';
-		page_key_arr = [];
+		// page_key = '';
+		// page_key_arr = [];
 		handleUpload(e);
-		$('#passphrase_box').text('');
+		// $('#passphrase_box').text('');
 	});
 
 	$('#passphrase_box').on('change paste keyup', function() {
 		// decrypt the arr
-		if (!page_key) {
+		if (!page_key && Keypad.ready) {
 			// handleUpload(e);
 			// arr is still encrypted; we need to decrypt it using tea
 			page_key = CharLib.getCharsFromCodes (decrypt(page_key_arr, CharLib.getCharCodes( Keypad.page_passcode )) );
 		}
 		// use the key
+		// cannot be Keypad.page_passcode or else it becomes static
 		var p = $('#passphrase_box').val();
-		// console.log('key: ' + page_key);
-		// console.log('p: ' + p);
 		var shout = sha3_512(p).toString();
 		var output = '';
-		for (var i = 0; i < 32; ++i) {
+		for (var i = 0; i < password_lenght; ++i) {
 			output += page_key.charAt( ( (i ** 2) + parseInt(shout.charAt(i), 16) ) % page_key.length );
 		}
-		// console.log('result: ' + output);
 		$('#password_box').val(output);
-	});
-
-	$('.dial').on('click', function() {
-		console.log(Keypad.page_passcode);
-		$('#passcode_area').text(Keypad.page_passcode);
 	});
 
 	// var shout = sha3_512(p).toString();
