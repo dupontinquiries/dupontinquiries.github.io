@@ -37,7 +37,7 @@ $(function() {
 		var file = event.target.files[0];
 		var reader = new FileReader();
 		// use the textInput variable previously declared to update the text input
-		reader.onload = (e) => { keybox.val(e.target.result); };   
+		reader.onload = (e) => { keybox.val(e.target.result); };
 		// trigger the fileReader
 		reader.readAsText(file);
 	}
@@ -50,7 +50,7 @@ $(function() {
     	var output = '';
     	for (i = 0; i < 48/* shout.length */; ++i) {
     		output += key.charAt( ( (i ** 2) + parseInt(shout.charAt(i), 16) ) % key.length );
-    	} 
+    	}
 		$('#result-box').val(output);
     }
     convertbutton.on('click', updatePassword);
