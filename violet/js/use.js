@@ -55,8 +55,8 @@ $(function() {
 			// handleUpload(e);
 			// arr is still encrypted; we need to decrypt it using tea
 			page_key = CharLib.getCharsFromCodes (decrypt(page_key_arr, CharLib.getCharCodes( Keypad.page_passcode )) );
-
-			$('#passphrase_box').val(''); // clears the passphrase box for user
+			if ( $.isNumeric( $('#passphrase_box').val() ) )
+				$('#passphrase_box').val(''); // clears the passphrase box for user
 		}
 		// use the key
 		// cannot be Keypad.page_passcode or else it becomes static
