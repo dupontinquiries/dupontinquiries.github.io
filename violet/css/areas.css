@@ -20,7 +20,7 @@
   left: 0;
   position: absolute;
   width: 100%;
-  font-size: .4em;
+  font-size: .45em;
   /* margin-bottom: 30px; */
   text-align: center;
   background-color: var( --dark-body-color );
@@ -41,7 +41,7 @@
 .top-banner span{
   width: 50px;
   /* heigth: 28px; */
-  line-height: 28px;
+  line-height: 2em;
   background-color: var( --body-color ); /*#a1c45a*/
   border-radius: 20px;
 }
@@ -63,7 +63,7 @@
     height: 0;
   }
   to {
-    height: 2em;
+    height: 3em;
   }
 }
 /*
