@@ -20,6 +20,11 @@ Keypad.page_key = "";
 Keypad.page_passcode = "";
 Keypad.ready = false;
 
+// pa.on('click', function(e) {
+//   pa.toggleClass('blurred');
+//   $('body').click();
+// });
+
 $('.dial').on('click', function(e) {
   if (!$(this).hasClass('dial_clickable'))
     return;
@@ -71,11 +76,11 @@ $(document).keypress(function(e) {
   if ($('.keypad_wrapper').hasClass('vis') && e.which >= 45 && e.which <= 57) {
     let passcode = Keypad.page_passcode; //$('#passcode_area').text();
     var a = e.which - 48;
-    if (a < 0 && passcode && passcode.length > 0) {
+    if (a == -3 && passcode && passcode.length > 0) {
       // delete
       passcode = passcode.slice(0,-1);
     }
-    else {
+    else if (a >= 0) {
       // add to keypad
       if (!passcode)
         passcode = '' + (e.which - 48);
