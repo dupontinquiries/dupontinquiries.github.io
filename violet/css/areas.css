@@ -151,6 +151,11 @@
   /* vertical-align: center; */
 }
 
+footer {
+  bottom: 4em;
+  line-height: .4em;
+}
+
 footer .fill {
   height: auto;
   max-height: 50vh;
