@@ -20,7 +20,12 @@ Keypad.page_key = "";
 Keypad.page_passcode = "";
 Keypad.ready = false;
 Keypad.passcode_length = 6; //change to 7 maybe
+=======
+<<<<<<< Updated upstream
+=======
 Keypad.passcode_length = 6; //change to 7 maybe (would 10x the number of possible combinations)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 // pa.on('click', function(e) {
 //   pa.toggleClass('blurred');
