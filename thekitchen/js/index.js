@@ -1,12 +1,12 @@
 
 
 var links = {"data": [
-  {
-      "name":"Support (coming soon)",
-      "color": "gray",
-      "icon": "currency-eth",
-      "url":"#"
-  },
+  // {
+  //     "name":"Support (coming soon)",
+  //     "color": "gray",
+  //     "icon": "currency-eth",
+  //     "url":"#"
+  // },
   {
       "name":"YouTube",
       "color":"red",
