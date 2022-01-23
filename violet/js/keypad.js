@@ -19,6 +19,7 @@ var page_key = "";
 Keypad.page_key = "";
 Keypad.page_passcode = "";
 Keypad.ready = false;
+Keypad.passcode_length = 6; //change to 7 maybe
 
 // pa.on('click', function(e) {
 //   pa.toggleClass('blurred');
@@ -44,7 +45,7 @@ $('.dial').on('click', function(e) {
   Keypad.page_passcode = passcode;
   // $('#passcode_area').text(passcode);
 
-  if (passcode.length == 6) { // close keypad
+  if (passcode.length == Keypad.passcode_length) { // close keypad
     Keypad.showKeypad();
     Keypad.page_passcode = passcode;
     Keypad.ready = true;
@@ -87,7 +88,7 @@ $(document).keypress(function(e) {
       else
         passcode += '' + (e.which - 48);
     }
-    if (passcode.length == 6) { // close keypad
+    if (passcode.length == Keypad.passcode_length) { // close keypad
       Keypad.showKeypad();
       Keypad.page_passcode = passcode;
       Keypad.ready = true;
