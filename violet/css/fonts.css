@@ -45,3 +45,8 @@ html {
 .monospace2 {
   font-family: "Share Tech Mono";
 }
+
+.letter_svg {
+  width: 1.4em;
+  margin: .2em;
+}
