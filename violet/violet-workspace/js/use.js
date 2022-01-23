@@ -78,4 +78,25 @@ $(function() {
 		document.execCommand("copy");
 	} );
 
+	$(document).keypress(function(e) {
+		if ($(e.target).closest('input')[0])
+	    return;
+		if (e.which == 104) { // h
+			// go home
+			window.location.replace("index.html");
+		}
+		else if (e.which == 117) { // u
+			$('#file_input').click();
+		}
+		else if (e.which == 112) { // p
+			$('#passphrase_box').select();
+			return false;
+		}
+		else if (e.which == 99) { // c
+			$('#copy_password').click();
+			return false;
+		}
+	});
+
+
 })

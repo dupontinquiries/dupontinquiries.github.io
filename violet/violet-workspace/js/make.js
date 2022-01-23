@@ -59,7 +59,7 @@ $(function() {
 	}
 
 	page_key = updateKeyText(512, 3, 3);
-	console.log(page_key);
+	// console.log(page_key);
 	// console.log(updateKeyText(512, 3, 3));
 
 	kd.on('click', function() {
@@ -89,6 +89,18 @@ $(function() {
 		// pa.text( Keypad.page_passcode );
 		if (Keypad.ready) {
 			download(JSON.stringify( encrypt(page_key, pa.text()) ), 'keyfile.json', 'json');
+		}
+	});
+
+	$(document).keypress(function(e) {
+		if ($(e.target).closest('input')[0])
+	    return;
+		if (e.which == 104) { // h
+			// go home
+			window.location.replace("index.html");
+		}
+		else if (e.which == 101) { // e
+			$('#keyfile_text').click();
 		}
 	});
 

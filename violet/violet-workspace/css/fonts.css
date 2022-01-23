@@ -16,6 +16,23 @@
   src: url("fonts/ShareTechMono-Regular.ttf");
 }
 
+:root {
+  /* --font-size: calc(22px + .7vh + 1.0vw); */
+  --font-size: calc(22px + .5vh + .8vw);
+  --font-size-sm: calc(20px + .5vh + .8vw);
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: var(--font-size-sm);
+  }
+}
+
+
 html {
   font-family: "Quantico";
   /* letter-spacing: .1em; */

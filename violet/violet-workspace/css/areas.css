@@ -46,7 +46,7 @@
 
 .header .tiny {
   margin-top: -1.5em;
-  font-size: .3em;
+  font-size: .44em;
   width: 80%;
   transform: translateX(12%);
 }
@@ -156,18 +156,18 @@ footer .fill {
     font-size: calc(.9em + 1.0vw);
   }
   /* fixes mobile overcentering */
-  .centered {
-    /* centers */
-    /* margin-left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    margin 25px auto; */
+  /* centers */
+  /* margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin 25px auto; */
+  /* height: auto;
+  min-height: 2em;
+  line-height: 2em; */
+  /* .centered {
     width: 100vw;
     max-width: 100vw;
-    /* height: auto;
-    min-height: 2em;
-    line-height: 2em; */
-  }
+  } */
 }
 
 .no_highlight {

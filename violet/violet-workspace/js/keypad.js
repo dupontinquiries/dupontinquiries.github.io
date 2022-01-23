@@ -20,7 +20,6 @@ Keypad.page_key = "";
 Keypad.page_passcode = "";
 Keypad.ready = false;
 
-
 $('.dial').on('click', function(e) {
   if (!$(this).hasClass('dial_clickable'))
     return;
@@ -61,6 +60,40 @@ $('.dial').on('click', function(e) {
     Keypad.ready = false;
   }
   $('#passcode_area').text( Keypad.page_passcode );
+});
+
+$(document).keypress(function(e) {
+  if ($(e.target).closest('input')[0])
+    return;
+  if ($('.keypad_wrapper').hasClass('vis') && e.which >= 45 && e.which <= 57) {
+    let passcode = Keypad.page_passcode; //$('#passcode_area').text();
+    var a = e.which - 48;
+    if (a < 0 && passcode && passcode.length > 0) {
+      // delete
+      passcode = passcode.slice(0,-1);
+    }
+    else {
+      // add to keypad
+      if (!passcode)
+        passcode = '' + (e.which - 48);
+      else
+        passcode += '' + (e.which - 48);
+    }
+    if (passcode.length == 6) { // close keypad
+      Keypad.showKeypad();
+      Keypad.page_passcode = passcode;
+      Keypad.ready = true;
+      $('#passcode_area').click();
+    }
+    else {
+      Keypad.ready = false;
+    }
+    pa.text(passcode);
+    Keypad.page_passcode = passcode;
+  }
+  // else if (e.which == 13) {
+  //   Keypad.showKeypad();
+  // }
 });
 
 // $(function() {
