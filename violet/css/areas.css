@@ -14,6 +14,64 @@
   --s-color: #d3e8fd;
 }
 
+/* (Just ignore)top banner style */
+.top-banner {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  font-size: .4em;
+  /* margin-bottom: 30px; */
+  text-align: center;
+  background-color: var( --dark-body-color );
+}
+
+.top-banner a, .top-banner span {
+  display: inline-block;
+}
+
+.top-banner a {
+  width: 100%;
+  padding: 7px 0;
+  text-decoration: none;
+  color: var( --p-color );
+  /* color: rgba(255, 255, 255, .8); */
+}
+
+.top-banner span{
+  width: 50px;
+  /* heigth: 28px; */
+  line-height: 28px;
+  background-color: var( --body-color ); /*#a1c45a*/
+  border-radius: 20px;
+}
+
+.slide_in_banner {
+  /* animation: gb 1s 1s ease; */
+  transition: all 1s ease;
+  height: 0;
+  overflow-y: hidden;
+  animation-name: slide_in;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide_in {
+  from {
+    height: 0;
+  }
+  to {
+    height: 2em;
+  }
+}
+/*
+.top-banner a:hover {
+  color: #fff9e0;
+} */
+/**/
+
 .header:first-child {
   /* border-top: solid 2em rgba(0,0,0,0); */
   /* white-space: nowrap; */
