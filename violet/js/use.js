@@ -55,6 +55,8 @@ $(function() {
 			// handleUpload(e);
 			// arr is still encrypted; we need to decrypt it using tea
 			page_key = CharLib.getCharsFromCodes (decrypt(page_key_arr, CharLib.getCharCodes( Keypad.page_passcode )) );
+
+			$('#passphrase_box').val(''); // clears the passphrase box for user
 		}
 		// use the key
 		// cannot be Keypad.page_passcode or else it becomes static
@@ -73,17 +75,35 @@ $(function() {
 	// 	output += key.charAt( ( (i ** 2) + parseInt(shout.charAt(i), 16) ) % key.length );
 	// }
 
+	$('.dial').on('click', function(e) {
+		if (Keypad.ready) {
+			$('#passphrase_box').select();
+			return false;
+		}
+	});
+
 	$('#copy_password').on('click', function() {
 		$('#password_box').select();
 		document.execCommand("copy");
 	} );
 
 	$(document).keypress(function(e) {
-		if ($(e.target).closest('input')[0])
-	    return;
+		if ($(e.target).closest('input')[0]) {
+			if (e.which == 13) { // enter
+				if (e.target.id == 'passphrase_box')
+					$('#copy_password').click();
+				else
+					$('#goto_home').click();
+				// document.execCommand('copy');
+			}
+			else {
+				return;
+			}
+		}
 		if (e.which == 104) { // h
 			// go home
-			window.location.replace("index.html");
+			// window.location.replace("index.html");
+			$('#goto_home').click();
 		}
 		else if (e.which == 117) { // u
 			$('#file_input').click();

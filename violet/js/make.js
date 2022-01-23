@@ -97,7 +97,8 @@ $(function() {
 	    return;
 		if (e.which == 104) { // h
 			// go home
-			window.location.replace("index.html");
+			// window.location.replace("index.html");
+			$('#goto_home').click();
 		}
 		else if (e.which == 101) { // e
 			$('#keyfile_text').click();

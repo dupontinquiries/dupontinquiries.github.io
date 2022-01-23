@@ -65,6 +65,9 @@ $('.dial').on('click', function(e) {
 $(document).keypress(function(e) {
   if ($(e.target).closest('input')[0])
     return;
+  if (e.which == 119 && $('.keypad_wrapper').hasClass('vis')) {
+    Keypad.showKeypad();
+  }
   if ($('.keypad_wrapper').hasClass('vis') && e.which >= 45 && e.which <= 57) {
     let passcode = Keypad.page_passcode; //$('#passcode_area').text();
     var a = e.which - 48;
