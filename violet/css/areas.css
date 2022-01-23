@@ -19,7 +19,7 @@
   /* white-space: nowrap; */
   /* text-align: center; */
   font-weight: 800;
-  margin-top: calc(3.2em + 2vh - 3.5vw);
+  margin-top: calc(3.0em + 1.9vh - 3.4vw);
   margin-bottom: calc(.2em + .25vh - .33vw);
   font-size: calc(1em + 1.2vw);
   /* min-width: 50%;
@@ -45,7 +45,11 @@
 }
 
 .header .tiny {
-  margin-top: -1.5em;
+  /* margin-top: -1.5em; */
+  margin-top: .5em;
+  margin-bottom: .9em;
+
+  line-height: 1.5em;
   font-size: .44em;
   width: 80%;
   transform: translateX(12%);
@@ -61,6 +65,7 @@
 
 .block {
   /* height: 70vh; */
+  min-height: 450px;
   height: calc(65vh - 1.7vw);
 }
 
