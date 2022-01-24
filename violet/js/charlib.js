@@ -1,8 +1,10 @@
 var CharLib = {};
 
-const char_map = "abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
+const char_map = 'abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ';
+const basic = 'abcdefghijklmnopqrstuvwxyz1234567890';
 
 CharLib.char_map = char_map;
+CharLib.char_map_basic = basic;
 
 CharLib.getCharCodes = function(s){
   let charCodeArr = [];

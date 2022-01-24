@@ -14,7 +14,7 @@ Keypad.showKeypad = function() {
   appear_elements.toggleClass('appear');
 }
 
-const key_string = "abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
+const key_string = CharLib.char_map;//"abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
 var page_key = "";
 Keypad.page_key = "";
 Keypad.page_passcode = "";

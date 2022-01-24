@@ -48,6 +48,32 @@ $(function() {
 		return tmp_keyfile;
 	}
 
+	function getRandomKeyBasic(l) {
+		var tmp_key = '';
+		for (var i = 0; i < l; ++i) {
+			tmp_key += CharLib.char_map_basic[getRandomNumber(3) % CharLib.char_map_basic.length];
+		}
+		return tmp_key;
+	}
+
+	function updateKeyTextSimplified(l, ww, hh) {
+		var tmp_keyfile = "";
+		kt.html("");
+		for (var i = 0; i < hh; ++i) {
+			for (var j = 0; j < ww; ++j) {
+				var tmp_key_block = getRandomKeyBasic(5);
+				tmp_keyfile += tmp_key_block;
+				kt.html(kt.html() + tmp_key_block + '&nbsp;');
+			}
+			kt.html(kt.html().slice(0,-6) + '<br>');
+		}
+		for (var k = 0; k < l - (ww * hh * 5); ++k) {
+			var tmp_key_block = getRandomKeyBasic(1);
+			tmp_keyfile += tmp_key_block;
+		}
+		return tmp_keyfile;
+	}
+
 	// take in strings
 	function encrypt(kk, pp) {
 		return TEA.TEAencrypt(CharLib.getCharCodes(kk), CharLib.getCharCodes(pp));
@@ -95,6 +121,7 @@ $(function() {
 	$(document).keypress(function(e) {
 		if ($(e.target).closest('input')[0])
 	    return;
+		// console.log([e.which]);
 		if (e.which == 104) { // h
 			// go home
 			// window.location.replace("index.html");
@@ -102,6 +129,9 @@ $(function() {
 		}
 		else if (e.which == 101) { // e
 			$('#keyfile_text').click();
+		}
+		else if (e.which == 115) {// s
+			page_key = updateKeyTextSimplified(512, 3, 3);
 		}
 	});
 
