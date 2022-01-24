@@ -23,7 +23,7 @@ $(function() {
 	}
 
 	function getRandomKey(l) {
-		var tmp_key = "";
+		var tmp_key = '';
 		for (var i = 0; i < l; ++i) {
 			tmp_key += key_string[getRandomNumber(3) % key_string.length];
 		}
@@ -37,9 +37,9 @@ $(function() {
 			for (var j = 0; j < ww; ++j) {
 				var tmp_key_block = getRandomKey(5);
 				tmp_keyfile += tmp_key_block;
-				kt.html(kt.html() + tmp_key_block + "&nbsp;");
+				kt.html(kt.html() + tmp_key_block + '&nbsp;');
 			}
-			kt.html(kt.html() + "<br>");
+			kt.html(kt.html().slice(0,-6) + '<br>');
 		}
 		for (var k = 0; k < l - (ww * hh * 5); ++k) {
 			var tmp_key_block = getRandomKey(1);
@@ -72,7 +72,7 @@ $(function() {
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
     else { // Others
-      var a = document.createElement("a"),
+      var a = document.createElement('a'),
       	url = URL.createObjectURL(file);
       a.href = url;
       a.download = filename;

@@ -15,7 +15,11 @@ $(function() {
 			// go home
       // window.location.replace("help.html");
       $('#goto_help').click();
-		}
+		} else if (e.which == 103) {
+      // console.log([e.which]);
+      // window.location.replace("help.html");
+      $('#music_link button').click();
+    }
   });
 
 })

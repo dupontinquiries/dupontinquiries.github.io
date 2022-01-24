@@ -105,12 +105,13 @@
 .header .tiny {
   /* margin-top: -1.5em; */
   margin-top: .5em;
-  margin-bottom: .9em;
+  margin-bottom: 1.3em;
 
   line-height: 1.5em;
   font-size: .44em;
   width: 80%;
-  transform: translateX(12%);
+  padding: 0 10%;
+  /* transform: translateX(12%); */
 }
 
 .sub_header {
