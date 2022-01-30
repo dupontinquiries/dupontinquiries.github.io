@@ -16,6 +16,11 @@
   src: url("fonts/ShareTechMono-Regular.ttf");
 }
 
+@font-face {
+  font-family: "IBM Plex Sans Thai Looped";
+  src: url("fonts/IBMPlexSansThaiLooped-Regular.ttf");
+}
+
 :root {
   /* --font-size: calc(22px + .7vh + 1.0vw); */
   --font-size: calc(22px + .5vh + .8vw);
@@ -49,4 +54,9 @@ html {
 .letter_svg {
   width: 1.4em;
   margin: .2em;
+}
+
+.clear_reading {
+  /* font-family: "IBM Plex Sans Thai Looped"; */
+  /* text-align: justify; */
 }
