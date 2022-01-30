@@ -2,7 +2,7 @@
 /* help */
 
 body {
-  font-size: .8em;
+  font-size: calc( 1.1em - .5vw );
 }
 
 .sub_header {
