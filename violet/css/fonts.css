@@ -23,8 +23,8 @@
 
 :root {
   /* --font-size: calc(22px + .7vh + 1.0vw); */
-  --font-size: calc(22px + .5vh + .8vw);
-  --font-size-sm: calc(20px + .5vh + .8vw);
+  --font-size: calc(22px + .5vh + .2vw);
+  --font-size-sm: calc(20px + .5vh + .2vw);
 }
 
 html {

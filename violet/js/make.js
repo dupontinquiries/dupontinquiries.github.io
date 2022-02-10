@@ -130,6 +130,9 @@ $(function() {
 		else if (e.which == 101) { // e
 			$('#keyfile_text').click();
 		}
+		else if (e.which == 114) { // r
+			page_key = updateKeyText(512, 3, 3);
+		}
 		else if (e.which == 115) {// s
 			page_key = updateKeyTextSimplified(512, 3, 3);
 		}
