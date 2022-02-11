@@ -140,11 +140,10 @@
   transition: all .4s;
 }
 
-.blurred {
-  /* transition: all .4s; */
+/* .blurred {
   filter: blur(5px);
 }
 
 .blurred:hover {
   filter: blur(0px);
-}
+} */

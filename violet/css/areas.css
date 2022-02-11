@@ -1,11 +1,21 @@
 
 /* areas */
 
-/* html, body {
-  overflow-x: hidden;
-  max-width: 50vw !important;
-  margin-left: 0;
-} */
+.top_bound {
+  position: absolute;
+  top: 0;
+}
+
+.bg-bubbles {
+  /* margin-left: 0;
+  width: 100vw; */
+  /* overflow-x: hidden; */
+  list-style-position: inside;
+  max-width: 100%;
+  /* margin-left: 0; */
+  /* right: 0; */
+  /* width: 100vw; */
+}
 
 :root {
   --blue: #d3e8fd;
@@ -153,7 +163,9 @@
 }
 
 footer {
-  bottom: 4em;
+  margin-top: 2em;
+  margin-bottom: .5em;
+  /* bottom: 4em; */
   line-height: .4em;
 }
 
