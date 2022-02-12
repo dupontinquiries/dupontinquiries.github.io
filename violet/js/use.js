@@ -8,7 +8,9 @@ $(function() {
 	const key_string = CharLib.char_map; //"abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
 	// move key_string into separate js file if it is used in both make & use, but unlikely since key is supposed to be from file (maybe make this the default key???)
 	var page_key = "";
-	var page_key_arr = [];
+	// var page_key_arr = [];
+	// var page_key_enc;
+	var json_data = {};
 
 	// steps:
 	// need to show keypad when user clicks file upload
@@ -21,11 +23,6 @@ $(function() {
 		Keypad.showKeypad();
 	});
 
-	// needed for loading keyfile
-	function decrypt(kk, pp) {
-		return TEA.TEAdecrypt(kk,pp);
-	}
-
 	// can put click events here
 
 	function handleUpload (event){
@@ -35,7 +32,12 @@ $(function() {
 		// var file = $('#file_input').files[0];
 		var reader = new FileReader();
 		reader.onload = (e) => {
-			page_key_arr = JSON.parse(e.target.result);
+			json_data = JSON.parse(e.target.result);
+			Keypad.passcode_length = json_data.passcode_length;
+			// console.log(json_data);
+			// console.log(
+			// 	CryptoJS.AES.decrypt(json_data.key.toString(), '111111' ).toString(CryptoJS.enc.Utf8)
+			// );
 		};
 		reader.readAsText(file);
 	}
@@ -49,12 +51,25 @@ $(function() {
 		// $('#passphrase_box').text('');
 	});
 
+	function encrypt(word, key) {
+		let encJson = CryptoJS.AES.encrypt(JSON.stringify(word), key).toString();
+		let encData = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(encJson));
+		return encData;
+	}
+
+	function decrypt(word, key) {
+		let decData = CryptoJS.enc.Base64.parse(word).toString(CryptoJS.enc.Utf8);
+		let bytes = CryptoJS.AES.decrypt(decData, key).toString(CryptoJS.enc.Utf8);
+		return JSON.parse(bytes);
+	}
+
 	$('#passphrase_box').on('change paste keyup', function() {
 		// decrypt the arr
 		if (!page_key && Keypad.ready) {
 			// handleUpload(e);
-			// arr is still encrypted; we need to decrypt it using tea
-			page_key = CharLib.getCharsFromCodes (decrypt(page_key_arr, CharLib.getCharCodes( Keypad.page_passcode )) );
+			// arr is still encrypted; we need to decrypt it using aes
+			page_key = decrypt(json_data.encKey, Keypad.page_passcode.toString() );
+			Keypad.page_key = page_key;
 			if ( $.isNumeric( $('#passphrase_box').val() ) )
 				$('#passphrase_box').val(''); // clears the passphrase box for user
 		}

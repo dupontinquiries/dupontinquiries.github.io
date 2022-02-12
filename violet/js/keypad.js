@@ -18,6 +18,7 @@ const key_string = CharLib.char_map;//"abcdefghijklmnopqrstuvwxyz1234567890!?@&^
 var page_key = "";
 Keypad.page_key = "";
 Keypad.page_passcode = "";
+Keypad.passcode_length = 9;
 Keypad.ready = false;
 
 // pa.on('click', function(e) {
@@ -29,26 +30,37 @@ $('#close_keypad').on('click', function(){
   Keypad.showKeypad();
 });
 
+$('#pass_done').on('click', function(e) {
+  Keypad.passcode_length = Keypad.page_passcode.length;
+  Keypad.showKeypad();
+  Keypad.ready = true;
+  pa.text( Keypad.page_passcode );
+  pa.click();
+});
+
 $('.dial').on('click', function(e) {
+  console.log(Keypad.passcode_length);
   if (!$(this).hasClass('dial_clickable'))
     return;
 
   let passcode = Keypad.page_passcode; //$('#passcode_area').text();
-  if ($(this).text() == '-') {
-    if (passcode && passcode.length > 0)
-      passcode = passcode.slice(0,-1);
-  } else {
-    if (!passcode)
-      passcode = $(this).text();
-    // else if (passcode.lenght < 6)
-    else
-      passcode += $(this).text();
+  if ( !$(this) != ('#pass_done') ) {
+    if ($(this).text() == '-') {
+      if (passcode && passcode.length > 0)
+        passcode = passcode.slice(0,-1);
+    } else {
+      if (!passcode)
+        passcode = $(this).text();
+      // else if (passcode.lenght < 6)
+      else
+        passcode += $(this).text();
+    }
   }
 
   Keypad.page_passcode = passcode;
   // $('#passcode_area').text(passcode);
 
-  if (passcode.length == 6) { // close keypad
+  if (passcode.length == Keypad.passcode_length) { // close keypad
     Keypad.showKeypad();
     Keypad.page_passcode = passcode;
     Keypad.ready = true;
@@ -82,7 +94,10 @@ $(document).keypress(function(e) {
   if (e.which == 119 && $('.keypad_wrapper').hasClass('vis')) {
     Keypad.showKeypad();
   }
-  if ($('.keypad_wrapper').hasClass('vis') && e.which >= 45 && e.which <= 57) {
+  if (e.which == 100 && $('.keypad_wrapper').hasClass('vis')) { //d for done
+    $('#pass_done').click();
+  }
+  else if ($('.keypad_wrapper').hasClass('vis') && e.which >= 45 && e.which <= 57) {
     let passcode = Keypad.page_passcode; //$('#passcode_area').text();
     var a = e.which - 48;
     if (a == -3 && passcode && passcode.length > 0) {
@@ -96,11 +111,13 @@ $(document).keypress(function(e) {
       else
         passcode += '' + (e.which - 48);
     }
-    if (passcode.length == 6) { // close keypad
+    if (passcode.length == Keypad.passcode_length) { // close keypad
       Keypad.showKeypad();
       Keypad.page_passcode = passcode;
       Keypad.ready = true;
-      $('#passcode_area').click();
+      pa.click();
+      // $('#passcode_area').click();
+      $('#passphrase_box').val(''); // clears the passphrase box for user
     }
     else {
       Keypad.ready = false;

@@ -76,12 +76,14 @@ $(function() {
 
 	// take in strings
 	function encrypt(kk, pp) {
-		return TEA.TEAencrypt(CharLib.getCharCodes(kk), CharLib.getCharCodes(pp));
+		return CryptoJS.AES.encrypt(kk, pp);
+		// return TEA.TEAencrypt(CharLib.getCharCodes(kk), CharLib.getCharCodes(pp));
 	}
 
 	// takes in arrays of numbers
 	function decrypt(kk, pp) {
-		return TEA.TEAdecrypt(kk,pp);
+		return CryptoJS.AES.decrypt(kk, pp);
+		// return TEA.TEAdecrypt(kk,pp);
 	}
 
 	page_key = updateKeyText(512, 3, 3);
@@ -111,10 +113,24 @@ $(function() {
   	}
 	}
 
+	function encrypt(word, key) {
+		let encJson = CryptoJS.AES.encrypt(JSON.stringify(word), key).toString();
+		let encData = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(encJson));
+		return encData;
+	}
+
+	function decrypt(word, key) {
+		let decData = CryptoJS.enc.Base64.parse(word).toString(CryptoJS.enc.Utf8);
+		let bytes = CryptoJS.AES.decrypt(decData, key).toString(CryptoJS.enc.Utf8);
+		return JSON.parse(bytes);
+	}
+
 	$('.dial').on('click', function() {
-		// pa.text( Keypad.page_passcode );
 		if (Keypad.ready) {
-			download(JSON.stringify( encrypt(page_key, pa.text()) ), 'keyfile.json', 'json');
+			let encJson = CryptoJS.AES.encrypt(JSON.stringify(page_key), pa.text()).toString();
+			var json_data = { encKey: encrypt(page_key, Keypad.page_passcode), passcode_length: Keypad.page_passcode.length };
+			console.log(json_data);
+			download(JSON.stringify(json_data), 'keyfile.json', 'json');
 		}
 	});
 
@@ -137,5 +153,15 @@ $(function() {
 			page_key = updateKeyTextSimplified(512, 3, 3);
 		}
 	});
+
+	// // INIT
+	// var myString   = "keyfile";
+	// var myPassword = "aulbbcu!dbdbmcuajlgddbi";
+
+	// // PROCESS
+	// var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
+	// var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
+
+	// console.table([myString, encrypted.toString(), decrypted.toString(CryptoJS.enc.Utf8)]);
 
 })
