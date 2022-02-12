@@ -1,0 +1,184 @@
+
+.crosshair_outline {
+  positon: absolute;
+
+}
+
+.crosshair_outline:nth-child(1):before {
+  content: '';
+  animation: draw_crosshair 1.3s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  background: var( --blue );
+
+  position: absolute;
+  width:  1em;
+  height: .2em;
+  margin: -10px;
+  opacity: 0;
+  margin-left: -1em;
+  margin-top: .5em;
+}
+
+.crosshair_outline:nth-child(2):before {
+  content: '';
+  animation: draw_crosshair 1.3s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  background: var( --blue );
+
+  position: absolute;
+  width:  .2em;
+  height: 1em;
+  margin: -10px;
+  opacity: 0;
+  margin-left: -1em;
+  margin-top: .5em;
+}
+
+.crosshair_outline:nth-child(3):before {
+  content: '';
+  position: absolute;
+  width:  .2em;
+  height: 1em;
+  background: var( --blue );
+  animation: draw_crosshair 1.3s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  margin: 10px;
+  opacity: 0;
+  margin-left: calc( 8.5em - 15px );
+  margin-top: calc( 9em - 20px );
+}
+
+.crosshair_outline:nth-child(4):before {
+  content: '';
+  position: absolute;
+  width:  1em;
+  height: .2em;
+  background: var( --blue );
+  animation: draw_crosshair 1.3s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  margin: 10px;
+  opacity: 0;
+  margin-left: calc( 8.5em - 35px );
+  margin-top: calc( 9em - 5px );
+}
+/*
+.crosshair_outline:nth-child(3):before {
+  content: '';
+  position: absolute;
+  width:  1em;
+  height: .2em;
+  background: var( --blue );
+  animation: draw_crosshair 1.3s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  margin: -10px;
+  opacity: 0;
+  margin-right: -1em;
+  margin-bottom: 3.5em;
+} */
+
+/* .crosshair_outline:nth-child(4):before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:  .2em;
+  height: 1em;
+  background: var( --blue );
+  animation: draw_crosshair 1.3s ease 1;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  opacity: 0;
+
+} */
+/* margin: -10px; */
+/* margin-left: calc( 100% - 0em ); */
+
+/* .crosshair_outline:nth-child(3), .crosshair_outline:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
+
+/* .crosshair_outline:nth-child(1) {
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.crosshair_outline:nth-child(2) {
+  transform: rotate(90deg);
+  bottom: calc( 25px - 0% );
+  left: calc( 25px - 100% );
+} */
+/* .crosshair span:nth-child(3) {
+  transform: rotate(180deg);
+}
+.crosshair span:nth-child(4) {
+  transform: rotate(270deg);
+} */
+
+@keyframes draw_crosshair {
+  0% {
+    transform:scale(0);
+    /* transform-origin: left; */
+    opacity: 0;
+  }
+  100% {
+    transform:scale(1);
+    /* transform-origin: left; */
+    opacity: 1;
+  }
+}
+/* @property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+} */
+
+/* .crosshair::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  border: solid 5px linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.crosshair::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(50px);
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+} */
+
+/* @keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+} */

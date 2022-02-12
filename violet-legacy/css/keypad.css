@@ -1,0 +1,168 @@
+
+/* keypad */
+
+:root {
+  --p-color: #f3f1f4;
+  --s-color: #d3e8fd;
+  --red-color: #b45a5c; /* bf5458 cc474b */
+  --body-color: #838ba4;
+}
+
+.keypad_wrapper {
+  background-color: var( --body-color );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  font-size: 1.25em;
+}
+
+.keypad_wrapper > * {
+  z-index: 2;
+}
+
+.keypad {
+  position: absolute;
+  width: 100%;
+  margin-left: -.55em;
+  margin-top: calc( 0em + 14vh );
+  /* 24vh */
+  /* margin-left: 50%;
+  margin-top: 50%;
+  transform: translate(-60%,-130%); */
+}
+
+.keypad .line {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 0.7em;
+  /* text-align: center; */
+}
+
+.keypad .line:first-child {
+  margin-bottom: 1.5em;
+  letter-spacing: calc( .2em + 1.5vw );
+  margin-left: calc( .2em + 1.5vw );
+}
+
+.keypad .line .dial {
+  display: inline;
+  cursor: pointer;
+  color: inherit;
+  border: solid 1px var( --p-color );
+  border-radius: 10%;
+  padding: 4px 12px;
+  /* padding-left: 8px; */
+  margin: 1px;
+  /* letter-spacing: .4em; */
+  line-height: 1.3em;
+}
+
+.keypad ul li .dial:hover {
+  color: var( --s-color );
+  /* animation: typing 0.35s steps(50, end);
+  animation-delay: .05s;
+  animation-iteration-count: 1s;
+  animation-fill-mode: forwards; */
+}
+
+.pop:not(.vis) {
+  animation-name: scale_in;
+  animation-duration: 1s;
+  animation-delay: .35s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  /* display: none;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: .35s;
+  animation-iteration-count: 1;
+
+  animation-fill-mode: forwards;
+   */
+}
+
+.pop {
+  animation-name: scale_in;
+  animation-duration: .24s;
+  /* animation-timing-function: ease-out; */
+  animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+  /* animation-delay: .35s; */
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  /* transform: scale(1); */
+  /* filter: blur(2px); */
+}
+
+@keyframes scale_in {
+  from {
+    /* filter: blur(2px); */
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  to {
+    /* filter: blur(0px); */
+    transform: scale(1.08);
+    filter: brightness(1.018);
+  }
+}
+
+/* .password_box {
+  display: inline;
+  cursor: pointer;
+  color: inherit;
+  border-bottom: solid 1px var( --p-color );
+  border-radius: 0%;
+  padding: 2px;
+  margin: auto 200px;
+  letter-spacing: .5em;
+  line-height: 1.3em;
+} */
+
+.red_theme {
+  color: var( --s-color ) !important;
+  border-color: var( --s-color ) !important;
+}
+
+#passcode_area {
+  text-decoration: bold;
+  /* background-color: var( --s-color ) !important; */
+  /* border-left: solid 1px var( --p-color ) !important; */
+  /* border-right: solid 1px var( --p-color ) !important; */
+  border-radius: 0 !important;
+}
+
+#passcode_area {
+  transition: all .4s;
+}
+
+/* .blurred {
+  filter: blur(5px);
+}
+
+.blurred:hover {
+  filter: blur(0px);
+} */
+
+#close_keypad {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 10em;
+  color: var( --s-color );
+  opacity: 0.5;
+  /* left: 50%; */
+
+  border: solid 1px var( --p-color );
+  border-radius: 10%;
+  padding: 4px 12px;
+  /* padding-left: 8px; */
+  /* letter-spacing: .4em; */
+  /* line-height: 1.3em; */
+}

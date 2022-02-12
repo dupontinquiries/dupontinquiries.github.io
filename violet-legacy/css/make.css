@@ -1,0 +1,27 @@
+
+/* make */
+
+.keyfile_container {
+  /* animation: size_properly 0s !important;
+  animation-delay: 1s !important;
+  animation-iteration-count: 1s !important;
+  animation-fill-mode: forwards !important; */
+  max-width: 120vw !important;
+  width: 10em !important;
+  height:10em !important;
+  overflow: visible !important;
+  /* width: auto !important; */
+}
+
+@keyframes size_properly {
+  from {
+    width: auto !important;
+  }
+  to {
+    opacity: 0 !important;
+    /* min-width: 10em !important;
+    max-width: 15em !important;
+    width: auto !important; */
+    width: 10em !important;
+  }
+}

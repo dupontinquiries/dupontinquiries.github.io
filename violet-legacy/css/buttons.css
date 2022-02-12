@@ -1,0 +1,89 @@
+
+/* buttons */
+
+:root {
+  --t1: .15s;
+  --p-color: #f3f1f4;
+  --s-color: #d3e8fd; /* 72a2d1 c1c8cf 708090 60daaa */
+}
+
+.small_text {
+  font-size: .65em;
+}
+
+button, .boxed {
+  font-family: inherit;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  /* margin: .25em; */
+  /* padding: .5em 1em; */
+  padding: .47em;
+  /* padding: 14px; */
+  margin: 12px 0;
+  /* box-shadow: inset 0 0 0 2px var( --p-color ); */
+  color: var( --p-color );
+  /* font-weight: 700; */
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+button::before, button::after {
+	 box-sizing: inherit;
+	 content: '';
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+}
+.draw {
+  transition: all calc( 3 * var( --t1 ) );
+  box-shadow: inset 0 0 0 3px var( --p-color );
+  /* transition: border-bottom calc( 2 * var( --t1 ) ); */
+  /* transform: rotate(0deg); */
+  /* border-bottom: solid 2px var( --p-color ); */
+  /* border: solid 2px var( --p-color ); */
+  /* transition: color var(--t1); */
+}
+.draw:hover {
+  transition: all calc( 3 * var( --t1 ) );
+  box-shadow: inset 0 0 0 0px var( --p-color );
+  /* transition: border-bottom calc( 2 * var( --t1 ) ); */
+  /* border-bottom: solid 0px var( --p-color ); */
+  /* border: solid 0px var( --p-color ); */
+  /* transform: rotate(360deg); */
+}
+ .draw::before, .draw::after {
+	 border: 2px solid transparent;
+	 width: 0;
+	 height: 0;
+}
+ .draw::before {
+	 top: 0;
+	 left: 0;
+}
+ .draw::after {
+	 bottom: 0;
+	 right: 0;
+}
+ .draw:hover {
+	 color: var( --s-color );
+}
+ .draw:hover::before, .draw:hover::after {
+	 width: 100%;
+	 height: 100%;
+}
+ .draw:hover::before {
+	 border-top-color: var( --s-color );
+	 border-right-color: var( --s-color );
+	 transition: width var(--t1) ease-out, height var(--t1) ease-out var(--t1);
+}
+ .draw:hover::after {
+	 border-bottom-color: var( --s-color );
+	 border-left-color: var( --s-color );
+	 transition: border-color 0s ease-out calc( 2 * var(--t1) ), width var(--t1) ease-out calc( 2 * var(--t1) ), height var(--t1) ease-out calc( 3 * var(--t1) );
+}
+
+.faded_button {
+  opacity: .5;
+}

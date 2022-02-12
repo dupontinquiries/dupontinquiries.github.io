@@ -1,0 +1,13 @@
+
+/* colors */
+
+:root {
+  --text-color: #f3f1f4; /* e1dde3 d0cad4 */
+  --body-color: #838ba4; /* 838ba4 */
+  --dark-body-color: #646d88; /* 838ba4 */
+}
+
+html {
+  color: var(--text-color);
+  background-color: var(--body-color);
+}

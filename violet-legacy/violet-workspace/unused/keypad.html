@@ -1,0 +1,65 @@
+<!-- keypad -->
+<!-- load times based on whether the file needs to be called immediately  -->
+<!-- important  -->
+<link rel="stylesheet" type="text/css" href="make.css">
+<!-- important  -->
+<link rel="stylesheet" type="text/css" href="fonts.css">
+<!-- important  -->
+<link rel="stylesheet" type="text/css" href="areas.css">
+<!-- important  -->
+<link rel="stylesheet" type="text/css" href="colors.css">
+<!-- important  -->
+<link rel="stylesheet" type="text/css" href="typewriter.css">
+<!-- less important  -->
+<link rel="stylesheet" type="text/css" href="buttons.css">
+<!-- not important  -->
+<link rel="stylesheet" type="text/css" href="keypad.css">
+<!-- less important  -->
+<link rel="stylesheet" type="text/css" href="icons.css">
+<!-- less important  -->
+<link rel="stylesheet" type="text/css" href="inputs.css">
+<!-- not important  -->
+<!-- <link rel="stylesheet" type="text/css" href="animations.css"> -->
+<link rel="stylesheet" type="text/css" href="debug/debug.css">
+<!-- helps with implementing responsive design  -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="keypad_wrapper">
+  <div class="keypad monospace2 no_highlight">
+    <ul>
+      <div class="line">
+        <div id="passcode_area" class="center dial no_border">______</div>
+      </div>
+      <div class="line">
+        <div id="1" class="dial dial_clickable draw">1</div>
+        <div id="2" class="dial dial_clickable draw">2</div>
+        <div id="3" class="dial dial_clickable draw">3</div>
+      </div>
+      <div class="line">
+        <div id="4" class="dial dial_clickable draw">4</div>
+        <div id="5" class="dial dial_clickable draw">5</div>
+        <div id="6" class="dial dial_clickable draw">6</div>
+      </div>
+      <div class="line">
+        <div id="7" class="dial dial_clickable draw">7</div>
+        <div id="8" class="dial dial_clickable draw">8</div>
+        <div id="9" class="dial dial_clickable draw">9</div>
+      </div>
+      <div class="line">
+        <div class="dial" style="opacity:0;">&nbsp;</div>
+        <div id="0" class="dial dial_clickable draw">0</div>
+        <div id="pass_del" class="dial dial_clickable draw red_theme">-</div>
+      </div>
+    </ul>
+  </div>
+</div>
+<script>
+  // setInterval(window.location.reload(), 2000);
+  // setTimeout(function(){ window.location.reload(); }, 7000);
+</script>
+<script src="jquery.min.js"></script>
+<!-- <script src="sha3.js" type="text/javascript"></script> -->
+<!-- <script src="sec.js" type="text/javascript"></script> -->
+<!-- <script src="keypad.js" type="text/javascript"></script> -->
+<script src="keypad.js" type="text/javascript"></script>
