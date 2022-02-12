@@ -147,3 +147,22 @@
 .blurred:hover {
   filter: blur(0px);
 } */
+
+#close_keypad {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 10em;
+  color: var( --s-color );
+  opacity: 0.5;
+  /* left: 50%; */
+
+  border: solid 1px var( --p-color );
+  border-radius: 10%;
+  padding: 4px 12px;
+  /* padding-left: 8px; */
+  /* letter-spacing: .4em; */
+  /* line-height: 1.3em; */
+}

@@ -25,6 +25,10 @@ Keypad.ready = false;
 //   $('body').click();
 // });
 
+$('#close_keypad').on('click', function(){
+  Keypad.showKeypad();
+});
+
 $('.dial').on('click', function(e) {
   if (!$(this).hasClass('dial_clickable'))
     return;
@@ -68,8 +72,13 @@ $('.dial').on('click', function(e) {
 });
 
 $(document).keypress(function(e) {
+  // console.log(e.which);
   if ($(e.target).closest('input')[0])
     return;
+  if (e.which == 113 && $('.keypad_wrapper').hasClass('vis')) { //q for quit
+    Keypad.showKeypad();
+    return;
+  }
   if (e.which == 119 && $('.keypad_wrapper').hasClass('vis')) {
     Keypad.showKeypad();
   }
