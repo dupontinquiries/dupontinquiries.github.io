@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Spotify",
+    "color": "green",
+    "icon": "music",
+    "url": "https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=UuOryZueRL2hSHIA4IRopg"
+  },
+  {
+    "name": "Apple Music",
+    "color": "purple",
+    "icon": "apple",
+    "url": "https://music.apple.com/us/artist/the-kitchen/1480129249"
+  },
+  {
+    "name": "YouTube",
+    "color": "red",
+    "icon": "video",
+    "url": "https://www.youtube.com/channel/UCw7YTR6oSIan42thJCtWC9g"
+  },
+  {
+    "name": "BeatStars",
+    "color": "red",
+    "icon": "settings",
+    "url": "https://www.beatstars.com/yokthatscrazy"
+  },
+  {
+    "name": "COVID-19 Fundraiser",
+    "color": "green",
+    "icon": "virus",
+    "url": "https://www.gofundme.com/f/fund-the-rocket"
+  }
+]

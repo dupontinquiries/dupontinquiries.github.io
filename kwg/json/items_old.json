@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Spotify",
+    "description": "Listen to songs from The Kitchen and featured artists.",
+    "image": "images/spotify.jpg",
+    "link": "https://open.spotify.com/artist/3UZDsnAmnpGlFGlFyikvIt?si=UuOryZueRL2hSHIA4IRopg"
+  },
+  {
+    "name": "Apple Music",
+    "description": "Listen to songs from The Kitchen and featured artists.",
+    "image": "images/applemusic.png",
+    "link": "https://music.apple.com/us/artist/the-kitchen/1480129249"
+  },
+  {
+    "name": "YouTube",
+    "description": "Music Videos & more await.",
+    "image": "images/youtube.png",
+    "link": "https://www.youtube.com/channel/UCw7YTR6oSIan42thJCtWC9g"
+  },
+  {
+    "name": "BeatStars",
+    "description": "Pick up some fire beats.",
+    "image": "images/beatstars.jpg",
+    "link": "https://www.beatstars.com/yokthatscrazy"
+  },
+  {
+    "name": "COVID-19 Fundraiser",
+    "description": "Support The Rocket Initiative, our fight against COVID-19.",
+    "image": "images/avengers.jpg",
+    "link": "https://www.beatstars.com/yokthatscrazy"
+  }
+]
