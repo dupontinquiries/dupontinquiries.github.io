@@ -18,7 +18,7 @@ const key_string = CharLib.char_map;//"abcdefghijklmnopqrstuvwxyz1234567890!?@&^
 var page_key = "";
 Keypad.page_key = "";
 Keypad.page_passcode = "";
-Keypad.passcode_length = 9;
+Keypad.passcode_length = 12;
 Keypad.ready = false;
 
 // pa.on('click', function(e) {

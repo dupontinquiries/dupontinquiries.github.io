@@ -3,7 +3,10 @@ $(function() {
 	// need keypad
 	// need file upload, salt (hidden away on the side), passphrase box, & result box
 
-	const password_lenght = 30;
+	var is_legacy = false;
+	var legacy_key = '';
+
+	var password_length = 36;
 
 	const key_string = CharLib.char_map; //"abcdefghijklmnopqrstuvwxyz1234567890!?@&^*-_YFGCRLAOEUIDHTNSQJKXBMWVZ";
 	// move key_string into separate js file if it is used in both make & use, but unlikely since key is supposed to be from file (maybe make this the default key???)
@@ -33,7 +36,14 @@ $(function() {
 		var reader = new FileReader();
 		reader.onload = (e) => {
 			json_data = JSON.parse(e.target.result);
-			Keypad.passcode_length = json_data.passcode_length;
+			if (json_data.passcode_length) {
+				Keypad.passcode_length = json_data.passcode_length;
+			} else {
+				Keypad.passcode_length = 6;
+				password_length = 30;
+				legacy_key = JSON.parse(e.target.result);
+				is_legacy = true;
+			}
 			// console.log(json_data);
 			// console.log(
 			// 	CryptoJS.AES.decrypt(json_data.key.toString(), '111111' ).toString(CryptoJS.enc.Utf8)
@@ -66,10 +76,14 @@ $(function() {
 	$('#passphrase_box').on('change paste keyup', function() {
 		// decrypt the arr
 		if (!page_key && Keypad.ready) {
-			// handleUpload(e);
-			// arr is still encrypted; we need to decrypt it using aes
-			page_key = decrypt(json_data.encKey, Keypad.page_passcode.toString() );
-			Keypad.page_key = page_key;
+			if (is_legacy) {
+				page_key = TEA.TEAdecrypt(legacy_key, CharLib.getCharCodes( Keypad.page_passcode ));
+				page_key = CharLib.getCharsFromCodes( page_key );
+			} else {
+				// arr is still encrypted; we need to decrypt it using aes
+				page_key = decrypt(json_data.encKey, Keypad.page_passcode.toString() );
+			}
+			Keypad.page_key = page_key; // needed?
 			if ( $.isNumeric( $('#passphrase_box').val() ) )
 				$('#passphrase_box').val(''); // clears the passphrase box for user
 		}
@@ -78,7 +92,7 @@ $(function() {
 		var p = $('#passphrase_box').val();
 		var shout = sha3_512(p).toString();
 		var output = '';
-		for (var i = 0; i < password_lenght; ++i) {
+		for (var i = 0; i < password_length; ++i) {
 			output += page_key.charAt( ( (i ** 2) + parseInt(shout.charAt(i), 16) ) % page_key.length );
 		}
 		$('#password_box').val(output);
