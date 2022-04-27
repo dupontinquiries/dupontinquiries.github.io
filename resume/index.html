@@ -48,7 +48,21 @@
       h1 {
         font-size: calc(1em + .25vw + 4px);
       }
+      /* added small screen support for tables */
+      table h1 {
+        /* font-size: .4em; */
+        /* max-width: 20vw; */
+        display: none;
+      }
+      table h2 {
+        font-size: 1.3em;
+      }
     }
+    /* @media (max-width: 400px) {
+      table h1 {
+        display: none;
+      }
+    } */
     @media print {
       body {
         background-color: transparent;
@@ -174,7 +188,7 @@
 <thead>
 <tr class="header">
 <th><h1 id="summary">Summary</h1></th>
-<th></th>
+<!-- <th></th> -->
 <th><p>Undergraduate student at Rensselaer Polytechnic Institute pursuing a B.S. in Computer &amp; Systems Engineering (ECSE). Strong understanding of computer science concepts. Research background in AI and computer vision.</p>
 <p><strong>Preferred Work Type:</strong> willing to relocate</p>
 <p><strong>Preferred Location:</strong> Amsterdam</p></th>
@@ -183,13 +197,13 @@
 <tbody>
 <tr class="odd">
 <td><h1 id="education">Education</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td><h2 id="rensselaer-polytechnic-institute">Rensselaer Polytechnic Institute</h2>
 <p>B.S. Computer &amp; Systems Engineering ‘23</p></td>
 </tr>
 <tr class="even">
 <td><h1 id="academic-achievements">Academic Achievements</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td>
 <p>Rensselaer Presidential Scholar Award</p>
 <p>National Honors Society, High Honors</p>
@@ -198,7 +212,7 @@
 </tr>
 <tr class="odd">
 <td><h1 id="skills">Skills</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td>
 
 <table>
@@ -266,7 +280,7 @@
 
 <tr class="even">
 <td><h1 id="projects">Projects</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td><h2 id="research-image-driven-approach-to-microstructure-recognition">Research: Image-Driven Approach to Microstructure Recognition</h2>
 <p>8/21-12/21</p>
 <p>A semester-long, full-time research opportunity at Rensselaer Polytechnic Institute involving computer vision, OpenCV, and deep learning techniques as they apply to automated analysis of material microstructures.</p>
@@ -296,7 +310,7 @@
 
 <tr class="odd">
 <td><h1 id="work-experience">Work Experience</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td>
 <h2 id="club-president-audiomakers-rpi">Club President – Audiomakers RPI</h2>
 <p>1/21-5/21 | Extracurricular at Rensselaer</p>
@@ -312,7 +326,7 @@
 
 <tr class="even">
 <td><h1 id="hobbies">Hobbies</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td>
 <h2 id="audio-engineer---the-kitchen-media">Audio Engineer - The Kitchen Media</h2>
 <p>9/17-present</p>
@@ -322,7 +336,7 @@
 
 <tr class="even">
 <td><h1 id="volunteer-experience">Volunteer Experience</h1></td>
-<td></td>
+<!-- <td></td> -->
 <td><h2 id="food-packaging---regional-food-bank-of-northeastern-new-york">Food Packaging - Regional Food Bank of Northeastern New York</h2>
 <p>2/20</p>
 <h2 id="volunteer-de-lage-landen-group">Volunteer – De Lage Landen Group</h2>
