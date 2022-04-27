@@ -214,7 +214,7 @@ table {
 }
 table tr {
     vertical-align: top;
-    border: 1px solid #dfe2e5;
+    /* border: 1px solid #dfe2e5; */
     margin: 0;
     padding: 0;
 }
@@ -224,13 +224,13 @@ thead {
 }
 table th {
     font-weight: bold;
-    border: 1px solid #dfe2e5;
+    /* border: 1px solid #dfe2e5; */
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
 table td {
-    border: 1px solid #dfe2e5;
+    /* border: 1px solid #dfe2e5; */
     margin: 0;
     padding: 6px 13px;
 }
