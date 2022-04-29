@@ -1,6 +1,9 @@
 :root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
+    max-width: 1600px;
+    display: block;
+    margin: 0 auto;
 }
 
 @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
