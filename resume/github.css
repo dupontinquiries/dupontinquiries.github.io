@@ -1,7 +1,8 @@
 :root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
-    max-width: 1600px;
+    /* max-width: 1600px; */
+    /* max-width: calc(100px + 1vw) !important; */
     display: block;
     margin: 0 auto;
 }
@@ -53,7 +54,7 @@ body {
 }
 
 #write {
-    max-width: 860px;
+    /* max-width: 860px; */
   	margin: 0 auto;
   	padding: 30px;
     padding-bottom: 100px;
