@@ -30,8 +30,22 @@ var links = {"data": [
 
 var items = {"data": [
   {
+    "name": "Compose",
+    "description": "Unique tracks inspired by Montreal",
+    "image": "",
+    "link": "",
+    "useSpotifyLink": true,
+    "spotifyLink": "https://open.spotify.com/album/0VQuV3NcVOSz2JKmlWDH9I?si=PemUtWV0QDyNtTaGMCufDg",
+    "useAppleLink": true,
+    "appleLink": "https://music.apple.com/us/album/compose/1653385531",
+    "useYouTubeLink": true,
+    "youtubeLink": "https://youtube.com/playlist?list=PL8empeWnnQ6ntGwLzeHL-d1NCM9YXJHgr",
+    "songDemo" : true,
+    // "audioFile" : "audio/takeoff.mp3"
+  },
+  {
     "name": "Troy, Vol. 2",
-    "description": "The Troy, Vol. 2 beat tape is coming soon to all platforms.",
+    "description": "The Troy, Vol. 2 beat tape is available on all platforms.",
     "image": "images/songs/troy2.jpg",
     "link": "",
     "useSpotifyLink": true,
@@ -45,7 +59,7 @@ var items = {"data": [
   },
   {
     "name": "Beat Tape: QC3",
-    "description": "The Quarantine Cookups, Vol. 2 beat tape is available all platforms.",
+    "description": "The Quarantine Cookups, Vol. 2 beat tape is available on all platforms.",
     "image": "images/songs/qc3.jpg",
     "link": "",
     "useSpotifyLink": true,
@@ -59,7 +73,7 @@ var items = {"data": [
   },
   {
     "name": "Beat Tape: QC2",
-    "description": "The Quarantine Cookups, Vol. 2 beat tape is available all platforms.",
+    "description": "The Quarantine Cookups, Vol. 2 beat tape is available on all platforms.",
     "image": "images/songs/qc2.jpg",
     "link": "",
     "useSpotifyLink": true,
@@ -73,7 +87,7 @@ var items = {"data": [
   },
   {
     "name": "Beat Tape: Green Island",
-    "description": "Green Island beat tape coming soon to all platforms.",
+    "description": "An album celebrating the wonders of space. Don't miss the two bonus tracks!",
     "image": "images/songs/greenisland.jpg",
     "link": "",
     "useSpotifyLink": true,

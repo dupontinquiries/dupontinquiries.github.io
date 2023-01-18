@@ -1,3 +1,4 @@
 
 violet/store/*
 violet/violet-workspace/unused/*
+*.DS_Store
