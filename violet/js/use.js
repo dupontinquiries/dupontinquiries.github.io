@@ -1,7 +1,7 @@
 $(function() {
 	// var passcode = "______";
 	// need keypad
-	// need file upload, salt (hidden away on the side), passphrase box, & result box
+	// need file import, salt (hidden away on the side), passphrase box, & result box
 
 	var is_legacy = false;
 	var legacy_key = '';
@@ -16,7 +16,7 @@ $(function() {
 	var json_data = {};
 
 	// steps:
-	// need to show keypad when user clicks file upload
+	// need to show keypad when user clicks file import
 	// -check if key is correct and show error if not until they get right code
 	// collapse keypad
 	//
@@ -28,8 +28,8 @@ $(function() {
 
 	// can put click events here
 
-	function handleUpload (event){
-		// if (has_uploaded)
+	function handleImport (event){
+		// if (has_imported)
 		// 	return
 		var file = event.target.files[0];
 		// var file = $('#file_input').files[0];
@@ -52,12 +52,12 @@ $(function() {
 		reader.readAsText(file);
 	}
 
-	// var has_uploaded = false;
+	// var has_imported = false;
 	// updates the page_key_arr to match the file contents
 	document.getElementById('file_input').addEventListener('change', function(e) {
 		// page_key = '';
 		// page_key_arr = [];
-		handleUpload(e);
+		handleImport(e);
 		// $('#passphrase_box').text('');
 	});
 
@@ -129,12 +129,13 @@ $(function() {
 				return;
 			}
 		}
+		//console.log(e.which);
 		if (e.which == 104) { // h
 			// go home
 			// window.location.replace("index.html");
 			$('#goto_home').click();
 		}
-		else if (e.which == 117) { // u
+		else if (e.which == 105) { // i
 			$('#file_input').click();
 		}
 		else if (e.which == 112) { // p
